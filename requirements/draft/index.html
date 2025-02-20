@@ -1,97 +1,351 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-		<meta charset="utf-8" />
-		<title>Functional Requirements</title>
-		<link rel="stylesheet" type="text/css" href="../../common/styles.css" />
-	</head>
-	<body>
-		<header>
-			<p>
-				<a href="https://daisy.org">
-					<img src="https://daisy.org/wp-content/uploads/2019/04/daisy_high.jpg" class="logo" alt="DAISY Consortium" />
-				</a>
-			</p>
-
-			<hgroup>
-				<h1 class="title">Functional Requirements</h1>
-				<p class="subtitle">DAISY Working Draft 13 January 2025</p>
-			</hgroup>
-
-			<p class="pubdate">13 January 2025 </p>
-
-			<div class="history">
-				<p class="history-title">Document history</p>
-				<ul role="list">
-					<li>
-						<a href="https://github.com/daisy/reading-apps-ux-reqs/issues?q=is%3Aissue+is%3Aclosed">Changes to this document</a>
-					</li>
-					<li>
-						<a href="https://github.com/daisy/reading-apps-ux-reqs/issues">Report an issue</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="legalnotice">
-				<p>Copyright © 2025 DAISY Consortium</p>
-			</div>
-		</header>
-
-		<nav class="toc" id="toc" role="doc-toc">
-			<h2 class="toc-title">Table of Contents</h2>
-			<ol class="toc" role="list">
-				<li>
-					<a href="#">1. Essential Requirements</a>
-					<ol role="list">
-						<li>
-							<a href="#">Library, bookshelf, and obtaining content</a>
-						</li>
-						<li>
-							<a href="#">Navigation inside book</a>
-						</li>
-					</ol>
-				</li>
-			</ol>
-		</nav>
-
-		<main>
-			<section id="s1">
-				<h2>Essential Requirements</h2>
-				<p> The  <a href="https://www.epubtest.org/test-books">EPUB test: Latest test books</a> have many well-established requirements. For our purposes, we will extract the requirements from the various sections. The titles are:</p>
-				<ol>
-				<li><a href="https://www.epubtest.org/test-books/basic-functionality">Fundamental Accessibility Tests: Basic Functionality</a></li>
-				 <li><a href="https://www.epubtest.org/test-books/non-visual-reading">Fundamental Accessibility Tests: Non-Visual Reading</a>.</li>
-				 <li><a href="https://www.epubtest.org/test-books/visual-adjustments">Fundamental Accessibility Tests: Visual Adjustments</a></li>
-				 <li><a href="https://www.epubtest.org/test-books/read-aloud">Fundamental Accessibility Tests: Read Aloud</a></li>
-				 </ol>
-
-
-<section id="library">
-
-<h3>Library, bookshelf, and obtaining content</h3>
-
-<p>In this section we identify the requirements on how to obtain content from various sources and how it is presented in the library view, sometimes called the bookshelf view. The search and discovery of materials is an important part of these requirements.  It also covers the organization of the content by the end user.</p>
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<title>
+DAISY Reading Apps User Requirements
+</title>
+<link rel="stylesheet" type="text/css" href="../../common/styles.css">
+<link rel="stylesheet" type="text/css" href="user-reqs.css">
+</head>
+<body>
+<header>
+<p><a href="https://daisy.org"><img
+src="https://daisy.org/wp-content/uploads/2019/04/daisy_high.jpg"
+class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
+<hgroup>
+<h1 class="title" id="daisy-reading-apps-user-requirements">DAISY
+Reading Apps User Requirements</h1>
+<p><span class="subtitle">Working Draft</span></p>
+</hgroup>
+<p><span class="pubdate">19 February 2025</span></p>
+<p>Editors:</p>
 <ul>
-<li>The application must be able to obtain content from a variety of sources. A variety of library formats must be supported, e.g. OPDS,DOPD.</li>
+<li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
+<li><a href="mailto:rorme@daisy.org">Richard Orme</a></li>
 </ul>
+<div class="history">
+<p><span class="history-title">Document History</span></p>
+<ul>
+<li><a
+href="https://github.com/daisy/reading-apps-ux-reqs/issues?q=is%3Aissue+is%3Aclosed">Changes
+to this document</a></li>
+<li><a
+href="https://github.com/daisy/reading-apps-ux-reqs/issues">Report an
+issue</a></li>
+</ul>
+</div>
+<div class="legalnotice">
+<p>Copyright © 2025 DAISY Consortium</p>
+</div>
+</header>
+<nav>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#user-stories">User Stories</a></li>
+<li><a href="#user-requirements">User Requirements</a>
+<ul>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#reading">Reading</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#links-and-footnotes">Links and Footnotes</a></li>
+<li><a href="#mathematical-expressions">Mathematical
+Expressions</a></li>
+<li><a href="#notes-and-highlights">Notes and Highlights</a></li>
+<li><a href="#visual-adjustments">Visual Adjustments</a></li>
+<li><a href="#read-aloud">Read Aloud</a></li>
+</ul></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</nav>
+<h2 id="introduction">Introduction</h2>
+<p>This document is the main output of the <a
+href="https://daisy.org/activities/projects/reading-apps-user-requirements/">DAISY
+project to develop user requirements for reading apps</a>. The project
+draws on the collective expertise and experiences of <a
+href="https://daisy.org/about-us/membership/">DAISY Consortium members
+and friends</a> to express user requirements of individuals with diverse
+print disabilities for reading digital publications.</p>
+<p>This unique document is intended to inform developers and purchasers
+of specialized reading systems and provide inspiration for mainstream
+reading solutions.</p>
+<section id="userstories">
+<h2 id="user-stories">User Stories</h2>
+<p>The <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/">user
+stories</a> referenced in this document were developed by the working
+group.</p>
 </section>
-
-				<section id="nav">
-				<h3>Navigation inside book</h3>
-
-				<p>In this section we define the navigation a user can  perform. It is limited to the book itself.</p>
-
-<dl>
-<dt>The user must be able to determine their location in the content (Where am I?).</dt>
-<dd><a href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-310"> nav-310 : Read navigation information</a></dd>
-<dt>Screen reader users must be able to navigate through content by headings, block items, lines, words and characters.</dt>
-<dd>from"Non-visual reading" test book: 810, 910, 1010, 1110, 1210.</dd>
-<dt>Screen reader users must be able to navigate between internal hyperlinks.</dt>
-<dd><a href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710">reading-710 : Navigate between internal hyperlinks</a></dd>
-</dl>
-				</section>
-			</section>
-		</main>
-	</body>
+<section id="userrequirements">
+<h2 id="user-requirements">User Requirements</h2>
+<h3 id="navigation">Navigation</h3>
+<h4
+id="the-user-should-have-a-simple-way-to-navigate-the-list-of-available-content-and-open-a-selected-title.">The
+user should have a simple way to navigate the list of available content
+and open a selected title.</h4>
+<p>User story: <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a></p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210">EPUBTest
+file-210 Open content</a></p>
+<h4
+id="the-user-should-have-a-way-to-navigate-the-content-through-the-table-of-contents-or-by-pages.">The
+user should have a way to navigate the content through the Table of
+Contents or by pages.</h4>
+<p>User story: <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210">EPUBTest
+nav-010 Navigate to chapters through the Table of Contents</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-005">EPUBTest
+nav-005 The table of contents in the app presents the content
+hierarchy</a></p>
+<h4
+id="the-user-should-have-a-simple-way-to-navigate-content-forward-and-backward-by-chapters-headings-pages-paragraphs.">The
+user should have a simple way to navigate content forward and backward
+by chapters, headings, pages, paragraphs.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-210">EPUBTest
+nav-210 Navigate forward and backward through reflowed content</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-510">EPUBTest
+nav-510 Move across chapters without using TOC</a>, <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1210">EPUBTest
+reading-1210 : Navigate the content by headings</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-110">EPUBTest
+nav-110 Navigate content by pages</a></p>
+<h4
+id="screen-readerassistive-technology-users-should-be-able-to-navigate-through-content-by-headings-block-items-lines-words-and-characters.">Screen
+reader/assistive technology users should be able to navigate through
+content by headings, block items, lines, words and characters.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-810">EPUBTest
+reading-810 : Move to the next block item</a>, <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1110">EPUBTest
+reading-1110 : Navigate by lines</a>, <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1110">EPUBTest
+reading-1010 : Navigate by words</a>, <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-910">EPUBTest
+reading-910 : Navigate by characters</a></p>
+<h4
+id="the-user-should-be-able-to-read-continuously-from-the-current-position-and-be-able-to-pause-then-resume-reading-from-the-paused-reading-location.">The
+user should be able to read continuously from the current position, and
+be able to pause, then resume reading from the paused reading
+location.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-010">reading-010
+: Initiate “read from here”</a>, <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-110">“reading-110
+: Stop and resume reading at the same reading location”</a></p>
+<h4
+id="the-user-should-have-a-way-to-save-their-progression-in-the-publication-and-return-the-user-to-the-last-location-they-saved-the-next-time-they-open-the-publication.">The
+user should have a way to save their progression in the publication and
+return the user to the last location they saved the next time they open
+the publication.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-110">ReadAloud-110
+: Stop and resume reading</a></p>
+<h4
+id="the-user-should-be-able-to-determine-their-location-in-the-content.">The
+user should be able to determine their location in the content.</h4>
+<p>The user should be able to get information about their current
+position in the book. The minimum information expected is current
+chapter/section and, if appropriate, current page number. Percentage or
+time read, time remaining, book title, author etc. can be additional
+useful information. It should be possible to resume reading from the
+last read position after using this command.</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-310">nav-310
+Read navigation information</a></p>
+<h3 id="search">Search</h3>
+<h4
+id="the-user-should-be-able-to-perform-a-search-and-review-the-search-results.">The
+user should be able to perform a search and review the search
+results.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-410">nav-410
+: Perform a search, review the search results</a></p>
+<h3 id="reading">Reading</h3>
+<h4
+id="screen-readerassistive-technology-users-should-be-able-to-read-through-content-in-the-logical-reading-order.">Screen
+reader/assistive technology users should be able to read through content
+in the logical reading order.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">reading-210
+: All text should be read in the proper order</a>, <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310">ReadAloud-310
+: All text should be read in the proper order</a></p>
+<h4
+id="users-of-screen-readerassistive-technology-audio-should-hear-appropriate-pauses-after-headings-paragraphs-list-items-etc.">Users
+of screen reader/assistive technology audio should hear appropriate
+pauses after headings, paragraphs, list items, etc.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510">EPUBTest
+reading-510 : TTS allows pause for indicating headings, paragraphs, list
+items, etc</a>, <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510">ReadAloud-510
+: Text to Speech handles punctuation and document structure
+appropriately</a></p>
+<h4
+id="screen-readerassistive-technology-users-should-be-able-to-read-content-in-the-correct-language-audio-or-braille.">Screen
+reader/assistive technology users should be able to read content in the
+correct language (audio or braille).</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510">reading-1510
+: TTS Change Languages Automatically</a></p>
+<h3 id="images">Images</h3>
+<h4
+id="screen-reader-users-should-be-able-to-read-and-navigate-within-image-descriptions.">Screen
+reader users should be able to read and navigate within image
+descriptions.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-310">reading-310
+: Image alternate text reading</a></p>
+<h4
+id="read-aloud-users-should-have-the-option-to-hear-image-descriptions.">Read
+aloud users should have the option to hear image descriptions.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-350">ReadAloud-350
+: Image alternate text reading</a></p>
+<h4 id="the-user-should-have-the-possibility-of-enlarging-images.">The
+user should have the possibility of enlarging images.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
+: Enlarge SVG Images</a></p>
+<h3 id="tables">Tables</h3>
+<h4
+id="screen-readerassistive-technology-users-should-be-able-to-navigate-between-the-cells-rows-and-columns-in-a-table">Screen
+reader/assistive technology users should be able to navigate between the
+cells, rows and columns in a table</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-610">reading-610
+: Navigate between the cells, rows and columns in the table</a></p>
+<h3 id="links-and-footnotes">Links and Footnotes</h3>
+<h4
+id="users-should-be-able-to-navigate-between-internal-hyperlinks.">Users
+should be able to navigate between internal hyperlinks.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710">reading-710
+: Navigate between internal hyperlinks</a></p>
+<h4
+id="users-should-be-able-to-detect-the-reference-to-a-footnote-reach-the-content-of-the-footnote-read-the-content-of-the-footnote-and-provide-a-mechanism-to-move-back-to-the-original-reading-position-from-the-footnote.">Users
+should be able to detect the reference to a footnote, reach the content
+of the footnote, read the content of the footnote and provide a
+mechanism to move back to the original reading position from the
+footnote.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-420">reading-420
+: Footnote Reading</a></p>
+<h3 id="mathematical-expressions">Mathematical Expressions</h3>
+<h4
+id="screen-reader-users-should-be-able-to-read-and-navigate-within-mathematical-expressions.">Screen
+reader users should be able to read and navigate within mathematical
+expressions.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">EPUBTest
+reading-1410 : MathML Reading</a></p>
+<h4
+id="the-user-should-be-able-to-adjust-the-size-and-color-of-math-expressions">The
+user should be able to adjust the size and color of math
+expressions</h4>
+<p>Math expressions included as inline or block MathML should be
+displayed correctly. As the user adjusts the size and colors of the text
+content, the math expressions should change accordingly.</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550">visual-550
+: Viewing MathML</a></p>
+<h3 id="notes-and-highlights">Notes and Highlights</h3>
+<h4 id="the-user-should-be-able-to-add-review-and-edit-highlights.">The
+user should be able to add, review and edit highlights.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010">EPUBTest
+anno-010 : Add a Bookmark or Highlight</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110">EPUBTest
+anno-110 : Review and navigate Bookmarks or Highlights</a></p>
+<h4 id="the-user-should-be-able-to-add-review-and-edit-notes.">The user
+should be able to add, review and edit notes.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EPUBTest
+anno-210 : Add a note</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
+anno-310 : Review and navigate Notes</a></p>
+<h4
+id="screen-readerassistive-technology-users-should-be-able-to-adjust-the-voice-and-reading-speed.">Screen
+reader/assistive technology users should be able to adjust the voice and
+reading speed.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
+: Change Read Aloud reading voice</a>, <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410">ReadAloud-410
+: Change Read Aloud reading speed</a></p>
+<h3 id="visual-adjustments">Visual Adjustments</h3>
+<h4
+id="the-user-should-have-the-possibility-of-personalizing-the-visual-reading-experience-controlling-font-size-choice-of-fonts-background-and-foreground-color-and-brightness.">The
+user should have the possibility of personalizing the visual reading
+experience, controlling font size, choice of fonts, background and
+foreground color, and brightness.</h4>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010">visual-010
+: Change font size</a>, <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110">visual-110
+: Change background and foreground color</a>, <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210">visual-210
+: Change brightness</a></p>
+<h4
+id="the-user-should-be-able-to-use-the-app-with-the-high-contrast-and-magnification-features-of-the-operating-system-platform.">The
+user should be able to use the app with the high contrast and
+magnification features of the operating system platform.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310">visual-310
+: Apply high contrast system configuration</a></p>
+<h3 id="read-aloud">Read Aloud</h3>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
+: Change Read Aloud reading voice</a></p>
+<h4
+id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
+user should be able to visually emphasize the text being read using a
+contrasting highlight, ruler lines, deemphasizing the surrounding text,
+or other means.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
+: Text is emphasised as it is spoken by read aloud</a></p>
+<h4
+id="read-aloud-users-should-be-able-to-control-the-starting-position.">Read
+aloud users should be able to control the starting position.</h4>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-010">ReadAloud-010
+: The content can be read aloud</a></p>
+</section>
+<section id="acknowledgments">
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This project would not have been possible without the contributions
+of the DAISY members and Friends who participated in the project. Their
+valuable insights, expertise, and experiences have been instrumental in
+ensuring that the requirments capture a broad range of user needs.</p>
+<p>This work is financially supported by <a
+href="https://dedicon.nl">Dedicon</a>.</p>
+</section>
+<h2 id="references">References</h2>
+<p>The <a href="https://www.epubtest.org/test-books">EPUB test: Latest
+test books</a> has many well-established fundamental accessibility tests
+which were extracted and adapted for this document. The titles are:</p>
+<ol type="1">
+<li><a
+href="https://www.epubtest.org/test-books/basic-functionality">Fundamental
+Accessibility Tests: Basic Functionality</a></li>
+<li><a
+href="https://www.epubtest.org/test-books/non-visual-reading">Fundamental
+Accessibility Tests: Non-Visual Reading</a>.</li>
+<li><a
+href="https://www.epubtest.org/test-books/visual-adjustments">Fundamental
+Accessibility Tests: Visual Adjustments</a></li>
+<li><a href="https://www.epubtest.org/test-books/read-aloud">Fundamental
+Accessibility Tests: Read Aloud</a></li>
+</ol>
+</body>
 </html>
