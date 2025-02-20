@@ -1,0 +1,24 @@
+	body {
+		margin: 5rem 10rem;
+		font-size: 1.6rem;
+		counter-reset: h3-counter ur-counter;
+	}
+	h2 {
+		font-size: 2rem;
+		counter-reset: h3-counter;
+	}
+	h3 {
+		font-size: 1.8rem;
+		counter-increment: h3-counter;
+	}
+	h3:before {
+        content: counter(h3-counter) ".\0000a0\0000a0";
+    }
+	h4 {
+		font-size: 1.6rem;
+		counter-increment: ur-counter;
+	}
+	h4:before {
+        content: "UR\0000a0" counter(ur-counter) ".\0000a0";
+    }
+	
