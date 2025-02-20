@@ -1,7 +1,14 @@
-<!-- convert this document to HTML with pandoc user-reqs.md -f markdown -o index.html --strip-comments --css="../../common/styles.css" --css="user-reqs.css" -->
-<!-- The DOCTYPE delaration in the generated file then needs an edit to make it valid -->
+---
+title:  'Reading Apps User Requirements'
+author:
+- Kirsten de Haan
+- Richard Orme
+keywords: [DAISY, Dedicon, accessibility, reading apps]
+...
 
-<!DOCTYPE html>
+<!-- convert this document to HTML with pandoc user-reqs.md -f markdown -o index.html --strip-comments --css="../../common/styles.css" --css="user-reqs.css" -->
+<!-- The DOCTYPE delaration at the top of the generated file then needs to be added  -->
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
@@ -145,6 +152,11 @@ Source: [reading-210 : All text should be read in the proper order](https://www.
 Source: [EPUBTest reading-510 : TTS allows pause for indicating headings, paragraphs, list items, etc](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510), 
 [ReadAloud-510 : Text to Speech handles punctuation and document structure appropriately](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510)
 
+#### Screen reader/assistive technology users should be able to adjust the voice and reading speed.
+
+Sources: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400), 
+[ReadAloud-410 : Change Read Aloud reading speed](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410)
+
 #### Screen reader/assistive technology users should be able to read content in the correct language (audio or braille).
 
 Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510)
@@ -202,11 +214,6 @@ Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.
 
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
-
-#### Screen reader/assistive technology users should be able to adjust the voice and reading speed.
-
-Sources: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400), 
-[ReadAloud-410 : Change Read Aloud reading speed](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410)
 
 ### Visual Adjustments
 
