@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[19 February 2025]{.pubdate}
+[9 March 2025]{.pubdate}
 
 Editors:
 
@@ -48,11 +48,13 @@ Copyright © 2025 DAISY Consortium
 <nav>
 
 ## Table of Contents
-
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [User Stories](#user-stories)
 - [User Requirements](#user-requirements)
+  - [Visual Adjustments - Text](#visual-adjustments---text)
+  - [Visual Adjustments - Images](#visual-adjustments---images)
+  - [Visual Adjustments - Math](#visual-adjustments---math)
+  - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
   - [Navigation](#navigation)
   - [Search](#search)
   - [Reading](#reading)
@@ -61,7 +63,6 @@ Copyright © 2025 DAISY Consortium
   - [Links and Footnotes](#links-and-footnotes)
   - [Mathematical Expressions](#mathematical-expressions)
   - [Notes and Highlights](#notes-and-highlights)
-  - [Visual Adjustments](#visual-adjustments)
   - [Read Aloud](#read-aloud)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
@@ -87,17 +88,120 @@ The [user stories](https://daisy.github.io/reading-apps-ux-reqs/use-cases/) refe
 
 ## User Requirements
 
+### Visual Adjustments - Text
+
+User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana), 
+[Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
+[Alex](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex),
+[Stefan](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan),
+[Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
+
+#### The user should be able to change the typeface.
+
+The user should be able to change the typeface of all text, choosing from a range including sans serif and serif fonts.
+
+Sources: [visual-010 : Change font](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-510), 
+[Accessibility Requirements for People with Low Vision: font face](https://w3c.github.io/low-vision-a11y-tf/requirements.html#font)
+
+#### The user should be able to change the text size.
+
+Some people need to increase the size of text in order to read it. Although increasing size is most common, some people with tunnel vision and good visual acuity may prefer to decrease the size so they can see more text at a time.
+
+Sources: [visual-010 : Change font size](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010), 
+[Accessibility Requirements for People with Low Vision: font size](https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-size),
+[The effect of print size on reading speed in dyslexia. Journal of Research in Reading](https://doi.org/10.1111/j.1467-9817.2005.00273.x)
+
+#### The user should be able to change the text style (underline, italic, bold) of blocks of text.
+
+For some people, it is difficult to read text that is all italicized or underlined. For some people, bold text is easier to read.
+
+Sources: [Accessibility Requirements for People with Low Vision: text style](https://w3c.github.io/low-vision-a11y-tf/requirements.html#style)
+
+#### The user should be able change the capitalization (all capital letters, small capital letters, sentence style) of blocks of text.
+
+Text in all capital letters is more difficult to read for most people, with and without disabilities.
+
+Sources: [Accessibility Requirements for People with Low Vision: capitalization](https://w3c.github.io/low-vision-a11y-tf/requirements.html#capitalization)
+
+#### The user should be able change the line spacing (leading), letter spacing (space between letters/characters) and word spacing (space between words) for blocks of text.
+
+Spacing such as space between lines and space between words impacts readability. Some people need more space between paragraphs, lines, words and/or letters to read text. Line spacing also helps with tracking.
+
+User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
+[Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
+
+Sources: [Accessibility Requirements for People with Low Vision: line spacing](https://w3c.github.io/low-vision-a11y-tf/requirements.html),
+[Extra-large letter spacing improves reading in dyslexia](https://doi.org/10.1073/pnas.1205566109).
+
+#### The user should be able change the justification/alignment (left, right, full/both, centered) of blocks of text.
+
+Justification impacts readability and tracking. Fully justified text creates uneven spaces between words and letters, leading to "rivers of white space" that disrupt reading flow and visual tracking, particularly for people with dyslexia. Users with low vision who rely on screen magnifiers may encounter exaggerated gaps or overlapping characters in justified text, making it harder to read. Center-aligned text is also problematic for multi-line blocks, as it disrupts smooth reading flow and makes it harder to find the beginning of lines.
+
+Sources: [Accessibility Requirements for People with Low Vision: justification/alignment](https://w3c.github.io/low-vision-a11y-tf/requirements.html#justification)
+
+#### The user should be able change the margins and adjust the line length for blocks of text.
+
+Having wide margins results in shorter line lengths. This can be helpful for some people with specific learning disabilities. Having wide margins around blocks of text helps some people focus on the text and not get distracted by other content. 
+
+Conversely, wide margins can make line length too short for people who use large text.
+
+User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana)
+
+Sources: [Accessibility Requirements for People with Low Vision: margins and borders](https://w3c.github.io/low-vision-a11y-tf/requirements.html#margins-and-borders),
+[Shorter Lines Facilitate Reading in Those Who Struggle](https://doi.org/10.1371/journal.pone.0071161)
+
+### Visual Adjustments - Images
+
+#### The user should be able to enlarge images.
+
+The user should be able to select an image and make it larger. There should be controls to adjust the size and to pan around an image when it no longer fits within the display.
+
+Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710)
+
+### Visual Adjustments - Math
+
+#### The user should be able to adjust the size and color of math expressions
+
+Math expressions included as inline or block MathML should be displayed correctly. As the user adjusts the size and colors of the text content, the math expressions should change accordingly.
+
+Source: [visual-550 : Viewing MathML](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550)
+
+### Visual Adjustments - Color and Brightness
+
+#### The user should be able to personlize the background and foreground colors.
+
+The user should be able to set the background and text color from the full color spectrum. Some people need low brightness, especially for backgrounds. Some people who need low brightness for backgrounds also need low brightness overall and thus need low brightness text.
+
+Other people need high contrast between text and background, including many older people who lose contrast sensitivity from ageing. Some read better with dark text on light background.
+
+For some people, common color combinations or colors from a limited color palette work fine, for example, black text on white background or the inverse with white text on black background. Other people need to select more specific background and text colors. For example, people who need low brightness overall, need to select the specific background and text colors that provide sufficient contrast for them yet not too high brightness. Readable and optimal color combinations differs vastly among individuals and can even vary for one individual depending on conditions such as fatigue and lighting.
+
+Sources: [visual-110 : Change background and foreground color](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110), [Accessibility Requirements for People with Low Vision: text contrast](https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-contrast)
+
+#### The user should be able to use the app with the high contrast and magnification features of the operating system platform.
+
+User story: [Stefan](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan)
+
+Source: [visual-310 : Apply high contrast system configuration](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310)
+
+#### The user should be able to change the display brightness.
+
+The user should be able to set the brightness of the display. Some individuals with low vision or dyslexia may have photophobia or light sensitivity. The ability to dim the screen can make reading more comfortable for these users. For some people with age-related macular degeneration, brighter illumination has been shown to improve reading acuity, critical print size, and maximum reading speed. Adjusting brightness can enhance the contrast between text and background, making it easier for individuals with low vision to distinguish letters and words.
+
+[visual-210 : Change brightness](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210),
+Legge G. E. (2016). Reading Digital with Low Vision. Visible language, 50(2), 102–125. (https://pmc.ncbi.nlm.nih.gov/articles/PMC5726769/)
+
 ### Navigation
 
 #### The user should have a simple way to navigate the list of available content and open a selected title.
 
-User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana)
+User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana), [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
 Source: [EPUBTest file-210 Open content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210)
 
 #### The user should have a way to navigate the content through the Table of Contents or by pages.
 
-User story: [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
+User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
 
 Sources: [EPUBTest nav-010 Navigate to chapters through the Table of Contents](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210), 
 [EPUBTest nav-005 The table of contents in the app presents the content hierarchy](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-005)
@@ -111,6 +215,8 @@ Sources: [EPUBTest nav-210 Navigate forward and backward through reflowed conten
 
 #### Screen reader/assistive technology users should be able to navigate through content by headings, block items, lines, words and characters.
 
+User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria)
+
 Sources: [EPUBTest reading-810 : Move to the next block item](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-810),
 [EPUBTest reading-1110 : Navigate by lines](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1110),
 [EPUBTest reading-1010 : Navigate by words](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1110),
@@ -118,6 +224,8 @@ Sources: [EPUBTest reading-810 : Move to the next block item](https://www.epubte
 
 
 #### The user should be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location.
+
+User story: [Alice](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alice), [Liviu](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#liviu)
 
 Sources: [reading-010 : Initiate "read from here"](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-010),
 ["reading-110 : Stop and resume reading at the same reading location"](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-110)
@@ -142,38 +250,40 @@ Source: [nav-410 : Perform a search, review the search results](https://www.epub
 
 ### Reading
 
-#### Screen reader/assistive technology users should be able to read through content in the logical reading order.
+#### The user should be able to read through content in the logical reading order.
 
 Source: [reading-210 : All text should be read in the proper order](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210), 
 [ReadAloud-310 : All text should be read in the proper order](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310)
 
-#### Users of screen reader/assistive technology audio should hear appropriate pauses after headings, paragraphs, list items, etc.
+#### The user should hear appropriate pauses after headings, paragraphs, list items, etc.
 
 Source: [EPUBTest reading-510 : TTS allows pause for indicating headings, paragraphs, list items, etc](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510), 
 [ReadAloud-510 : Text to Speech handles punctuation and document structure appropriately](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510)
 
-#### Screen reader/assistive technology users should be able to adjust the voice and reading speed.
+#### The user should be able to adjust the voice and reading speed.
+
+User Story: [Simona](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
 
 Sources: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400), 
 [ReadAloud-410 : Change Read Aloud reading speed](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410)
 
-#### Screen reader/assistive technology users should be able to read content in the correct language (audio or braille).
+#### The user should be able to read content in the correct language (audio or braille).
 
 Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510)
+
+User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
 ### Images
 
 #### Screen reader users should be able to read and navigate within image descriptions.
+
+User Story: [Simona](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona)
 
 Source: [reading-310 : Image alternate text reading](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-310)
 
 #### Read aloud users should have the option to hear image descriptions.
 
 Source: [ReadAloud-350 : Image alternate text reading](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-350)
-
-#### The user should have the possibility of enlarging images.
-
-Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710)
 
 ### Tables
 
@@ -193,15 +303,11 @@ Source: [reading-420 : Footnote Reading](https://www.epubtest.org/test-books/non
 
 ### Mathematical Expressions
 
-#### Screen reader users should be able to read and navigate within mathematical expressions.
+#### The user should be able to read and navigate within mathematical expressions.
+
+User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
 Source: [EPUBTest reading-1410 : MathML Reading](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210)
-
-#### The user should be able to adjust the size and color of math expressions
-
-Math expressions included as inline or block MathML should be displayed correctly. As the user adjusts the size and colors of the text content, the math expressions should change accordingly.
-
-Source: [visual-550 : Viewing MathML](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550)
 
 ### Notes and Highlights
 
@@ -214,18 +320,6 @@ Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.
 
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
-
-### Visual Adjustments
-
-#### The user should have the possibility of personalizing the visual reading experience, controlling font size, choice of fonts, background and foreground color, and brightness.
-
-Sources: [visual-010 : Change font size](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010), 
-[visual-110 : Change background and foreground color](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110), 
-[visual-210 : Change brightness](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210)
-
-#### The user should be able to use the app with the high contrast and magnification features of the operating system platform.
-
-Source: [visual-310 : Apply high contrast system configuration](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310)
 
 ### Read Aloud
 
