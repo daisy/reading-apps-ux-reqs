@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">9 March 2025</span></p>
+<p><span class="pubdate">23 March 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -100,21 +100,43 @@ href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex">Alex</a>,
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan">Stefan</a>,
 <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
-<h4 id="the-user-should-be-able-to-change-the-typeface.">The user should
-be able to change the typeface.</h4>
+<h4 id="the-user-must-be-able-to-change-the-typeface.">The user must be
+able to change the typeface.</h4>
 <p>The user should be able to change the typeface of all text, choosing
-from a range including sans serif and serif fonts.</p>
+from a range including sans serif and serif fonts. Individuals with low
+vision or dyslexia often have specific preferences for font styles that
+optimize their reading experience. Typefaces with preferred letter
+shapes can aid in visual processing, improve comprehension and reduce
+cognitive load.</p>
+<p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-510">visual-010
 : Change font</a>, <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#font">Accessibility
 Requirements for People with Low Vision: font face</a></p>
-<h4 id="the-user-should-be-able-to-change-the-text-size.">The user
-should be able to change the text size.</h4>
+<h4 id="the-user-must-be-able-to-change-the-font-weight.">The user must
+be able to change the font weight.</h4>
+<p>Visual readability of text requires good visual contrast. Visual
+contrast is a product of the text characteristics, such as font weight
+(thickness, font stroke width) and font size, the lightness/darkness
+difference of the colors used for the text and the background, and other
+factors. For some people, bold text is easier to read which is why they
+should be able to choose a higher font weight. Many typefaces have a
+bold font and some offer variable weight.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/font-characteristics-contrast/">WCAG
+Accessibility Guidelines 3.0 - Draft version: visual contrast of
+text</a>, <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
+Requirements for People with Low Vision: text style</a></p>
+<h4 id="the-user-must-be-able-to-change-the-text-size.">The user must be
+able to change the text size.</h4>
 <p>Some people need to increase the size of text in order to read it.
 Although increasing size is most common, some people with tunnel vision
 and good visual acuity may prefer to decrease the size so they can see
 more text at a time.</p>
+<p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010">visual-010
 : Change font size</a>, <a
@@ -124,28 +146,38 @@ href="https://doi.org/10.1111/j.1467-9817.2005.00273.x">The effect of
 print size on reading speed in dyslexia. Journal of Research in
 Reading</a></p>
 <h4
-id="the-user-should-be-able-to-change-the-text-style-underline-italic-bold-of-blocks-of-text.">The
-user should be able to change the text style (underline, italic, bold)
-of blocks of text.</h4>
-<p>For some people, it is difficult to read text that is all italicized
-or underlined. For some people, bold text is easier to read.</p>
+id="the-user-should-be-able-to-strip-the-visual-formatting-text-style-underline-italic-bold-of-the-text.">The
+user should be able to strip the visual formatting (text style:
+underline, italic, bold) of the text.</h4>
+<p>For some people, it is difficult to read text that is all italicized,
+underlined or bold. Users should have the option to view the text
+without these visual formatting styles. However, underlining should be
+retained for hyperlinks. While removing formatting may result in the
+loss of some semantic significance, users should be able to toggle back
+to the visually formatted version as needed.</p>
+<p>Priority: Should-have</p>
 <p>Sources: <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
 Requirements for People with Low Vision: text style</a></p>
 <h4
-id="the-user-should-be-able-change-the-capitalization-all-capital-letters-small-capital-letters-sentence-style-of-blocks-of-text.">The
-user should be able change the capitalization (all capital letters,
-small capital letters, sentence style) of blocks of text.</h4>
-<p>Text in all capital letters is more difficult to read for most
-people, with and without disabilities.</p>
+id="the-user-could-be-able-change-the-capitalization-of-blocks-of-text-to-sentence-style.">The
+user could be able change the capitalization of blocks of text to
+sentence style.</h4>
+<p>Text written in all capital letters or all small capital letters is
+more difficult to read for most people, with and without disabilities.
+Users should have the option to choose a sentence-style version.
+Acronyms that are correctly marked as abbreviations will remain in
+uppercase; otherwise, they will be converted to sentence style. Users
+should also be able to toggle between the different styles as
+needed.</p>
+<p>Priority: Could-have</p>
 <p>Sources: <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#capitalization">Accessibility
 Requirements for People with Low Vision: capitalization</a></p>
 <h4
-id="the-user-should-be-able-change-the-line-spacing-leading-letter-spacing-space-between-letterscharacters-and-word-spacing-space-between-words-for-blocks-of-text.">The
-user should be able change the line spacing (leading), letter spacing
-(space between letters/characters) and word spacing (space between
-words) for blocks of text.</h4>
+id="the-user-should-be-able-change-the-line-spacing-leading-for-blocks-of-text.">The
+user should be able change the line spacing (leading) for blocks of
+text.</h4>
 <p>Spacing such as space between lines and space between words impacts
 readability. Some people need more space between paragraphs, lines,
 words and/or letters to read text. Line spacing also helps with
@@ -154,6 +186,43 @@ tracking.</p>
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a>,
 <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
+<p>Priority: TBC</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html">Accessibility
+Requirements for People with Low Vision: line spacing</a>, <a
+href="https://doi.org/10.1073/pnas.1205566109">Extra-large letter
+spacing improves reading in dyslexia</a>.</p>
+<h4
+id="the-user-should-be-able-change-the-letter-spacing-space-between-letterscharacters-for-blocks-of-text.">The
+user should be able change the letter spacing (space between
+letters/characters) for blocks of text.</h4>
+<p>Spacing such as space between lines and space between words impacts
+readability. Some people need more space between paragraphs, lines,
+words and/or letters to read text. Line spacing also helps with
+tracking.</p>
+<p>User story: <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a>,
+<a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
+<p>Priority: TBC</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html">Accessibility
+Requirements for People with Low Vision: line spacing</a>, <a
+href="https://doi.org/10.1073/pnas.1205566109">Extra-large letter
+spacing improves reading in dyslexia</a>.</p>
+<h4
+id="the-user-should-be-able-change-the-word-spacing-space-between-words-for-blocks-of-text.">The
+user should be able change the word spacing (space between words) for
+blocks of text.</h4>
+<p>Spacing such as space between lines and space between words impacts
+readability. Some people need more space between paragraphs, lines,
+words and/or letters to read text. Line spacing also helps with
+tracking.</p>
+<p>User story: <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a>,
+<a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
+<p>Priority: TBC</p>
 <p>Sources: <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html">Accessibility
 Requirements for People with Low Vision: line spacing</a>, <a
@@ -171,6 +240,7 @@ magnifiers may encounter exaggerated gaps or overlapping characters in
 justified text, making it harder to read. Center-aligned text is also
 problematic for multi-line blocks, as it disrupts smooth reading flow
 and makes it harder to find the beginning of lines.</p>
+<p>Priority: TBC</p>
 <p>Sources: <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#justification">Accessibility
 Requirements for People with Low Vision: justification/alignment</a></p>
@@ -186,17 +256,30 @@ not get distracted by other content.</p>
 who use large text.</p>
 <p>User story: <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a></p>
+<p>Priority: TBC</p>
 <p>Sources: <a
 href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#margins-and-borders">Accessibility
 Requirements for People with Low Vision: margins and borders</a>, <a
 href="https://doi.org/10.1371/journal.pone.0071161">Shorter Lines
 Facilitate Reading in Those Who Struggle</a></p>
+<h4
+id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
+user should be able to visually emphasize the text being read using a
+contrasting highlight, ruler lines, deemphasizing the surrounding text,
+or other means.</h4>
+<p>User story: <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex">Alex</a></p>
+<p>Priority: TBC</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
+: Text is emphasised as it is spoken by read aloud</a></p>
 <h3 id="visual-adjustments---images">Visual Adjustments - Images</h3>
 <h4 id="the-user-should-be-able-to-enlarge-images.">The user should be
 able to enlarge images.</h4>
 <p>The user should be able to select an image and make it larger. There
 should be controls to adjust the size and to pan around an image when it
 no longer fits within the display.</p>
+<p>Priority: TBC</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
 : Enlarge SVG Images</a></p>
@@ -208,6 +291,7 @@ expressions</h4>
 <p>Math expressions included as inline or block MathML should be
 displayed correctly. As the user adjusts the size and colors of the text
 content, the math expressions should change accordingly.</p>
+<p>Priority: TBC</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550">visual-550
 : Viewing MathML</a></p>
@@ -233,6 +317,7 @@ text colors that provide sufficient contrast for them yet not too high
 brightness. Readable and optimal color combinations differs vastly among
 individuals and can even vary for one individual depending on conditions
 such as fatigue and lighting.</p>
+<p>Priority: TBC</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110">visual-110
 : Change background and foreground color</a>, <a
@@ -244,6 +329,7 @@ user should be able to use the app with the high contrast and
 magnification features of the operating system platform.</h4>
 <p>User story: <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan">Stefan</a></p>
+<p>Priority: TBC</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310">visual-310
 : Apply high contrast system configuration</a></p>
@@ -258,6 +344,7 @@ acuity, critical print size, and maximum reading speed. Adjusting
 brightness can enhance the contrast between text and background, making
 it easier for individuals with low vision to distinguish letters and
 words.</p>
+<p>Priority: TBC</p>
 <p><a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210">visual-210
 : Change brightness</a>, Legge G. E. (2016). Reading Digital with Low
@@ -471,7 +558,7 @@ anno-310 : Review and navigate Notes</a></p>
 href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
 : Change Read Aloud reading voice</a></p>
 <h4
-id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
+id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.-1">The
 user should be able to visually emphasize the text being read using a
 contrasting highlight, ruler lines, deemphasizing the surrounding text,
 or other means.</h4>
