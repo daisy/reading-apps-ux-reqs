@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[23 March 2025]{.pubdate}
+[27 March 2025]{.pubdate}
 
 Editors:
 
@@ -48,25 +48,65 @@ Copyright © 2025 DAISY Consortium
 <nav>
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [User Stories](#user-stories)
-- [User Requirements](#user-requirements)
-  - [Visual Adjustments - Text](#visual-adjustments---text)
-  - [Visual Adjustments - Images](#visual-adjustments---images)
-  - [Visual Adjustments - Math](#visual-adjustments---math)
-  - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
-  - [Navigation](#navigation)
-  - [Search](#search)
-  - [Reading](#reading)
-  - [Images](#images)
-  - [Tables](#tables)
-  - [Links and Footnotes](#links-and-footnotes)
-  - [Mathematical Expressions](#mathematical-expressions)
-  - [Notes and Highlights](#notes-and-highlights)
-  - [Read Aloud](#read-aloud)
-- [Acknowledgements](#acknowledgements)
-- [References](#references)
-
+- [DAISY Reading Apps User Requirements {.title}](#daisy-reading-apps-user-requirements-title)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [User Stories](#user-stories)
+  - [User Requirements](#user-requirements)
+    - [Visual Adjustments - Text](#visual-adjustments---text)
+      - [The user must be able to change the typeface.](#the-user-must-be-able-to-change-the-typeface)
+      - [The user must be able to change the font weight.](#the-user-must-be-able-to-change-the-font-weight)
+      - [The user must be able to change the text size.](#the-user-must-be-able-to-change-the-text-size)
+      - [The user should be able to remove the visual text styling (underline, italic, bold).](#the-user-should-be-able-to-remove-the-visual-text-styling-underline-italic-bold)
+      - [The user could be able change the capitalization of text to sentence style.](#the-user-could-be-able-change-the-capitalization-of-text-to-sentence-style)
+      - [The user must be able change the line spacing, word spacing and letter spacing.](#the-user-must-be-able-change-the-line-spacing-word-spacing-and-letter-spacing)
+      - [The user must be able turn off justification and center-alignment of blocks of text.](#the-user-must-be-able-turn-off-justification-and-center-alignment-of-blocks-of-text)
+      - [The user must be able to change the margins and adjust the line length for blocks of text.](#the-user-must-be-able-to-change-the-margins-and-adjust-the-line-length-for-blocks-of-text)
+      - [The user must be able to view the content in a scrolling view.](#the-user-must-be-able-to-view-the-content-in-a-scrolling-view)
+      - [The user could be able to view the content in a paginated view.](#the-user-could-be-able-to-view-the-content-in-a-paginated-view)
+      - [The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.](#the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means)
+    - [Visual Adjustments - Images](#visual-adjustments---images)
+      - [The user must be able to enlarge images.](#the-user-must-be-able-to-enlarge-images)
+    - [Visual Adjustments - Math](#visual-adjustments---math)
+      - [The user must be able to adjust the size and color of math expressions \[by adjusting the text's font size and color\].](#the-user-must-be-able-to-adjust-the-size-and-color-of-math-expressions-by-adjusting-the-texts-font-size-and-color)
+    - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
+      - [The user must be able to personalize the background and foreground colors.](#the-user-must-be-able-to-personalize-the-background-and-foreground-colors)
+      - [The user must be able to use the app with the high contrast and magnification features of the operating system platform.](#the-user-must-be-able-to-use-the-app-with-the-high-contrast-and-magnification-features-of-the-operating-system-platform)
+      - [The user must/should/could be able to change the display brightness. \[In the reader or in the settings of the device?\]](#the-user-mustshouldcould-be-able-to-change-the-display-brightness-in-the-reader-or-in-the-settings-of-the-device)
+    - [Navigation](#navigation)
+      - [The user must/should/could have a simple way to navigate the list of available content and open a selected title.](#the-user-mustshouldcould-have-a-simple-way-to-navigate-the-list-of-available-content-and-open-a-selected-title)
+      - [The user must/should/could have a way to navigate the content through the Table of Contents or by pages.](#the-user-mustshouldcould-have-a-way-to-navigate-the-content-through-the-table-of-contents-or-by-pages)
+      - [The user must/should/could have a simple way to navigate content forward and backward by chapters, headings, pages, paragraphs.](#the-user-mustshouldcould-have-a-simple-way-to-navigate-content-forward-and-backward-by-chapters-headings-pages-paragraphs)
+      - [Screen reader/assistive technology users must/should/could be able to navigate through content by headings, block items, lines, words and characters.](#screen-readerassistive-technology-users-mustshouldcould-be-able-to-navigate-through-content-by-headings-block-items-lines-words-and-characters)
+      - [The user must/should/could be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location.](#the-user-mustshouldcould-be-able-to-read-continuously-from-the-current-position-and-be-able-to-pause-then-resume-reading-from-the-paused-reading-location)
+      - [The user must/should/could have a way to save their progression in the publication and return the user to the last location they saved the next time they open the publication.](#the-user-mustshouldcould-have-a-way-to-save-their-progression-in-the-publication-and-return-the-user-to-the-last-location-they-saved-the-next-time-they-open-the-publication)
+      - [The user must/should/could be able to determine their location in the content.](#the-user-mustshouldcould-be-able-to-determine-their-location-in-the-content)
+    - [Search](#search)
+      - [The user should be able to perform a search and review the search results.](#the-user-should-be-able-to-perform-a-search-and-review-the-search-results)
+    - [Reading](#reading)
+      - [The user should be able to read through content in the logical reading order.](#the-user-should-be-able-to-read-through-content-in-the-logical-reading-order)
+      - [The user should hear appropriate pauses after headings, paragraphs, list items, etc.](#the-user-should-hear-appropriate-pauses-after-headings-paragraphs-list-items-etc)
+      - [The user should be able to adjust the voice and reading speed.](#the-user-should-be-able-to-adjust-the-voice-and-reading-speed)
+      - [The user should be able to read content in the correct language (audio or braille).](#the-user-should-be-able-to-read-content-in-the-correct-language-audio-or-braille)
+    - [Images](#images)
+      - [Screen reader users should be able to read and navigate within image descriptions.](#screen-reader-users-should-be-able-to-read-and-navigate-within-image-descriptions)
+      - [Read aloud users should have the option to hear image descriptions.](#read-aloud-users-should-have-the-option-to-hear-image-descriptions)
+    - [Tables](#tables)
+      - [Screen reader/assistive technology users should be able to navigate between the cells, rows and columns in a table](#screen-readerassistive-technology-users-should-be-able-to-navigate-between-the-cells-rows-and-columns-in-a-table)
+    - [Links and Footnotes](#links-and-footnotes)
+      - [Users should be able to navigate between internal hyperlinks.](#users-should-be-able-to-navigate-between-internal-hyperlinks)
+      - [Users should be able to detect the reference to a footnote, reach the content of the footnote, read the content of the footnote and provide a mechanism to move back to the original reading position from the footnote.](#users-should-be-able-to-detect-the-reference-to-a-footnote-reach-the-content-of-the-footnote-read-the-content-of-the-footnote-and-provide-a-mechanism-to-move-back-to-the-original-reading-position-from-the-footnote)
+    - [Mathematical Expressions](#mathematical-expressions)
+      - [The user should be able to read and navigate within mathematical expressions.](#the-user-should-be-able-to-read-and-navigate-within-mathematical-expressions)
+    - [Notes and Highlights](#notes-and-highlights)
+      - [The user should be able to add, review and edit highlights.](#the-user-should-be-able-to-add-review-and-edit-highlights)
+      - [The user should be able to add, review and edit notes.](#the-user-should-be-able-to-add-review-and-edit-notes)
+    - [Read Aloud](#read-aloud)
+      - [The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.](#the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means-1)
+      - [Read aloud users should be able to control the starting position.](#read-aloud-users-should-be-able-to-control-the-starting-position)
+  - [Acknowledgements](#acknowledgements)
+  - [References](#references)
+  
 </nav>
 
 ::: {#introduction .section}
@@ -107,7 +147,7 @@ Sources: [visual-010 : Change font](https://www.epubtest.org/test-books/visual-a
 
 #### The user must be able to change the font weight.
 
-Visual readability of text requires good visual contrast. Visual contrast is a product of the text characteristics, such as font weight (thickness, font stroke width) and font size, the lightness/darkness difference of the colors used for the text and the background, and other factors. For some people, bold text is easier to read which is why they should be able to choose a higher font weight. Many typefaces have a bold font and some offer variable weight. 
+Visual readability of text requires good visual contrast. Visual contrast is a product of the text characteristics, such as font weight (thickness, font stroke width) and font size, the lightness/darkness difference of the colors used for the text and the background, and other factors. For some people, bold text is easier to read which is why they should be have bold font options. Many typefaces have a bold font and some offer variable weight. 
 
 Priority: Must-have
 
@@ -123,15 +163,15 @@ Sources: [visual-010 : Change font size](https://www.epubtest.org/test-books/vis
 [Accessibility Requirements for People with Low Vision: font size](https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-size),
 [The effect of print size on reading speed in dyslexia. Journal of Research in Reading](https://doi.org/10.1111/j.1467-9817.2005.00273.x)
 
-#### The user should be able to strip the visual formatting (text style: underline, italic, bold) of the text.
+#### The user should be able to remove the visual text styling (underline, italic, bold).
 
-For some people, it is difficult to read text that is all italicized, underlined or bold. Users should have the option to view the text without these visual formatting styles. However, underlining should be retained for hyperlinks. While removing formatting may result in the loss of some semantic significance, users should be able to toggle back to the visually formatted version as needed.
+For some people, it is difficult to read text that is italicized, underlined or bold. Users should have the option to view the text without these visual formatting styles. However, underlining should be retained for hyperlinks. While removing formatting may result in the loss of some semantic significance, users should be able to toggle back to the visually formatted version as needed.
 
 Priority: Should-have
 
 Sources: [Accessibility Requirements for People with Low Vision: text style](https://w3c.github.io/low-vision-a11y-tf/requirements.html#style)
 
-#### The user could be able change the capitalization of blocks of text to sentence style.
+#### The user could be able change the capitalization of text to sentence style.
 
 Text written in all capital letters or all small capital letters is more difficult to read for most people, with and without disabilities. Users should have the option to choose a sentence-style version. Acronyms that are correctly marked as abbreviations will remain in uppercase; otherwise, they will be converted to sentence style. Users should also be able to toggle between the different styles as needed.
 
@@ -139,51 +179,27 @@ Priority: Could-have
 
 Sources: [Accessibility Requirements for People with Low Vision: capitalization](https://w3c.github.io/low-vision-a11y-tf/requirements.html#capitalization)
 
-#### The user should be able change the line spacing (leading) for blocks of text.
+#### The user must be able change the line spacing, word spacing and letter spacing.
 
-Spacing such as space between lines and space between words impacts readability. Some people need more space between paragraphs, lines, words and/or letters to read text. Line spacing also helps with tracking.
-
-User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
-[Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
-
-Priority: TBC
-
-Sources: [Accessibility Requirements for People with Low Vision: line spacing](https://w3c.github.io/low-vision-a11y-tf/requirements.html),
-[Extra-large letter spacing improves reading in dyslexia](https://doi.org/10.1073/pnas.1205566109).
-
-#### The user should be able change the letter spacing (space between letters/characters) for blocks of text.
-
-Spacing such as space between lines and space between words impacts readability. Some people need more space between paragraphs, lines, words and/or letters to read text. Line spacing also helps with tracking.
+The amount of line spacing (leading), word spacing (space between words) and letter spacing (space between letters/characters) impacts readability. Some people need more space to read text and will have individual preferences. Line spacing also helps with tracking.
 
 User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
 [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
 
-Priority: TBC
+Priority: Must-have
 
 Sources: [Accessibility Requirements for People with Low Vision: line spacing](https://w3c.github.io/low-vision-a11y-tf/requirements.html),
 [Extra-large letter spacing improves reading in dyslexia](https://doi.org/10.1073/pnas.1205566109).
 
-#### The user should be able change the word spacing (space between words) for blocks of text.
+#### The user must be able turn off justification and center-alignment of blocks of text.
 
-Spacing such as space between lines and space between words impacts readability. Some people need more space between paragraphs, lines, words and/or letters to read text. Line spacing also helps with tracking.
+Justification impacts readability and tracking. Fully justified text creates uneven spaces between words and letters, leading to "rivers of white space" that disrupt reading flow and visual tracking, particularly for people with dyslexia. Users with low vision who rely on screen magnifiers may encounter exaggerated gaps or overlapping characters in justified text, making it harder to read. Center-aligned text is also problematic for multi-line blocks, as it disrupts smooth reading flow and makes it harder to find the beginning of lines. Depending on the reading order of the language concerned (left to right, or right to left) turning the justification or center-alignment off results in a left-aligned or right-aligned text. 
 
-User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
-[Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
-
-Priority: TBC
-
-Sources: [Accessibility Requirements for People with Low Vision: line spacing](https://w3c.github.io/low-vision-a11y-tf/requirements.html),
-[Extra-large letter spacing improves reading in dyslexia](https://doi.org/10.1073/pnas.1205566109).
-
-#### The user should be able change the justification/alignment (left, right, full/both, centered) of blocks of text.
-
-Justification impacts readability and tracking. Fully justified text creates uneven spaces between words and letters, leading to "rivers of white space" that disrupt reading flow and visual tracking, particularly for people with dyslexia. Users with low vision who rely on screen magnifiers may encounter exaggerated gaps or overlapping characters in justified text, making it harder to read. Center-aligned text is also problematic for multi-line blocks, as it disrupts smooth reading flow and makes it harder to find the beginning of lines.
-
-Priority: TBC
+Priority: Must-have
 
 Sources: [Accessibility Requirements for People with Low Vision: justification/alignment](https://w3c.github.io/low-vision-a11y-tf/requirements.html#justification)
 
-#### The user should be able change the margins and adjust the line length for blocks of text.
+#### The user must be able to change the margins and adjust the line length for blocks of text.
 
 Having wide margins results in shorter line lengths. This can be helpful for some people with specific learning disabilities. Having wide margins around blocks of text helps some people focus on the text and not get distracted by other content. 
 
@@ -191,42 +207,62 @@ Conversely, wide margins can make line length too short for people who use large
 
 User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana)
 
-Priority: TBC
+Priority: Must-have
 
 Sources: [Accessibility Requirements for People with Low Vision: margins and borders](https://w3c.github.io/low-vision-a11y-tf/requirements.html#margins-and-borders),
 [Shorter Lines Facilitate Reading in Those Who Struggle](https://doi.org/10.1371/journal.pone.0071161)
 
+#### The user must be able to view the content in a scrolling view.
+
+For reflowable content, if the reader offers a paginated view, then the user should also be able to vie it in a scrollabe view.
+
+User story: 
+
+Priority: Must-have
+
+Sources: 
+
+#### The user could be able to view the content in a paginated view.
+
+User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth)
+
+Priority: Could-have
+
+Sources: 
+
 #### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.
+
+There are many ways this can be done. Here are some implementation examples:
 
 User story: [Alex](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex)
 
-Priority: TBC
+Priority: Should-have
 
 Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
 
 ### Visual Adjustments - Images
 
-#### The user should be able to enlarge images.
+#### The user must be able to enlarge images.
 
 The user should be able to select an image and make it larger. There should be controls to adjust the size and to pan around an image when it no longer fits within the display.
 
-Priority: TBC
+Priority: [Must-have]
 
 Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710)
 
 ### Visual Adjustments - Math
 
-#### The user should be able to adjust the size and color of math expressions
+#### The user must be able to adjust the size and color of math expressions [by adjusting the text's font size and color].
 
 Math expressions included as inline or block MathML should be displayed correctly. As the user adjusts the size and colors of the text content, the math expressions should change accordingly.
 
-Priority: TBC
+Priority: [Must-have]
 
 Source: [visual-550 : Viewing MathML](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550)
 
 ### Visual Adjustments - Color and Brightness
 
-#### The user should be able to personlize the background and foreground colors.
+#### The user must be able to personalize the background and foreground colors.
 
 The user should be able to set the background and text color from the full color spectrum. Some people need low brightness, especially for backgrounds. Some people who need low brightness for backgrounds also need low brightness overall and thus need low brightness text.
 
@@ -234,19 +270,19 @@ Other people need high contrast between text and background, including many olde
 
 For some people, common color combinations or colors from a limited color palette work fine, for example, black text on white background or the inverse with white text on black background. Other people need to select more specific background and text colors. For example, people who need low brightness overall, need to select the specific background and text colors that provide sufficient contrast for them yet not too high brightness. Readable and optimal color combinations differs vastly among individuals and can even vary for one individual depending on conditions such as fatigue and lighting.
 
-Priority: TBC
+Priority: [Must-have]
 
 Sources: [visual-110 : Change background and foreground color](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110), [Accessibility Requirements for People with Low Vision: text contrast](https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-contrast)
 
-#### The user should be able to use the app with the high contrast and magnification features of the operating system platform.
+#### The user must be able to use the app with the high contrast and magnification features of the operating system platform.
 
 User story: [Stefan](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan)
 
-Priority: TBC
+Priority: [Must-have]
 
 Source: [visual-310 : Apply high contrast system configuration](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310)
 
-#### The user should be able to change the display brightness.
+#### The user must/should/could be able to change the display brightness. [In the reader or in the settings of the device?]
 
 The user should be able to set the brightness of the display. Some individuals with low vision or dyslexia may have photophobia or light sensitivity. The ability to dim the screen can make reading more comfortable for these users. For some people with age-related macular degeneration, brighter illumination has been shown to improve reading acuity, critical print size, and maximum reading speed. Adjusting brightness can enhance the contrast between text and background, making it easier for individuals with low vision to distinguish letters and words.
 
@@ -257,29 +293,37 @@ Legge G. E. (2016). Reading Digital with Low Vision. Visible language, 50(2), 10
 
 ### Navigation
 
-#### The user should have a simple way to navigate the list of available content and open a selected title.
+#### The user must/should/could have a simple way to navigate the list of available content and open a selected title.
 
 User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana), [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
+Priority: TBC
+
 Source: [EPUBTest file-210 Open content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210)
 
-#### The user should have a way to navigate the content through the Table of Contents or by pages.
+#### The user must/should/could have a way to navigate the content through the Table of Contents or by pages.
 
 User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
+
+Priority: TBC
 
 Sources: [EPUBTest nav-010 Navigate to chapters through the Table of Contents](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210), 
 [EPUBTest nav-005 The table of contents in the app presents the content hierarchy](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-005)
 
-#### The user should have a simple way to navigate content forward and backward by chapters, headings, pages, paragraphs.
+#### The user must/should/could have a simple way to navigate content forward and backward by chapters, headings, pages, paragraphs.
+
+Priority: TBC
 
 Sources: [EPUBTest nav-210 Navigate forward and backward through reflowed content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-210), 
 [EPUBTest nav-510 Move across chapters without using TOC](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-510), 
 [EPUBTest reading-1210 : Navigate the content by headings](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1210),
 [EPUBTest nav-110 Navigate content by pages](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-110)
 
-#### Screen reader/assistive technology users should be able to navigate through content by headings, block items, lines, words and characters.
+#### Screen reader/assistive technology users must/should/could be able to navigate through content by headings, block items, lines, words and characters.
 
 User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria)
+
+Priority: TBC
 
 Sources: [EPUBTest reading-810 : Move to the next block item](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-810),
 [EPUBTest reading-1110 : Navigate by lines](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1110),
@@ -287,22 +331,28 @@ Sources: [EPUBTest reading-810 : Move to the next block item](https://www.epubte
 [EPUBTest reading-910 : Navigate by characters](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-910)
 
 
-#### The user should be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location.
+#### The user must/should/could be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location.
 
 User story: [Alice](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alice), [Liviu](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#liviu)
+
+Priority: TBC
 
 Sources: [reading-010 : Initiate "read from here"](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-010),
 ["reading-110 : Stop and resume reading at the same reading location"](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-110)
 
-#### The user should have a way to save their progression in the publication and return the user to the last location they saved the next time they open the publication.
+#### The user must/should/could have a way to save their progression in the publication and return the user to the last location they saved the next time they open the publication.
+
+Priority: TBC
 
 Source: [ReadAloud-110 : Stop and resume reading](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-110)
 
-#### The user should be able to determine their location in the content.
+#### The user must/should/could be able to determine their location in the content.
 
 The user should be able to get information about their current position in the book. The minimum information expected is current chapter/section and, 
 if appropriate, current page number. Percentage or time read, time remaining, book title, author etc. can be additional useful information. 
 It should be possible to resume reading from the last read position after using this command.
+
+Priority: TBC
 
 Source: [nav-310 Read navigation information](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-310)
 
