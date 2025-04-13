@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[5 April 2025]{.pubdate}
+[13 April 2025]{.pubdate}
 
 Editors:
 
@@ -57,6 +57,7 @@ Copyright © 2025 DAISY Consortium
   - [Visual Adjustments - Math](#visual-adjustments---math)
   - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
   - [Navigation](#navigation)
+  - [Read Aloud](#read-aloud)
   - [Search](#search)
   - [Reading](#reading)
   - [Images](#images)
@@ -64,7 +65,6 @@ Copyright © 2025 DAISY Consortium
   - [Links and Footnotes](#links-and-footnotes)
   - [Mathematical Expressions](#mathematical-expressions)
   - [Notes and Highlights](#notes-and-highlights)
-  - [Read Aloud](#read-aloud)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
   
@@ -194,7 +194,6 @@ Sources:
 #### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.
 
 There are many ways this can be done. Here are some implementation examples: [...]
-Note to editor: - user should be able to change color of highlight
 
 User story: [Alex](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex)
 
@@ -297,7 +296,24 @@ Priority: Must-have
 
 Source: [EPUBTest file-210 Open content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210)
 
-#### The user must have a way to navigate the content through the Table of Contents.
+#### The user must have a simple way to navigate forward and backward through the content.
+
+For content with text it must be possible to move forward and backward from the currently displayed screen.
+
+For content with audio it must be possible to move forward and backward using time-based navigation.
+
+Priority: Must-have
+
+Sources: [EPUBTest nav-210 Navigate forward and backward through reflowed content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-210), 
+[EPUBTest nav-510 Move across chapters without using TOC](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-510), 
+[EPUBTest reading-1210 : Navigate the content by headings](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1210),
+[EPUBTest nav-110 Navigate content by pages](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-110)
+
+#### The user must have a way to navigate the publication using the Table of Contents.
+
+The focus must be on the entry for the current reading position when the user is presented with the table of contents. If the publication's table of content comprises a hierachy of entries (eg volumes, chapters, subsections) then it must be presented as a tree view, nested list view or any other view that conveys the structure to the user. The user must have a mechanism to move between items in the table of contents of the same level (eg between the chapters without having to go via the subsections).
+
+Page numbers or percentage information could be provided in the table of contents. The user could be able to search within the table of contents.
 
 User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
 
@@ -308,6 +324,8 @@ Sources: [EPUBTest nav-010 Navigate to chapters through the Table of Contents](h
 
 #### The user must have a way to navigate the content by pages.
 
+When the publication includes page markup then it must be possible to navigate by page numbers. If the publication does not include page markup it could be possible to navigate by 'pseudo pages' (where the app uses an algorithm to approximate navigation points equivalent to typical page lengths).   
+
 User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
 
 Priority: Must-have
@@ -315,18 +333,13 @@ Priority: Must-have
 Sources: [EPUBTest nav-010 Navigate to chapters through the Table of Contents](https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210), 
 [EPUBTest nav-005 The table of contents in the app presents the content hierarchy](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-005)
 
-#### The user must have a simple way to navigate content forward and backward by chapters, headings, and pages.
+#### The user must have a way to go to a specific location in audio-based content.
+
+When reading audio-based content it must be possible to go to a specific location. This could be based on time, percentage, or another approach.
 
 Priority: Must-have
 
-Sources: [EPUBTest nav-210 Navigate forward and backward through reflowed content](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-210), 
-[EPUBTest nav-510 Move across chapters without using TOC](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-510), 
-[EPUBTest reading-1210 : Navigate the content by headings](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1210),
-[EPUBTest nav-110 Navigate content by pages](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-110)
-
 #### Screen reader/assistive technology users must be able to navigate through content by headings, block items, lines, words and characters.
-
-Question for the working group - we use the term ' block item'. Should we explain this in detail, simplify to paragraph, something else?
 
 User story: [Maria](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria)
 
@@ -348,17 +361,103 @@ Sources: [reading-010 : Initiate "read from here"](https://www.epubtest.org/test
 
 #### The user must have a way to save their progression in the publication and return the user to the last location they saved the next time they open the publication.
 
-Question for the working group - this is surely an essential feature- but is it specific to accessibility?
+When reading text-based content it must be possible to return to the approximate location (such as the same page or screen of text). It could be possible to return to the exact last location.
+
+When reading audio-based content it must be possible to return to the exact last location.
 
 Priority: Must-have
 
 #### The user must be able to determine their location in the content.
 
-The user must be able to get information about their current position in the book. The minimum information expected is current chapter/section and, if appropriate, current page number. Percentage or time read, time remaining, book title, author etc. can be additional useful information. It should be possible to resume reading from the last read position after using this command.
+The user must be able to get information about their current position in the book without losing their reading position. The minimum information expected is the percentage progress.
+
+The user should be able to determine the current chapter, section, current page number where this information is provided in the publication.
 
 Priority: Must-have
 
 Source: [nav-310 Read navigation information](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-310)
+
+### Read Aloud
+
+In this requirements document the term "read aloud" refers to the app using Text To Speech (TTS) to provide an audio option for text-based content.
+
+#### The user must be able to listen to text-based content using synthetic speech (Text To Speech).
+
+The user must be able to use a TTS read aloud feature for text-based content. If the publication also has synchronised audio with the text then the user must be able to choose the alternative of listening to the TTS read aloud.
+
+Priority: Must-have
+
+Source: [ReadAloud-010 : The content can be read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-010)
+
+#### The user must be able to control the starting position of the read aloud.
+
+The user should be able to choose the position from where the read aloud begins. If the read aloud starts from the approximate reading position (eg on teh current page or screen) then the user must be able to easily move the read aloud position so that reading is happening from the desired location.
+
+Priority: Must-have
+
+#### The user must be able to control the voice and speed of the read aloud.
+
+The user should be able to select from a range of voices. The user must be able to choose the speed of the read aloud voice.
+
+Source: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400)
+
+#### The user must be able to listen to the read aloud without having to manually advance to subsequent pages or chapters.
+
+The read aloud must read continuously until the end of the publication unless interupted by the user.
+
+#### The user must be able to have the content read aloud in the logical reading order.
+
+Priority: Must-have
+
+Source: [reading-210 : All text should be read in the proper order](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210), 
+[ReadAloud-310 : All text should be read in the proper order](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310)
+
+#### The user of read aloud must hear appropriate pauses after headings, paragraphs, list items, etc.
+
+Priority: Must-have
+
+Source: [EPUBTest reading-510 : TTS allows pause for indicating headings, paragraphs, list items, etc](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510), 
+[ReadAloud-510 : Text to Speech handles punctuation and document structure appropriately](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510)
+
+#### The user must be able to view the text being read aloud.
+
+The text being read must be shown on the display as the read aloud position continues beyond the text initially visible.
+
+#### The user must be able to visually emphasize the text being read aloud.
+
+The user must be able to visually emphasize the text as it is read aloud using a contrasting highlight, underlining, or other means.
+
+The user should be able to change the color or style of the visual emphasis.
+
+The user should be able to to turn off the read aloud visual emphasis.
+
+Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
+
+#### The user of read aloud must hear content in the correct language (audio or braille).
+
+Priority: Must-have
+
+Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510)
+
+User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
+
+#### The user must be able to listen to image alt text.
+
+The read aloud feature must be able to announce the alt text of images. 
+
+The user should able to turn off the read aloud of image alt text.
+
+The image alt text could be distinguished from text content with an announcement, use of different voice, or other technique.
+
+Priority: Must-have
+
+#### The user must be able to listen to math content using synthetic speech (Text To Speech).
+
+The read aloud feature must be able to announce encoded math content (eg MathML).
+
+The user should be able to adjust the announcement of math content according to their preference (eg relative reading speed,  verbosity).
+
+Priority: Must-have
 
 ### Search
 
@@ -462,20 +561,6 @@ Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.
 
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
-
-### Read Aloud
-
-Source: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400)
-
-#### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.
-
-Note to editors: - user should be able to change color of the highlight
-
-Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
-
-#### Read aloud users should be able to control the starting position.
-
-Source: [ReadAloud-010 : The content can be read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-010)
 
 :::
 ::: {#acknowledgments .section}
