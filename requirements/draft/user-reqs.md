@@ -68,6 +68,7 @@ Copyright © 2025 DAISY Consortium
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
   
+
 </nav>
 
 ::: {#introduction .section}
@@ -391,19 +392,36 @@ Source: [ReadAloud-010 : The content can be read aloud](https://www.epubtest.org
 
 #### The user must be able to control the starting position of the read aloud.
 
-The user should be able to choose the position from where the read aloud begins. If the read aloud starts from the approximate reading position (eg on teh current page or screen) then the user must be able to easily move the read aloud position so that reading is happening from the desired location.
+The user should be able to choose the position from where the read aloud begins. 
+
+If a screen reader is being used then the read aloud should start from the screen reader position.
+
+If a screen reader is not being used then:
+
+- If the user has indicated a start position then read aloud should start from there.
+- If the user has made no selection, then read aloud should start from an approximate reading position (eg the first visible text on the display).
 
 Priority: Must-have
 
-#### The user must be able to control the voice and speed of the read aloud.
+#### The user must be able to read aloud selected parts of the content.
 
-The user should be able to select from a range of voices. The user must be able to choose the speed of the read aloud voice.
+The user should be able to select text (e.g. word, phrase, sentence, paragraph) and have that read aloud.
 
-Source: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400)
+Priority: Must-have
 
 #### The user must be able to listen to the read aloud without having to manually advance to subsequent pages or chapters.
 
-The read aloud must read continuously until the end of the publication unless interupted by the user.
+The read aloud must be able to read continuously until the end of the publication unless interupted by the user.
+
+The read aloud could support a sleep function, pausing the read aloud after a user determined period of time.
+
+Priority: Must-have
+
+#### The user could be able to choose from a range of read aloud modes.
+
+The user could be able to set the mode so that read aloud is not continuous. The amount read should be chosen by the user (eg read aloud stop after each word, sentence, paragraph, page or chapter). 
+
+Priority: Could-have
 
 #### The user must be able to have the content read aloud in the logical reading order.
 
@@ -414,26 +432,52 @@ Source: [reading-210 : All text should be read in the proper order](https://www.
 
 #### The user of read aloud must hear appropriate pauses after headings, paragraphs, list items, etc.
 
+The read aloud must use appropriate pauses after headings, list items etc., rather than reading as if it is one continuous section of text. The read aloud implementation should pay attention to commonly used text content such as numbered heading and lists.
+
 Priority: Must-have
 
 Source: [EPUBTest reading-510 : TTS allows pause for indicating headings, paragraphs, list items, etc](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510), 
 [ReadAloud-510 : Text to Speech handles punctuation and document structure appropriately](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510)
 
+#### The user could be able to adjust read aloud to change the pause length between content blocks.
+
+The user could be able to adjust the pauses between sentences, paragraphs, etc.
+
+Priority: Could-have
+
 #### The user must be able to view the text being read aloud.
 
-The text being read must be shown on the display as the read aloud position continues beyond the text initially visible.
+The user must be able to view the text on the display as the read aloud position continues beyond the text initially visible.
 
-#### The user must be able to visually emphasize the text being read aloud.
+The user could have the option for read aloud without text display (eg on the lock screen)
 
-The user must be able to visually emphasize the text as it is read aloud using a contrasting highlight, underlining, or other means.
+Priority: Must-have
 
-The user should be able to change the color or style of the visual emphasis.
+#### The user must be able to visually emphasize the text being read aloud and be able to turn this feature off.
 
-The user should be able to to turn off the read aloud visual emphasis.
+The user must be able to visually emphasize the text as it is read aloud using a contrasting highlight, underlining, or other means. Some users will be hindered by this visual cue, e.g. due to health concerns such as epilepsy. Overly granular, like word-by-word highlighting could also be distracting.
+
+The user must be able to to turn off the read aloud visual emphasis.
+
+Priority: Must-have
 
 Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
 
-#### The user of read aloud must hear content in the correct language (audio or braille).
+#### The user must be able to change the color or style of the visual emphasis.
+
+The user must be able to adjust the visual emphasis.
+
+The user could be able to adjust the number of words that are highlighted at any time.
+
+Priority: Should-have [or Could-have]
+
+Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
+
+#### The user of read aloud must hear content in the correct language.
+
+The user must be able to hear the read aloud using the correct voice when reading content with language tags (if available to the reading app). The user should be able to override language switching and select the language to be used for all content.
+
+The read aloud could switch between dialects of the same language. If this feature is supported the user must be able to disable it.
 
 Priority: Must-have
 
@@ -441,23 +485,75 @@ Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest
 
 User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
+#### The user must be able to control the voice and speed of the read aloud.
+
+The user must be able to select from a range of voices. The user must be able to choose the speed of the read aloud voice.
+
+The reading app should not distort the pitch when the user has selected higher listening speeds.
+
+Priority: Must-have
+
+Source: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400)
+
 #### The user must be able to listen to image alt text.
 
 The read aloud feature must be able to announce the alt text of images. 
 
-The user should able to turn off the read aloud of image alt text.
+The user must be able to turn off the read aloud of image alt text. The user should be able to escape from the image alt text once the read aloud has started.
 
 The image alt text could be distinguished from text content with an announcement, use of different voice, or other technique.
 
 Priority: Must-have
 
-#### The user must be able to listen to math content using synthetic speech (Text To Speech).
+#### The user could be able to choose to have semantic expressiveness for read aloud.
+
+The user could be able to adjust the pitch or style for emphasized text (eg bold, italic, underlined). If this feature is supported the user must be able to disable it.
+
+Priority: Could-have
+
+#### The user must be able to listen to math content when using read aloud.
 
 The read aloud feature must be able to announce encoded math content (eg MathML).
 
-The user should be able to adjust the announcement of math content according to their preference (eg relative reading speed,  verbosity).
+The user should be able to adjust the announcement of math content according to their preference (eg relative reading speed,  reading style, verbosity).
 
 Priority: Must-have
+
+#### The user must/should/could be able to use read aloud with tables
+
+What should the experience be?
+
+Skippability/escapability?
+
+Priority level?
+
+#### The user should be able to decide to skip read aloud of anciallary content 
+
+Ancillary content includes aside, bibliography, endnotes, footnote, noteref, pullquote.
+
+Priority: Should-have
+
+#### The user should be able to decide to skip read aloud of navigation content 
+
+Navigation content includes landmarks, lists of audios, tables, images or videos, pagebreak and table of contents.
+
+Priority: Should-have
+
+#### The user must/should/could be able to use read aloud with footnotes and endnotes
+
+What should the experience be?
+
+Skippability/escapability?
+
+Priority level?
+
+#### The user must/should/could be able to use read aloud with expandable/collapsable content
+
+What should the experience be?
+
+Skippability/escapability?
+
+Priority level?
 
 ### Search
 
