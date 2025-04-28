@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[13 April 2025]{.pubdate}
+[28 April 2025]{.pubdate}
 
 Editors:
 
