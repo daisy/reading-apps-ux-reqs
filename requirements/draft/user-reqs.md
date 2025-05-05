@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[28 April 2025]{.pubdate}
+[5 Mayl 2025]{.pubdate}
 
 Editors:
 
@@ -178,19 +178,13 @@ Sources: [Accessibility Requirements for People with Low Vision: margins and bor
 
 For reflowable content, if the reader offers a paginated view, then the user should also be able to vie it in a scrollabe view.
 
-User story: 
-
 Priority: Must-have
-
-Sources: 
 
 #### The user could be able to view the content in a paginated view.
 
 User story: [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth)
 
 Priority: Could-have
-
-Sources: 
 
 #### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.
 
@@ -210,9 +204,7 @@ The user should be able to select an image and make it larger. There should be c
 
 A custom color theme used for viewing the text can sometimes render parts of the image difficult to see. There could be the option in the image viewer to revert to the default color mode, or to choose different color themes.
 
-User story:
-
-Priority: [Must-have]
+Priority: Must-have
 
 Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710)
 
@@ -221,8 +213,6 @@ Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/vi
 #### The user must be able to adjust the size and color of math expressions by adjusting the text's font size and color.
 
 Math expressions included as MathML (or LaTeX, if supported) should be displayed correctly. As the user adjusts the size and colors of the text content, the math expressions should change accordingly. As the text size is increased, so should the math expressions in proportion. As the user changes the colors for the text content, this should also affect the math expressions.
-
-User story:
 
 Priority: Must-have
 
@@ -234,17 +224,11 @@ Math expressions often contain small symbols such as exponents, indices, dot not
 
 Priority: Should-have
 
-Source:
-
 #### The user could be able [to flatten the colors of math expressions].
 
 Certain parts of math expressions are sometimes presented in special colors, e.g. superscript in red. For some people this can present problems. The user could be able to remove the color formatting used in math expressions so the chosen text color is always used.
 
-User story:
-
 Priority: Could-have
-
-Source:
 
 ### Visual Adjustments - Color and Brightness
 
@@ -255,8 +239,6 @@ The user should be able to set the background and text color from the full color
 Some people need high contrast between text and background, including many older people who lose contrast sensitivity from ageing. Some read better with dark text on light background. Others find it easier to read with low contrast and colors that present less glare.
 
 For some people, common color combinations or colors from a limited color palette work fine, for example, black text on white background or the inverse with white text on black background. For instance, black text on a white background is specifically useful for people with dyslexia. Other people need to select more specific background and text colors. For example, people who need low brightness overall, need to select the specific background and text colors that provide sufficient contrast for them yet not too high brightness. Readable and optimal color combinations differs vastly among individuals and can even vary for one individual depending on conditions such as fatigue and lighting.
-
-User story:
 
 Priority: [Must-have for a limited color palette; Should-have for more specific background and text colors]
 
@@ -447,9 +429,11 @@ Priority: Could-have
 
 #### The user must be able to view the text being read aloud.
 
-The user must be able to view the text on the display as the read aloud position continues beyond the text initially visible.
+The user must be able to see the text that is being read aloud, and the display must automatically update to keep the spoken text in view. The techniques for changing the text in display might include scrolling the text to keep the text being read in the centre of the display, or displaying a new screen of text and starting again at the top. Note that users may be reading with large text, so additional care should be taken to consider that the complete text of the first and last sentence may not be in view. The user should be able to see the text being read. If starting from the top of the display then the read aloud should start from the first visble text in view (that is, should not read text that is not visible). The display should promptly update to always show the text being read, even if this is partway through a sentence at the bottom of the display.
 
-The user could have the option for read aloud without text display (eg on the lock screen)
+The user could have the ability to move to a different part of the text whilst the read aloud continues. If viewing a different part of the text the user should be able to initiate the read aloud from a part of the text they select.
+
+The user could have the option to use read aloud without the text displayed.
 
 Priority: Must-have
 
@@ -469,7 +453,7 @@ The user must be able to adjust the visual emphasis.
 
 The user could be able to adjust the number of words that are highlighted at any time.
 
-Priority: Should-have [or Could-have]
+Must-have
 
 Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
 
@@ -485,11 +469,19 @@ Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest
 
 User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
 
-#### The user must be able to control the voice and speed of the read aloud.
+#### The user must be able to control the rate of the read aloud.
 
-The user must be able to select from a range of voices. The user must be able to choose the speed of the read aloud voice.
+The user must be able to choose the speed of the read aloud voice. The reading app must not distort the pitch when the user has selected higher listening speeds.
 
-The reading app should not distort the pitch when the user has selected higher listening speeds.
+The reading app could provide an audio preview to assist the user in selection.
+
+Priority: Must-have
+
+#### The user must be able to control the voice of the read aloud.
+
+The user must be able to select from a range of voices.
+
+Consideration should made of how the voice options are presented (by region or language, online/offline, etc). The reading app could provide an audio preview to assist the user in their selection.
 
 Priority: Must-have
 
@@ -519,7 +511,21 @@ The user should be able to adjust the announcement of math content according to 
 
 Priority: Must-have
 
-#### The user must/should/could be able to use read aloud with tables
+#### The user must be able to lock their mobile device and use read aloud.
+
+On a mobile device the user must be lock the device without the read aloud stopping. The user must be able to listen and control read aloud (pause, resume, go back and forward) from the lock screen, to the extent this is supported on the platform. The display could show relevant information such as the current position in the title.
+
+Editor's note - this probably also applies to audio playback.
+
+Priority: Must-have
+
+#### The user must be able to control read-aloud playback using the device’s media controls.
+
+If supported on the device and platform the user must be able to control read-aloud playback using the device’s media controls, such including play, pause, skip forward, skip backward, and stop functions on a keyboard or headset.
+
+Priority: Must-have
+
+#### TODO: The user must/should/could be able to use read aloud with tables.
 
 What should the experience be?
 
@@ -527,19 +533,19 @@ Skippability/escapability?
 
 Priority level?
 
-#### The user should be able to decide to skip read aloud of anciallary content 
+#### TODO: The user should be able to decide to skip read aloud of anciallary content.
 
 Ancillary content includes aside, bibliography, endnotes, footnote, noteref, pullquote.
 
 Priority: Should-have
 
-#### The user should be able to decide to skip read aloud of navigation content 
+#### TODO: The user should be able to decide to skip read aloud of navigation content.
 
 Navigation content includes landmarks, lists of audios, tables, images or videos, pagebreak and table of contents.
 
 Priority: Should-have
 
-#### The user must/should/could be able to use read aloud with footnotes and endnotes
+#### TODO: The user must/should/could be able to use read aloud with footnotes and endnotes.
 
 What should the experience be?
 
@@ -547,7 +553,7 @@ Skippability/escapability?
 
 Priority level?
 
-#### The user must/should/could be able to use read aloud with expandable/collapsable content
+#### TODO: The user must/should/could be able to use read aloud with expandable/collapsable content.
 
 What should the experience be?
 

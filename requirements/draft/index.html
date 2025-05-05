@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">28 April 2025</span></p>
+<p><span class="pubdate">5 Mayl 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -235,16 +235,13 @@ id="the-user-must-be-able-to-view-the-content-in-a-scrolling-view.">The
 user must be able to view the content in a scrolling view.</h4>
 <p>For reflowable content, if the reader offers a paginated view, then
 the user should also be able to vie it in a scrollabe view.</p>
-<p>User story:</p>
 <p>Priority: Must-have</p>
-<p>Sources:</p>
 <h4
 id="the-user-could-be-able-to-view-the-content-in-a-paginated-view.">The
 user could be able to view the content in a paginated view.</h4>
 <p>User story: <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a></p>
 <p>Priority: Could-have</p>
-<p>Sources:</p>
 <h4
 id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
 user should be able to visually emphasize the text being read using a
@@ -268,8 +265,7 @@ no longer fits within the display.</p>
 parts of the image difficult to see. There could be the option in the
 image viewer to revert to the default color mode, or to choose different
 color themes.</p>
-<p>User story:</p>
-<p>Priority: [Must-have]</p>
+<p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
 : Enlarge SVG Images</a></p>
@@ -284,7 +280,6 @@ text content, the math expressions should change accordingly. As the
 text size is increased, so should the math expressions in proportion. As
 the user changes the colors for the text content, this should also
 affect the math expressions.</p>
-<p>User story:</p>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550">visual-550
@@ -297,7 +292,6 @@ inspection.</h4>
 indices, dot notations and derivatives. It should be possible for the
 user to view a math expression as a separate item and enlarge it.</p>
 <p>Priority: Should-have</p>
-<p>Source:</p>
 <h4
 id="the-user-could-be-able-to-flatten-the-colors-of-math-expressions.">The
 user could be able [to flatten the colors of math expressions].</h4>
@@ -305,9 +299,7 @@ user could be able [to flatten the colors of math expressions].</h4>
 colors, e.g. superscript in red. For some people this can present
 problems. The user could be able to remove the color formatting used in
 math expressions so the chosen text color is always used.</p>
-<p>User story:</p>
 <p>Priority: Could-have</p>
-<p>Source:</p>
 <h3 id="visual-adjustments---color-and-brightness">Visual Adjustments -
 Color and Brightness</h3>
 <h4
@@ -331,7 +323,6 @@ contrast for them yet not too high brightness. Readable and optimal
 color combinations differs vastly among individuals and can even vary
 for one individual depending on conditions such as fatigue and
 lighting.</p>
-<p>User story:</p>
 <p>Priority: [Must-have for a limited color palette; Should-have for
 more specific background and text colors]</p>
 <p>Sources: <a
@@ -606,10 +597,25 @@ paragraphs, etc.</p>
 <p>Priority: Could-have</p>
 <h4 id="the-user-must-be-able-to-view-the-text-being-read-aloud.">The
 user must be able to view the text being read aloud.</h4>
-<p>The user must be able to view the text on the display as the read
-aloud position continues beyond the text initially visible.</p>
-<p>The user could have the option for read aloud without text display
-(eg on the lock screen)</p>
+<p>The user must be able to see the text that is being read aloud, and
+the display must automatically update to keep the spoken text in view.
+The techniques for changing the text in display might include scrolling
+the text to keep the text being read in the centre of the display, or
+displaying a new screen of text and starting again at the top. Note that
+users may be reading with large text, so additional care should be taken
+to consider that the complete text of the first and last sentence may
+not be in view. The user should be able to see the text being read. If
+starting from the top of the display then the read aloud should start
+from the first visble text in view (that is, should not read text that
+is not visible). The display should promptly update to always show the
+text being read, even if this is partway through a sentence at the
+bottom of the display.</p>
+<p>The user could have the ability to move to a different part of the
+text whilst the read aloud continues. If viewing a different part of the
+text the user should be able to initiate the read aloud from a part of
+the text they select.</p>
+<p>The user could have the option to use read aloud without the text
+displayed.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-visually-emphasize-the-text-being-read-aloud-and-be-able-to-turn-this-feature-off.">The
@@ -633,7 +639,7 @@ emphasis.</h4>
 <p>The user must be able to adjust the visual emphasis.</p>
 <p>The user could be able to adjust the number of words that are
 highlighted at any time.</p>
-<p>Priority: Should-have [or Could-have]</p>
+<p>Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
 : Text is emphasised as it is spoken by read aloud</a></p>
@@ -653,12 +659,21 @@ href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510"
 <p>User Story: <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis">Louis</a></p>
 <h4
-id="the-user-must-be-able-to-control-the-voice-and-speed-of-the-read-aloud.">The
-user must be able to control the voice and speed of the read aloud.</h4>
-<p>The user must be able to select from a range of voices. The user must
-be able to choose the speed of the read aloud voice.</p>
-<p>The reading app should not distort the pitch when the user has
-selected higher listening speeds.</p>
+id="the-user-must-be-able-to-control-the-rate-of-the-read-aloud.">The
+user must be able to control the rate of the read aloud.</h4>
+<p>The user must be able to choose the speed of the read aloud voice.
+The reading app must not distort the pitch when the user has selected
+higher listening speeds.</p>
+<p>The reading app could provide an audio preview to assist the user in
+selection.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-control-the-voice-of-the-read-aloud.">The
+user must be able to control the voice of the read aloud.</h4>
+<p>The user must be able to select from a range of voices.</p>
+<p>Consideration should made of how the voice options are presented (by
+region or language, online/offline, etc). The reading app could provide
+an audio preview to assist the user in their selection.</p>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
@@ -691,36 +706,55 @@ according to their preference (eg relative reading speed, reading style,
 verbosity).</p>
 <p>Priority: Must-have</p>
 <h4
-id="the-user-mustshouldcould-be-able-to-use-read-aloud-with-tables">The
-user must/should/could be able to use read aloud with tables</h4>
+id="the-user-must-be-able-to-lock-their-mobile-device-and-use-read-aloud.">The
+user must be able to lock their mobile device and use read aloud.</h4>
+<p>On a mobile device the user must be lock the device without the read
+aloud stopping. The user must be able to listen and control read aloud
+(pause, resume, go back and forward) from the lock screen, to the extent
+this is supported on the platform. The display could show relevant
+information such as the current position in the title.</p>
+<p>Editor’s note - this probably also applies to audio playback.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-control-read-aloud-playback-using-the-devices-media-controls.">The
+user must be able to control read-aloud playback using the device’s
+media controls.</h4>
+<p>If supported on the device and platform the user must be able to
+control read-aloud playback using the device’s media controls, such
+including play, pause, skip forward, skip backward, and stop functions
+on a keyboard or headset.</p>
+<p>Priority: Must-have</p>
+<h4
+id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-tables.">TODO:
+The user must/should/could be able to use read aloud with tables.</h4>
 <p>What should the experience be?</p>
 <p>Skippability/escapability?</p>
 <p>Priority level?</p>
 <h4
-id="the-user-should-be-able-to-decide-to-skip-read-aloud-of-anciallary-content">The
-user should be able to decide to skip read aloud of anciallary
-content</h4>
+id="todo-the-user-should-be-able-to-decide-to-skip-read-aloud-of-anciallary-content.">TODO:
+The user should be able to decide to skip read aloud of anciallary
+content.</h4>
 <p>Ancillary content includes aside, bibliography, endnotes, footnote,
 noteref, pullquote.</p>
 <p>Priority: Should-have</p>
 <h4
-id="the-user-should-be-able-to-decide-to-skip-read-aloud-of-navigation-content">The
-user should be able to decide to skip read aloud of navigation
-content</h4>
+id="todo-the-user-should-be-able-to-decide-to-skip-read-aloud-of-navigation-content.">TODO:
+The user should be able to decide to skip read aloud of navigation
+content.</h4>
 <p>Navigation content includes landmarks, lists of audios, tables,
 images or videos, pagebreak and table of contents.</p>
 <p>Priority: Should-have</p>
 <h4
-id="the-user-mustshouldcould-be-able-to-use-read-aloud-with-footnotes-and-endnotes">The
-user must/should/could be able to use read aloud with footnotes and
-endnotes</h4>
+id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-footnotes-and-endnotes.">TODO:
+The user must/should/could be able to use read aloud with footnotes and
+endnotes.</h4>
 <p>What should the experience be?</p>
 <p>Skippability/escapability?</p>
 <p>Priority level?</p>
 <h4
-id="the-user-mustshouldcould-be-able-to-use-read-aloud-with-expandablecollapsable-content">The
-user must/should/could be able to use read aloud with
-expandable/collapsable content</h4>
+id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-expandablecollapsable-content.">TODO:
+The user must/should/could be able to use read aloud with
+expandable/collapsable content.</h4>
 <p>What should the experience be?</p>
 <p>Skippability/escapability?</p>
 <p>Priority level?</p>
