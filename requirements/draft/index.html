@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">5 Mayl 2025</span></p>
+<p><span class="pubdate">11 May 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -57,14 +57,12 @@ Math</a></li>
 Adjustments - Color and Brightness</a></li>
 <li><a href="#navigation">Navigation</a></li>
 <li><a href="#read-aloud">Read Aloud</a></li>
-<li><a href="#search">Search</a></li>
-<li><a href="#reading">Reading</a></li>
-<li><a href="#images">Images</a></li>
-<li><a href="#tables">Tables</a></li>
-<li><a href="#links-and-footnotes">Links and Footnotes</a></li>
-<li><a href="#mathematical-expressions">Mathematical
-Expressions</a></li>
-<li><a href="#notes-and-highlights">Notes and Highlights</a></li>
+<li><a href="#screen-reader-support">Screen reader support</a></li>
+<li><a href="#todo-assessments">TODO: Assessments</a></li>
+<li><a href="#todo-switching-modalities">TODO: Switching
+modalities</a></li>
+<li><a href="#todo-library-and-bookshelf">TODO: Library and
+Bookshelf</a></li>
 </ul></li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
 <li><a href="#references">References</a></li>
@@ -724,169 +722,118 @@ control read-aloud playback using the device’s media controls, such
 including play, pause, skip forward, skip backward, and stop functions
 on a keyboard or headset.</p>
 <p>Priority: Must-have</p>
+<h4 id="the-user-should-be-able-to-use-read-aloud-with-tables.">The user
+should be able to use read aloud with tables.</h4>
+<p>The read aloud must read the table contents from left to right and
+top to bottom. The read aloud could indicate the start of the table
+though an announcement or other notification.</p>
+<p>Priority level: Must-have.</p>
 <h4
-id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-tables.">TODO:
-The user must/should/could be able to use read aloud with tables.</h4>
-<p>What should the experience be?</p>
-<p>Skippability/escapability?</p>
-<p>Priority level?</p>
+id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsable-content"><strong>The
+user must be able to use read aloud with expandable/collapsable
+content</strong></h4>
+<p>Expanded content must be read aloud. Collapsed content must not be
+read aloud.</p>
+<p>Priority level: Must-have.</p>
 <h4
-id="todo-the-user-should-be-able-to-decide-to-skip-read-aloud-of-anciallary-content.">TODO:
-The user should be able to decide to skip read aloud of anciallary
+id="the-user-must-be-able-escape-from-certain-structures-when-using-read-aloud.">The
+user must be able escape from certain structures when using read
+aloud.</h4>
+<p>The user must be able to control the read aloud so they can escape
+from reading all the way through escapable items and to continue read
+aloud from the item following the table.</p>
+<p>The escapable items are defined by each format specification.</p>
+<p>Priority level: Must-have.</p>
+<p>Source:
+https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-escapable-roles</p>
+<h4
+id="the-user-must-be-able-to-decide-the-read-aloud-should-skip-over-certain-content.">The
+user must be able to decide the read aloud should skip over certain
 content.</h4>
-<p>Ancillary content includes aside, bibliography, endnotes, footnote,
-noteref, pullquote.</p>
-<p>Priority: Should-have</p>
-<h4
-id="todo-the-user-should-be-able-to-decide-to-skip-read-aloud-of-navigation-content.">TODO:
-The user should be able to decide to skip read aloud of navigation
-content.</h4>
-<p>Navigation content includes landmarks, lists of audios, tables,
-images or videos, pagebreak and table of contents.</p>
-<p>Priority: Should-have</p>
-<h4
-id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-footnotes-and-endnotes.">TODO:
-The user must/should/could be able to use read aloud with footnotes and
-endnotes.</h4>
-<p>What should the experience be?</p>
-<p>Skippability/escapability?</p>
-<p>Priority level?</p>
-<h4
-id="todo-the-user-mustshouldcould-be-able-to-use-read-aloud-with-expandablecollapsable-content.">TODO:
-The user must/should/could be able to use read aloud with
-expandable/collapsable content.</h4>
-<p>What should the experience be?</p>
-<p>Skippability/escapability?</p>
-<p>Priority level?</p>
-<h3 id="search">Search</h3>
-<h4
-id="the-user-must-be-able-to-perform-a-search-and-review-the-search-results.">The
-user must be able to perform a search and review the search
-results.</h4>
+<p>The user must be able to configure their reading app so that it does
+not announce skipable elements.</p>
+<p>The user preference for skipping non-core content could be set on a
+per-title basis.</p>
+<p>The skippable items are defined by each format specification.</p>
 <p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-410">nav-410
-: Perform a search, review the search results</a></p>
-<h3 id="reading">Reading</h3>
+<p>Sources:
+https://daisy.org/activities/standards/daisy/daisy-2/daisy-2-02-skippable-structures-recommendation/#intro_1,
+https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-skippable-roles</p>
+<h3 id="screen-reader-support">Screen reader support</h3>
 <h4
-id="the-user-must-be-able-to-read-through-content-in-the-logical-reading-order.">The
-user must be able to read through content in the logical reading
-order.</h4>
+id="the-user-must-be-able-to-use-their-screen-reader-in-the-user-interface.">The
+user must be able to use their screen reader in the user interface.</h4>
+<p>The user must be able to navigate and interact with all elements of
+the app—including menus, dialogs, buttons, and content—using assistive
+technologies. All interactive components shall provide appropriate
+semantic labels and roles to support accessibility standards such as
+WCAG 2.1 and ARIA guidelines.</p>
 <p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">reading-210
-: All text should be read in the proper order</a>, <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310">ReadAloud-310
-: All text should be read in the proper order</a></p>
 <h4
-id="screen-readerassistive-technology-users-should-hear-appropriate-pauses-after-headings-paragraphs-list-items-etc.">Screen
-reader/assistive technology users should hear appropriate pauses after
-headings, paragraphs, list items, etc.</h4>
+id="the-user-must-be-able-to-use-their-screen-reader-to-leveraging-semantic-markup-in-the-content.">The
+user must be able to use their screen reader to leveraging semantic
+markup in the content.</h4>
+<p>The application must allow users to read publication content using a
+screen reader. All content must be accessible to the screen reader and
+presented in a logical reading order. Headings, lists, links, tables,
+images and other semantic elements must be exposed with appropriate
+markup to support interpretation and navigation by the screen
+reader.</p>
 <p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510">EPUBTest
-reading-510 : TTS allows pause for indicating headings, paragraphs, list
-items, etc</a>, <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510">ReadAloud-510
-: Text to Speech handles punctuation and document structure
-appropriately</a></p>
 <h4
-id="screen-readerassistive-technology-users-must-be-able-to-adjust-the-voice-and-reading-speed.">Screen
-reader/assistive technology users must be able to adjust the voice and
-reading speed.</h4>
+id="the-user-must-be-able-to-use-their-screen-reader-in-a-scrolling-mode.">The
+user must be able to use their screen reader in a scrolling mode.</h4>
+<p>The user must be able to use a scrolling (rather than a paginated
+mode) to enable the use of screen reader features such as navigating to
+next/previous heading, landmark, graphic, etc.</p>
 <p>Priority: Must-have</p>
-<p>User Story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona">Simona</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
-<p>Sources: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
-: Change Read Aloud reading voice</a>, <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410">ReadAloud-410
-: Change Read Aloud reading speed</a></p>
 <h4
-id="screen-readerassistive-technology-users-must-be-able-to-read-content-in-the-correct-language-audio-or-braille.">Screen
-reader/assistive technology users must be able to read content in the
-correct language (audio or braille).</h4>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510">reading-1510
-: TTS Change Languages Automatically</a></p>
-<p>User Story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis">Louis</a></p>
-<h3 id="images">Images</h3>
-<h4
-id="screen-reader-users-must-be-able-to-read-and-navigate-within-image-descriptions.">Screen
-reader users must be able to read and navigate within image
-descriptions.</h4>
-<p>Priority: Must-have</p>
-<p>User Story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona">Simona</a></p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-310">reading-310
-: Image alternate text reading</a></p>
-<h4
-id="read-aloud-users-must-have-the-option-to-hear-image-descriptions.">Read
-aloud users must have the option to hear image descriptions.</h4>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-350">ReadAloud-350
-: Image alternate text reading</a></p>
-<h3 id="tables">Tables</h3>
-<h4
-id="screen-readerassistive-technology-users-must-be-able-to-navigate-between-the-cells-rows-and-columns-in-a-table">Screen
-reader/assistive technology users must be able to navigate between the
-cells, rows and columns in a table</h4>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-610">reading-610
-: Navigate between the cells, rows and columns in the table</a></p>
-<h3 id="links-and-footnotes">Links and Footnotes</h3>
-<h4
-id="users-must-be-able-to-navigate-between-internal-hyperlinks.">Users
-must be able to navigate between internal hyperlinks.</h4>
+id="todo-screen-reader-users-must-be-able-to-navigate-between-internal-hyperlinks.">TODO:
+Screen reader users must be able to navigate between internal
+hyperlinks.</h4>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710">reading-710
 : Navigate between internal hyperlinks</a></p>
-<h4
-id="users-must-be-able-to-detect-the-reference-to-a-footnote-reach-the-content-of-the-footnote-read-the-content-of-the-footnote-and-provide-a-mechanism-to-move-back-to-the-original-reading-position-from-the-footnote.">Users
-must be able to detect the reference to a footnote, reach the content of
-the footnote, read the content of the footnote and provide a mechanism
-to move back to the original reading position from the footnote.</h4>
+<h4 id="todo-screen-reader-users-must-be-able-to-use-footnotes">TODO:
+Screen reader users must be able to use footnotes</h4>
+<p>Users must be able to detect the reference to a footnote, reach the
+content of the footnote, read the content of the footnote and provide a
+mechanism to move back to the original reading position from the
+footnote.</p>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-420">reading-420
 : Footnote Reading</a></p>
-<h3 id="mathematical-expressions">Mathematical Expressions</h3>
 <h4
-id="the-user-must-be-able-to-read-and-navigate-within-mathematical-expressions.">The
-user must be able to read and navigate within mathematical
-expressions.</h4>
-<p>[Notes for editors: - The user should be able to explore mathematical
-expressions that are included as MathML or LaTeX. This is not expected
-if math is included as images.]</p>
-<p>Priority: Must-have</p>
-<p>User Story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis">Louis</a></p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">EPUBTest
-reading-1410 : MathML Reading</a></p>
-<h3 id="notes-and-highlights">Notes and Highlights</h3>
-<h4 id="the-user-should-be-able-to-add-review-and-edit-highlights.">The
-user should be able to add, review and edit highlights.</h4>
+id="todo-the-user-should-be-able-to-add-review-and-edit-highlights.">TODO:
+The user should be able to add, review and edit highlights.</h4>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010">EPUBTest
 anno-010 : Add a Bookmark or Highlight</a>, <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110">EPUBTest
 anno-110 : Review and navigate Bookmarks or Highlights</a></p>
-<h4 id="the-user-should-be-able-to-add-review-and-edit-notes.">The user
-should be able to add, review and edit notes.</h4>
+<h4
+id="todo-the-user-should-be-able-to-add-review-and-edit-notes.">TODO:
+The user should be able to add, review and edit notes.</h4>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EPUBTest
 anno-210 : Add a note</a>, <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
 anno-310 : Review and navigate Notes</a></p>
+<h3 id="todo-assessments">TODO: Assessments</h3>
+<p>To include filling in answers and saving/sending them, completing a
+quiz.</p>
+<h3 id="todo-switching-modalities">TODO: Switching modalities</h3>
+<p>To include switching between embedded audio and read aloud.</p>
+<h3 id="todo-library-and-bookshelf">TODO: Library and Bookshelf</h3>
+<p>To include:</p>
+<ul>
+<li>library- logging in, discovery, download, return</li>
+<li>bookshelf- sorting, adding and removing books</li>
+<li>titles - book information (metadata), book
+rating/reviewing/recommending</li>
+</ul>
 </section>
 <section id="acknowledgments">
 <h2 id="acknowledgements">Acknowledgements</h2>

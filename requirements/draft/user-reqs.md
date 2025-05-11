@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[5 Mayl 2025]{.pubdate}
+[11 May 2025]{.pubdate}
 
 Editors:
 
@@ -58,13 +58,10 @@ Copyright © 2025 DAISY Consortium
   - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
   - [Navigation](#navigation)
   - [Read Aloud](#read-aloud)
-  - [Search](#search)
-  - [Reading](#reading)
-  - [Images](#images)
-  - [Tables](#tables)
-  - [Links and Footnotes](#links-and-footnotes)
-  - [Mathematical Expressions](#mathematical-expressions)
-  - [Notes and Highlights](#notes-and-highlights)
+  - [Screen reader support](#screen-reader-support)
+  - [TODO: Assessments](#todo-assessments)
+  - [TODO: Switching modalities](#todo-switching-modalities)
+  - [TODO: Library and Bookshelf](#todo-library-and-bookshelf)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
   
@@ -525,144 +522,99 @@ If supported on the device and platform the user must be able to control read-al
 
 Priority: Must-have
 
-#### TODO: The user must/should/could be able to use read aloud with tables.
+#### The user should be able to use read aloud with tables.
 
-What should the experience be?
+The read aloud must read the table contents from left to right and top to bottom. The read aloud could indicate the start of the table though an announcement or other notification.
 
-Skippability/escapability?
+Priority level: Must-have.
 
-Priority level?
+#### **The user must be able to use read aloud with expandable/collapsable content**
 
-#### TODO: The user should be able to decide to skip read aloud of anciallary content.
+Expanded content must be read aloud. Collapsed content must not be read aloud.
 
-Ancillary content includes aside, bibliography, endnotes, footnote, noteref, pullquote.
+Priority level: Must-have.
 
-Priority: Should-have
+#### The user must be able escape from certain structures when using read aloud.
 
-#### TODO: The user should be able to decide to skip read aloud of navigation content.
+The user must be able to control the read aloud so they can escape from reading all the way through escapable items and to continue read aloud from the item following the table.
 
-Navigation content includes landmarks, lists of audios, tables, images or videos, pagebreak and table of contents.
+The escapable items are defined by each format specification.
 
-Priority: Should-have
+Priority level: Must-have.
 
-#### TODO: The user must/should/could be able to use read aloud with footnotes and endnotes.
+Source: https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-escapable-roles
 
-What should the experience be?
+#### The user must be able to decide the read aloud should skip over certain content.
 
-Skippability/escapability?
+The user must be able to configure their reading app so that it does not announce skipable elements. 
 
-Priority level?
+The user preference for skipping non-core content could be set on a per-title basis.
 
-#### TODO: The user must/should/could be able to use read aloud with expandable/collapsable content.
-
-What should the experience be?
-
-Skippability/escapability?
-
-Priority level?
-
-### Search
-
-#### The user must be able to perform a search and review the search results.
+The skippable items are defined by each format specification.
 
 Priority: Must-have
 
-Source: [nav-410 : Perform a search, review the search results](https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-410)
+Sources: https://daisy.org/activities/standards/daisy/daisy-2/daisy-2-02-skippable-structures-recommendation/#intro_1, https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-skippable-roles
 
-### Reading
+### Screen reader support
 
-#### The user must be able to read through content in the logical reading order.
+#### The user must be able to use their screen reader in the user interface.
 
-Priority: Must-have
-
-Source: [reading-210 : All text should be read in the proper order](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210), 
-[ReadAloud-310 : All text should be read in the proper order](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310)
-
-#### Screen reader/assistive technology users should hear appropriate pauses after headings, paragraphs, list items, etc.
+The user must be able to navigate and interact with all elements of the app—including menus, dialogs, buttons, and content—using assistive technologies. All interactive components shall provide appropriate semantic labels and roles to support accessibility standards such as WCAG 2.1 and ARIA guidelines.
 
 Priority: Must-have
 
-Source: [EPUBTest reading-510 : TTS allows pause for indicating headings, paragraphs, list items, etc](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510), 
-[ReadAloud-510 : Text to Speech handles punctuation and document structure appropriately](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510)
+#### The user must be able to use their screen reader to leveraging semantic markup in the content.
 
-#### Screen reader/assistive technology users must be able to adjust the voice and reading speed.
-
-Priority: Must-have
-
-User Story: [Simona](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona), [Javier](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier)
-
-Sources: [ReadAloud-400 : Change Read Aloud reading voice](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400), 
-[ReadAloud-410 : Change Read Aloud reading speed](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-410)
-
-#### Screen reader/assistive technology users must be able to read content in the correct language (audio or braille).
+The application must allow users to read publication content using a screen reader. All content must be accessible to the screen reader and presented in a logical reading order. Headings, lists, links, tables, images and other semantic elements must be exposed with appropriate markup to support interpretation and navigation by the screen reader.
 
 Priority: Must-have
 
-Source: [reading-1510 : TTS Change Languages Automatically](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510)
+#### The user must be able to use their screen reader in a scrolling mode.
 
-User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
-
-### Images
-
-#### Screen reader users must be able to read and navigate within image descriptions.
+The user must be able to use a scrolling (rather than a paginated mode) to enable the use of screen reader features such as navigating to next/previous heading, landmark, graphic, etc.
 
 Priority: Must-have
 
-User Story: [Simona](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#simona)
-
-Source: [reading-310 : Image alternate text reading](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-310)
-
-#### Read aloud users must have the option to hear image descriptions.
-
-Priority: Must-have
-
-Source: [ReadAloud-350 : Image alternate text reading](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-350)
-
-### Tables
-
-#### Screen reader/assistive technology users must be able to navigate between the cells, rows and columns in a table
-
-Priority: Must-have
-
-Source: [reading-610 : Navigate between the cells, rows and columns in the table](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-610)
-
-### Links and Footnotes
-
-#### Users must be able to navigate between internal hyperlinks.
+#### TODO: Screen reader users must be able to navigate between internal hyperlinks.
 
 Priority: Must-have
 
 Source: [reading-710 : Navigate between internal hyperlinks](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710)
 
-#### Users must be able to detect the reference to a footnote, reach the content of the footnote, read the content of the footnote and provide a mechanism to move back to the original reading position from the footnote.
+#### TODO: Screen reader users must be able to use footnotes
+
+Users must be able to detect the reference to a footnote, reach the content of the footnote, read the content of the footnote and provide a mechanism to move back to the original reading position from the footnote.
 
 Priority: Must-have
 
 Source: [reading-420 : Footnote Reading](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-420)
 
-### Mathematical Expressions
-
-#### The user must be able to read and navigate within mathematical expressions.
-
-[Notes for editors: - The user should be able to explore mathematical expressions that are included as MathML or LaTeX. This is not expected if math is included as images.]
-
-Priority: Must-have
-
-User Story: [Louis](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis)
-
-Source: [EPUBTest reading-1410 : MathML Reading](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210)
-
-### Notes and Highlights
-
-#### The user should be able to add, review and edit highlights.
+#### TODO: The user should be able to add, review and edit highlights.
 
 Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010), 
 [EPUBTest anno-110 : Review and navigate Bookmarks or Highlights](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110)
 
-#### The user should be able to add, review and edit notes.
+#### TODO: The user should be able to add, review and edit notes.
 
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
+
+### TODO: Assessments
+
+To include filling in answers and saving/sending them, completing a quiz.
+
+### TODO: Switching modalities
+
+To include switching between embedded audio and read aloud.
+
+### TODO: Library and Bookshelf
+
+To include:
+
+- library- logging in, discovery, download, return
+- bookshelf- sorting, adding and removing books
+- titles - book information (metadata), book rating/reviewing/recommending
 
 :::
 ::: {#acknowledgments .section}
