@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[11 May 2025]{.pubdate}
+[19 May 2025]{.pubdate}
 
 Editors:
 
@@ -52,14 +52,12 @@ Copyright © 2025 DAISY Consortium
 - [Introduction](#introduction)
 - [User Stories](#user-stories)
 - [User Requirements](#user-requirements)
-  - [Visual Adjustments - Text](#visual-adjustments---text)
-  - [Visual Adjustments - Images](#visual-adjustments---images)
-  - [Visual Adjustments - Math](#visual-adjustments---math)
-  - [Visual Adjustments - Color and Brightness](#visual-adjustments---color-and-brightness)
+  - [Visual Adjustments](#visual-adjustments)
   - [Navigation](#navigation)
   - [Read Aloud](#read-aloud)
   - [Screen reader support](#screen-reader-support)
-  - [TODO: Assessments](#todo-assessments)
+  - [Notes](#notes)
+  - [Entering answers](#entering-answers)
   - [TODO: Switching modalities](#todo-switching-modalities)
   - [TODO: Library and Bookshelf](#todo-library-and-bookshelf)
 - [Acknowledgements](#acknowledgements)
@@ -87,7 +85,7 @@ The [user stories](https://daisy.github.io/reading-apps-ux-reqs/use-cases/) refe
 
 ## User Requirements
 
-### Visual Adjustments - Text
+### Visual Adjustments
 
 User story: [Oxana](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana), 
 [Ruth](https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth),
@@ -193,8 +191,6 @@ Priority: Should-have
 
 Source: [ReadAloud-610 : Text is emphasised as it is spoken by read aloud](https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610)
 
-### Visual Adjustments - Images
-
 #### The user must be able to enlarge images.
 
 The user should be able to select an image and make it larger. There should be controls to adjust the size and to pan around an image when it no longer fits within the display.
@@ -204,8 +200,6 @@ A custom color theme used for viewing the text can sometimes render parts of the
 Priority: Must-have
 
 Source: [visual-710 : Enlarge SVG Images](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710)
-
-### Visual Adjustments - Math
 
 #### The user must be able to adjust the size and color of math expressions by adjusting the text's font size and color.
 
@@ -226,8 +220,6 @@ Priority: Should-have
 Certain parts of math expressions are sometimes presented in special colors, e.g. superscript in red. For some people this can present problems. The user could be able to remove the color formatting used in math expressions so the chosen text color is always used.
 
 Priority: Could-have
-
-### Visual Adjustments - Color and Brightness
 
 #### The user must be able to personalize the background and foreground colors.
 
@@ -564,9 +556,9 @@ The user must be able to navigate and interact with all elements of the app—in
 
 Priority: Must-have
 
-#### The user must be able to use their screen reader to leveraging semantic markup in the content.
+#### The user must be able to take advantage of their screen reader's ability to leverage semantic markup in the content.
 
-The application must allow users to read publication content using a screen reader. All content must be accessible to the screen reader and presented in a logical reading order. Headings, lists, links, tables, images and other semantic elements must be exposed with appropriate markup to support interpretation and navigation by the screen reader.
+The application must allow users to read publication content using a screen reader. The rendered content must expose the accessibility semantics to the screen reader. Thus headings, lists, tables, images and other semantic elements must be exposed to the screen reader so that it can be interpreted by the screen reader. Furthermore, semantics of links need to be exposed, such as bibliographic or footnote, should be exposed to the screen reader.
 
 Priority: Must-have
 
@@ -576,11 +568,37 @@ The user must be able to use a scrolling (rather than a paginated mode) to enabl
 
 Priority: Must-have
 
-#### TODO: Screen reader users must be able to navigate between internal hyperlinks.
+#### The user could use additional navigation features of the reading app.
+
+In addition to the table of contents and other navigation provided by the content creator, the user could use additional navigation features offered by the reading app that will be especially beneficial to print disabled readers. For example, the app could provide navigation by heading, between landmarks, tables, images and  mathematics expressions, irrespective of whether they are in the same content document.
+
+Priority: Could-have
+
+#### Screen reader users must be able to navigate confidently between internal hyperlinks.
+
+When navigating to another place in the content (for example when using the table of contents, reading a footnote or following an internal hyperlink) the screen reader user must be able to read from the new navigation position.
+
+Priority: Must-have
+
+#### Screen reader users must be able to activate actionable content.
+
+Screen reader users must be able to activate actionable content (such as links, buttons, expandable elements).
+
+Priority: Must-have
+
+#### Screen reader users must be able to return to their previous reading position.
+
+After navigating to a different part of the content (perhaps by following a footnote, internal hyperlink, referring to a glossary entry or going to a different page) the user must be able to return back to their previous reading position.
 
 Priority: Must-have
 
 Source: [reading-710 : Navigate between internal hyperlinks](https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710)
+
+#### Screen reader users must be able to determine their current location without losing thier place.
+
+Screen user readers must be able to get information about their current position in the content (such as section, page number) without losing their reading position.
+
+Priority: Must-have
 
 #### TODO: Screen reader users must be able to use footnotes
 
@@ -600,9 +618,125 @@ Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
 
-### TODO: Assessments
+### Notes
 
-To include filling in answers and saving/sending them, completing a quiz.
+#### The user must be able to add notes.
+
+Notes may contain either plain text or audio. [How about Math and Chemistry?]
+Notes must be anchored to at least a text range within a paragraph. The element to which the note is attached, must be highlighted.
+Notes can be inserted at any position within the running text.
+
+Priority: Must-have
+
+Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
+[EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
+
+#### The user should be able to format the content of a note using basic rich text formatting.
+
+Supported formatting includes bold, italic, and underline.
+
+Priority: Should-have
+
+#### The user must be able to view notes alongside the text, for example in the margin.
+
+#### The user should be able to hide or show individual notes.
+
+Priority: Should-have
+
+#### The user should be able to hide all notes.
+
+For a more focused experience
+
+Priority: Should-have
+
+#### The user should be able to have a single note read aloud.
+
+Priority: Should-have
+
+#### The user should be able to have all notes read aloud in sequence.
+
+Priority: Should-have
+
+#### Screen reader users must be able to navigate from one note to another.
+
+#### The user must be able to save notes automatically, including during offline use.
+
+Notes must be synchronized once the device is online.
+
+Priority: Must-have
+
+#### The user must be able to view previously saved notes when reopening the book.
+
+Priority: Must-have
+
+#### The user should be able to synchronize notes across multiple devices.
+
+Priority: Should-have
+
+#### The user should be able to export notes.
+
+Priority: Should-have
+
+#### The user could be able to share notes with others.
+
+Priority: Could-have
+
+### Entering answers
+
+#### The user must be able to enter answers into input fields provided in a publication.
+
+Text, possibly audio, no MathML in text fields
+
+Priority: Must-have
+
+#### The user must be able to enter different types of answers depending on the field type.
+
+Supported types:
+Single-line text field, Multi-line text field, Radio buttons, Checkboxes, Dropdown menus
+
+Priority: Must-have
+
+#### The user should be able to format answers in long-text fields using a basic rich text editor.
+
+Formatting options: bold, italic, underline
+
+Priority: Should-have
+
+#### The user should be able to add custom input fields where none exist.
+
+These must support the same input types, be accessible via screen reader navigation, and be included in exports.
+
+Priority: Should-have
+
+#### The user must be able to save answers automatically, including during offline use.
+
+Answers must sync once the device is online.
+
+Priority: Must-have
+
+#### The user must be able to see previously saved answers when reopening a book.
+
+Priority: Must-have
+
+#### The user should be able to synchronize answers and settings across multiple devices.
+
+Priority: Should-have
+
+#### The user should be able to export answers.
+
+Priority: Should-have
+
+#### Screen reader users must be able to navigate between answer fields.
+
+Priority: Must-have
+
+#### The user should be able to share answers with others (e.g. teachers, students).
+
+Priority: Should-have
+
+#### The user could be able to have their answers automatically checked.
+
+Priority: Could-have
 
 ### TODO: Switching modalities
 
