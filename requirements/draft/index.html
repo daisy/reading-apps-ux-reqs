@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">11 May 2025</span></p>
+<p><span class="pubdate">19 May 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -47,18 +47,12 @@ issue</a></li>
 <li><a href="#user-stories">User Stories</a></li>
 <li><a href="#user-requirements">User Requirements</a>
 <ul>
-<li><a href="#visual-adjustments---text">Visual Adjustments -
-Text</a></li>
-<li><a href="#visual-adjustments---images">Visual Adjustments -
-Images</a></li>
-<li><a href="#visual-adjustments---math">Visual Adjustments -
-Math</a></li>
-<li><a href="#visual-adjustments---color-and-brightness">Visual
-Adjustments - Color and Brightness</a></li>
+<li><a href="#visual-adjustments">Visual Adjustments</a></li>
 <li><a href="#navigation">Navigation</a></li>
 <li><a href="#read-aloud">Read Aloud</a></li>
 <li><a href="#screen-reader-support">Screen reader support</a></li>
-<li><a href="#todo-assessments">TODO: Assessments</a></li>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#entering-answers">Entering answers</a></li>
 <li><a href="#todo-switching-modalities">TODO: Switching
 modalities</a></li>
 <li><a href="#todo-library-and-bookshelf">TODO: Library and
@@ -88,7 +82,7 @@ group.</p>
 </section>
 <section id="userrequirements">
 <h2 id="user-requirements">User Requirements</h2>
-<h3 id="visual-adjustments---text">Visual Adjustments - Text</h3>
+<h3 id="visual-adjustments">Visual Adjustments</h3>
 <p>User story: <a
 href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a>,
 <a
@@ -253,7 +247,6 @@ href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex">Alex</a></p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
 : Text is emphasised as it is spoken by read aloud</a></p>
-<h3 id="visual-adjustments---images">Visual Adjustments - Images</h3>
 <h4 id="the-user-must-be-able-to-enlarge-images.">The user must be able
 to enlarge images.</h4>
 <p>The user should be able to select an image and make it larger. There
@@ -267,7 +260,6 @@ color themes.</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
 : Enlarge SVG Images</a></p>
-<h3 id="visual-adjustments---math">Visual Adjustments - Math</h3>
 <h4
 id="the-user-must-be-able-to-adjust-the-size-and-color-of-math-expressions-by-adjusting-the-texts-font-size-and-color.">The
 user must be able to adjust the size and color of math expressions by
@@ -298,8 +290,6 @@ colors, e.g. superscript in red. For some people this can present
 problems. The user could be able to remove the color formatting used in
 math expressions so the chosen text color is always used.</p>
 <p>Priority: Could-have</p>
-<h3 id="visual-adjustments---color-and-brightness">Visual Adjustments -
-Color and Brightness</h3>
 <h4
 id="the-user-must-be-able-to-personalize-the-background-and-foreground-colors.">The
 user must be able to personalize the background and foreground
@@ -770,15 +760,16 @@ semantic labels and roles to support accessibility standards such as
 WCAG 2.1 and ARIA guidelines.</p>
 <p>Priority: Must-have</p>
 <h4
-id="the-user-must-be-able-to-use-their-screen-reader-to-leveraging-semantic-markup-in-the-content.">The
-user must be able to use their screen reader to leveraging semantic
-markup in the content.</h4>
+id="the-user-must-be-able-to-take-advantage-of-their-screen-readers-ability-to-leverage-semantic-markup-in-the-content.">The
+user must be able to take advantage of their screen reader’s ability to
+leverage semantic markup in the content.</h4>
 <p>The application must allow users to read publication content using a
-screen reader. All content must be accessible to the screen reader and
-presented in a logical reading order. Headings, lists, links, tables,
-images and other semantic elements must be exposed with appropriate
-markup to support interpretation and navigation by the screen
-reader.</p>
+screen reader. The rendered content must expose the accessibility
+semantics to the screen reader. Thus headings, lists, tables, images and
+other semantic elements must be exposed to the screen reader so that it
+can be interpreted by the screen reader. Furthermore, semantics of links
+need to be exposed, such as bibliographic or footnote, should be exposed
+to the screen reader.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-use-their-screen-reader-in-a-scrolling-mode.">The
@@ -788,13 +779,50 @@ mode) to enable the use of screen reader features such as navigating to
 next/previous heading, landmark, graphic, etc.</p>
 <p>Priority: Must-have</p>
 <h4
-id="todo-screen-reader-users-must-be-able-to-navigate-between-internal-hyperlinks.">TODO:
-Screen reader users must be able to navigate between internal
+id="the-user-could-use-additional-navigation-features-of-the-reading-app.">The
+user could use additional navigation features of the reading app.</h4>
+<p>In addition to the table of contents and other navigation provided by
+the content creator, the user could use additional navigation features
+offered by the reading app that will be especially beneficial to print
+disabled readers. For example, the app could provide navigation by
+heading, between landmarks, tables, images and mathematics expressions,
+irrespective of whether they are in the same content document.</p>
+<p>Priority: Could-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-navigate-confidently-between-internal-hyperlinks.">Screen
+reader users must be able to navigate confidently between internal
 hyperlinks.</h4>
+<p>When navigating to another place in the content (for example when
+using the table of contents, reading a footnote or following an internal
+hyperlink) the screen reader user must be able to read from the new
+navigation position.</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-activate-actionable-content.">Screen
+reader users must be able to activate actionable content.</h4>
+<p>Screen reader users must be able to activate actionable content (such
+as links, buttons, expandable elements).</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-return-to-their-previous-reading-position.">Screen
+reader users must be able to return to their previous reading
+position.</h4>
+<p>After navigating to a different part of the content (perhaps by
+following a footnote, internal hyperlink, referring to a glossary entry
+or going to a different page) the user must be able to return back to
+their previous reading position.</p>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-710">reading-710
 : Navigate between internal hyperlinks</a></p>
+<h4
+id="screen-reader-users-must-be-able-to-determine-their-current-location-without-losing-thier-place.">Screen
+reader users must be able to determine their current location without
+losing thier place.</h4>
+<p>Screen user readers must be able to get information about their
+current position in the content (such as section, page number) without
+losing their reading position.</p>
+<p>Priority: Must-have</p>
 <h4 id="todo-screen-reader-users-must-be-able-to-use-footnotes">TODO:
 Screen reader users must be able to use footnotes</h4>
 <p>Users must be able to detect the reference to a footnote, reach the
@@ -821,9 +849,126 @@ href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EP
 anno-210 : Add a note</a>, <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
 anno-310 : Review and navigate Notes</a></p>
-<h3 id="todo-assessments">TODO: Assessments</h3>
-<p>To include filling in answers and saving/sending them, completing a
-quiz.</p>
+<h3 id="notes">Notes</h3>
+<h4 id="the-user-must-be-able-to-add-notes.">The user must be able to
+add notes.</h4>
+<p>Notes may contain either plain text or audio. [How about Math and
+Chemistry?] Notes must be anchored to at least a text range within a
+paragraph. The element to which the note is attached, must be
+highlighted. Notes can be inserted at any position within the running
+text.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EPUBTest
+anno-210 : Add a note</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
+anno-310 : Review and navigate Notes</a></p>
+<h4
+id="the-user-should-be-able-to-format-the-content-of-a-note-using-basic-rich-text-formatting.">The
+user should be able to format the content of a note using basic rich
+text formatting.</h4>
+<p>Supported formatting includes bold, italic, and underline.</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-must-be-able-to-view-notes-alongside-the-text-for-example-in-the-margin.">The
+user must be able to view notes alongside the text, for example in the
+margin.</h4>
+<h4 id="the-user-should-be-able-to-hide-or-show-individual-notes.">The
+user should be able to hide or show individual notes.</h4>
+<p>Priority: Should-have</p>
+<h4 id="the-user-should-be-able-to-hide-all-notes.">The user should be
+able to hide all notes.</h4>
+<p>For a more focused experience</p>
+<p>Priority: Should-have</p>
+<h4 id="the-user-should-be-able-to-have-a-single-note-read-aloud.">The
+user should be able to have a single note read aloud.</h4>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-should-be-able-to-have-all-notes-read-aloud-in-sequence.">The
+user should be able to have all notes read aloud in sequence.</h4>
+<p>Priority: Should-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-navigate-from-one-note-to-another.">Screen
+reader users must be able to navigate from one note to another.</h4>
+<h4
+id="the-user-must-be-able-to-save-notes-automatically-including-during-offline-use.">The
+user must be able to save notes automatically, including during offline
+use.</h4>
+<p>Notes must be synchronized once the device is online.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-view-previously-saved-notes-when-reopening-the-book.">The
+user must be able to view previously saved notes when reopening the
+book.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-synchronize-notes-across-multiple-devices.">The
+user should be able to synchronize notes across multiple devices.</h4>
+<p>Priority: Should-have</p>
+<h4 id="the-user-should-be-able-to-export-notes.">The user should be
+able to export notes.</h4>
+<p>Priority: Should-have</p>
+<h4 id="the-user-could-be-able-to-share-notes-with-others.">The user
+could be able to share notes with others.</h4>
+<p>Priority: Could-have</p>
+<h3 id="entering-answers">Entering answers</h3>
+<h4
+id="the-user-must-be-able-to-enter-answers-into-input-fields-provided-in-a-publication.">The
+user must be able to enter answers into input fields provided in a
+publication.</h4>
+<p>Text, possibly audio, no MathML in text fields</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-enter-different-types-of-answers-depending-on-the-field-type.">The
+user must be able to enter different types of answers depending on the
+field type.</h4>
+<p>Supported types: Single-line text field, Multi-line text field, Radio
+buttons, Checkboxes, Dropdown menus</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-format-answers-in-long-text-fields-using-a-basic-rich-text-editor.">The
+user should be able to format answers in long-text fields using a basic
+rich text editor.</h4>
+<p>Formatting options: bold, italic, underline</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-should-be-able-to-add-custom-input-fields-where-none-exist.">The
+user should be able to add custom input fields where none exist.</h4>
+<p>These must support the same input types, be accessible via screen
+reader navigation, and be included in exports.</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-must-be-able-to-save-answers-automatically-including-during-offline-use.">The
+user must be able to save answers automatically, including during
+offline use.</h4>
+<p>Answers must sync once the device is online.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-see-previously-saved-answers-when-reopening-a-book.">The
+user must be able to see previously saved answers when reopening a
+book.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-synchronize-answers-and-settings-across-multiple-devices.">The
+user should be able to synchronize answers and settings across multiple
+devices.</h4>
+<p>Priority: Should-have</p>
+<h4 id="the-user-should-be-able-to-export-answers.">The user should be
+able to export answers.</h4>
+<p>Priority: Should-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-navigate-between-answer-fields.">Screen
+reader users must be able to navigate between answer fields.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-share-answers-with-others-e.g.-teachers-students.">The
+user should be able to share answers with others (e.g. teachers,
+students).</h4>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-could-be-able-to-have-their-answers-automatically-checked.">The
+user could be able to have their answers automatically checked.</h4>
+<p>Priority: Could-have</p>
 <h3 id="todo-switching-modalities">TODO: Switching modalities</h3>
 <p>To include switching between embedded audio and read aloud.</p>
 <h3 id="todo-library-and-bookshelf">TODO: Library and Bookshelf</h3>
