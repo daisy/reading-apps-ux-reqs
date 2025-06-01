@@ -16,9 +16,9 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 <hgroup>
 <h1 class="title" id="daisy-reading-apps-user-requirements">DAISY
 Reading Apps User Requirements</h1>
-<p><span class="subtitle">Working Draft</span></p>
+<p><span class="subtitle">Public Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">19 May 2025</span></p>
+<p><span class="pubdate">1 June 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -44,328 +44,73 @@ issue</a></li>
 <ul>
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#user-stories">User Stories</a></li>
 <li><a href="#user-requirements">User Requirements</a>
 <ul>
-<li><a href="#visual-adjustments">Visual Adjustments</a></li>
 <li><a href="#navigation">Navigation</a></li>
+<li><a href="#screen-reader-support">Screen Reader Support</a></li>
 <li><a href="#read-aloud">Read Aloud</a></li>
-<li><a href="#screen-reader-support">Screen reader support</a></li>
-<li><a href="#notes">Notes</a></li>
-<li><a href="#entering-answers">Entering answers</a></li>
+<li><a href="#visual-adjustments">Visual Adjustments</a></li>
+<li><a href="#making-notes">Making Notes</a></li>
+<li><a href="#todo-entering-answers">TODO: Entering Answers</a></li>
 <li><a href="#todo-switching-modalities">TODO: Switching
-modalities</a></li>
+Modalities</a></li>
 <li><a href="#todo-library-and-bookshelf">TODO: Library and
 Bookshelf</a></li>
 </ul></li>
+<li><a href="#user-stories">User Stories</a></li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
 <li><a href="#references">References</a></li>
 </ul>
 </nav>
 <h2 id="introduction">Introduction</h2>
-<p>This document is the main output of the <a
+<p>This document presents a comprehensive set of user requirements
+developed as part of the <a
 href="https://daisy.org/activities/projects/reading-apps-user-requirements/">DAISY
-project to develop user requirements for reading apps</a>. The project
-draws on the collective expertise and experiences of <a
+project to develop user requirements for reading apps</a>. Its purpose
+is to help developers, designers, and decision-makers understand what
+individuals with diverse print disabilities need and expect from digital
+reading solutions- especially when it comes to accessibility, usability,
+and inclusive design.</p>
+<p>Created through close collaboration between <a
 href="https://daisy.org/about-us/membership/">DAISY Consortium members
-and friends</a> to express user requirements of individuals with diverse
-print disabilities for reading digital publications.</p>
-<p>This unique document is intended to inform developers and purchasers
-of specialized reading systems and provide inspiration for mainstream
-reading solutions.</p>
-<section id="userstories">
-<h2 id="user-stories">User Stories</h2>
-<p>The <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/">user
-stories</a> referenced in this document were developed by the working
-group.</p>
-</section>
+and friends</a>, (DAISY Consortium members, accessibility experts, and
+developers of specialized reading apps), this resource captures a wide
+range of expert knowledge and practical insights. The document draws on
+the lived experiences of people with print disabilities and the
+requirements have been shaped and articulated by professionals with deep
+expertise in accessible reading technology.</p>
+<p>This <strong>public working draft</strong> represents the results of
+the work carried out in the first part of the project. It is not yet
+comprehensive: several important topics still need to be addressed and
+will be added in future iterations. Feedback and collaboration are
+welcomed as the document evolves.</p>
+<p>While the document is particularly relevant for those developing or
+procuring specialized reading apps, it also offers valuable guidance for
+those working on mainstream reading platforms who wish to make their
+products outstandingly accessible and user-friendly for everyone.
+Whether you’re building a new reading application from the ground up or
+enhancing an existing one, we invite you to explore these requirements
+not just as a checklist, but as a roadmap toward more inclusive digital
+reading experiences.</p>
 <section id="userrequirements">
 <h2 id="user-requirements">User Requirements</h2>
-<h3 id="visual-adjustments">Visual Adjustments</h3>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex">Alex</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan">Stefan</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
-<h4 id="the-user-must-be-able-to-change-the-typeface.">The user must be
-able to change the typeface.</h4>
-<p>The user should be able to change the typeface of all text, choosing
-from a range including sans serif and serif fonts. Individuals with low
-vision or dyslexia often have specific preferences for font styles that
-optimize their reading experience. Typefaces with preferred letter
-shapes can aid in visual processing, improve comprehension and reduce
-cognitive load.</p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-510">visual-010
-: Change font</a>, <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#font">Accessibility
-Requirements for People with Low Vision: font face</a></p>
-<h4 id="the-user-must-be-able-to-change-the-font-weight.">The user must
-be able to change the font weight.</h4>
-<p>Visual readability of text requires good visual contrast. Visual
-contrast is a product of the text characteristics, such as font weight
-(thickness, font stroke width) and font size, the lightness/darkness
-difference of the colors used for the text and the background, and other
-factors. For some people, bold text is easier to read which is why they
-should be have bold font options. Many typefaces have a bold font and
-some offer variable weight.</p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/font-characteristics-contrast/">WCAG
-Accessibility Guidelines 3.0 - Draft version: visual contrast of
-text</a>, <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
-Requirements for People with Low Vision: text style</a></p>
-<h4 id="the-user-must-be-able-to-change-the-text-size.">The user must be
-able to change the text size.</h4>
-<p>Some people need to increase the size of text in order to read it.
-Although increasing size is most common, some people with tunnel vision
-and good visual acuity may prefer to decrease the size so they can see
-more text at a time.</p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010">visual-010
-: Change font size</a>, <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-size">Accessibility
-Requirements for People with Low Vision: font size</a>, <a
-href="https://doi.org/10.1111/j.1467-9817.2005.00273.x">The effect of
-print size on reading speed in dyslexia. Journal of Research in
-Reading</a></p>
-<h4
-id="the-user-should-be-able-to-remove-the-visual-text-styling-underline-italic-bold.">The
-user should be able to remove the visual text styling (underline,
-italic, bold).</h4>
-<p>For some people, it is difficult to read text that is italicized,
-underlined or bold. Users should have the option to view the text
-without these visual formatting styles. However, underlining should be
-retained for hyperlinks. While removing formatting may result in the
-loss of some semantic significance, users should be able to toggle back
-to the visually formatted version as needed.</p>
-<p>Priority: Should-have</p>
-<p>Sources: <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
-Requirements for People with Low Vision: text style</a></p>
-<h4
-id="the-user-could-be-able-change-the-capitalization-of-text-to-sentence-style.">The
-user could be able change the capitalization of text to sentence
-style.</h4>
-<p>Text written in all capital letters or all small capital letters is
-more difficult to read for most people, with and without disabilities.
-Users should have the option to choose a sentence-style version.
-Acronyms that are correctly marked as abbreviations will remain in
-uppercase; otherwise, they will be converted to sentence style. Users
-should also be able to toggle between the different styles as
-needed.</p>
-<p>Priority: Could-have</p>
-<p>Sources: <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#capitalization">Accessibility
-Requirements for People with Low Vision: capitalization</a></p>
-<h4
-id="the-user-must-be-able-change-the-line-spacing-word-spacing-and-letter-spacing.">The
-user must be able change the line spacing, word spacing and letter
-spacing.</h4>
-<p>The amount of line spacing (leading), word spacing (space between
-words) and letter spacing (space between letters/characters) impacts
-readability. Some people need more space to read text and will have
-individual preferences. Line spacing also helps with tracking.</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html">Accessibility
-Requirements for People with Low Vision: line spacing</a>, <a
-href="https://doi.org/10.1073/pnas.1205566109">Extra-large letter
-spacing improves reading in dyslexia</a>.</p>
-<h4
-id="the-user-must-be-able-turn-off-justification-and-center-alignment-of-blocks-of-text.">The
-user must be able turn off justification and center-alignment of blocks
-of text.</h4>
-<p>Justification impacts readability and tracking. Fully justified text
-creates uneven spaces between words and letters, leading to “rivers of
-white space” that disrupt reading flow and visual tracking, particularly
-for people with dyslexia. Users with low vision who rely on screen
-magnifiers may encounter exaggerated gaps or overlapping characters in
-justified text, making it harder to read. Center-aligned text is also
-problematic for multi-line blocks, as it disrupts smooth reading flow
-and makes it harder to find the beginning of lines. Depending on the
-reading order of the language concerned (left to right, or right to
-left) turning the justification or center-alignment off results in a
-left-aligned or right-aligned text.</p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#justification">Accessibility
-Requirements for People with Low Vision: justification/alignment</a></p>
-<h4
-id="the-user-must-be-able-to-change-the-margins-and-adjust-the-line-length-for-blocks-of-text.">The
-user must be able to change the margins and adjust the line length for
-blocks of text.</h4>
-<p>Having wide margins results in shorter line lengths. This can be
-helpful for some people with specific learning disabilities. Having wide
-margins around blocks of text helps some people focus on the text and
-not get distracted by other content.</p>
-<p>Conversely, wide margins can make line length too short for people
-who use large text.</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a></p>
-<p>Priority: Must-have</p>
-<p>Sources: <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#margins-and-borders">Accessibility
-Requirements for People with Low Vision: margins and borders</a>, <a
-href="https://doi.org/10.1371/journal.pone.0071161">Shorter Lines
-Facilitate Reading in Those Who Struggle</a></p>
-<h4
-id="the-user-must-be-able-to-view-the-content-in-a-scrolling-view.">The
-user must be able to view the content in a scrolling view.</h4>
-<p>For reflowable content, if the reader offers a paginated view, then
-the user should also be able to vie it in a scrollabe view.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-could-be-able-to-view-the-content-in-a-paginated-view.">The
-user could be able to view the content in a paginated view.</h4>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#ruth">Ruth</a></p>
-<p>Priority: Could-have</p>
-<h4
-id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
-user should be able to visually emphasize the text being read using a
-contrasting highlight, ruler lines, deemphasizing the surrounding text,
-or other means.</h4>
-<p>There are many ways this can be done. Here are some implementation
-examples: […]</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alex">Alex</a></p>
-<p>Priority: Should-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
-: Text is emphasised as it is spoken by read aloud</a></p>
-<h4 id="the-user-must-be-able-to-enlarge-images.">The user must be able
-to enlarge images.</h4>
-<p>The user should be able to select an image and make it larger. There
-should be controls to adjust the size and to pan around an image when it
-no longer fits within the display.</p>
-<p>A custom color theme used for viewing the text can sometimes render
-parts of the image difficult to see. There could be the option in the
-image viewer to revert to the default color mode, or to choose different
-color themes.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
-: Enlarge SVG Images</a></p>
-<h4
-id="the-user-must-be-able-to-adjust-the-size-and-color-of-math-expressions-by-adjusting-the-texts-font-size-and-color.">The
-user must be able to adjust the size and color of math expressions by
-adjusting the text’s font size and color.</h4>
-<p>Math expressions included as MathML (or LaTeX, if supported) should
-be displayed correctly. As the user adjusts the size and colors of the
-text content, the math expressions should change accordingly. As the
-text size is increased, so should the math expressions in proportion. As
-the user changes the colors for the text content, this should also
-affect the math expressions.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550">visual-550
-: Viewing MathML</a></p>
-<h4
-id="the-user-should-be-able-to-enlarge-math-expressions-for-closer-inspection.">The
-user should be able to enlarge math expressions for closer
-inspection.</h4>
-<p>Math expressions often contain small symbols such as exponents,
-indices, dot notations and derivatives. It should be possible for the
-user to view a math expression as a separate item and enlarge it.</p>
-<p>Priority: Should-have</p>
-<h4
-id="the-user-could-be-able-to-flatten-the-colors-of-math-expressions.">The
-user could be able [to flatten the colors of math expressions].</h4>
-<p>Certain parts of math expressions are sometimes presented in special
-colors, e.g. superscript in red. For some people this can present
-problems. The user could be able to remove the color formatting used in
-math expressions so the chosen text color is always used.</p>
-<p>Priority: Could-have</p>
-<h4
-id="the-user-must-be-able-to-personalize-the-background-and-foreground-colors.">The
-user must be able to personalize the background and foreground
-colors.</h4>
-<p>The user should be able to set the background and text color from the
-full color spectrum.</p>
-<p>Some people need high contrast between text and background, including
-many older people who lose contrast sensitivity from ageing. Some read
-better with dark text on light background. Others find it easier to read
-with low contrast and colors that present less glare.</p>
-<p>For some people, common color combinations or colors from a limited
-color palette work fine, for example, black text on white background or
-the inverse with white text on black background. For instance, black
-text on a white background is specifically useful for people with
-dyslexia. Other people need to select more specific background and text
-colors. For example, people who need low brightness overall, need to
-select the specific background and text colors that provide sufficient
-contrast for them yet not too high brightness. Readable and optimal
-color combinations differs vastly among individuals and can even vary
-for one individual depending on conditions such as fatigue and
-lighting.</p>
-<p>Priority: [Must-have for a limited color palette; Should-have for
-more specific background and text colors]</p>
-<p>Sources: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110">visual-110
-: Change background and foreground color</a>, <a
-href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-contrast">Accessibility
-Requirements for People with Low Vision: text contrast</a></p>
-<h4
-id="the-user-must-be-able-to-use-the-app-with-the-high-contrast-and-magnification-features-of-the-operating-system-platform.">The
-user must be able to use the app with the high contrast and
-magnification features of the operating system platform.</h4>
-<p>Some people use high contrast modes on their device because it
-increases readability by maximizing the difference between text and
-background. Some people use the magnification feature of the operating
-system, or third party tools, to increase the size of text and images on
-the display.</p>
-<p>Users must be able to use these features with the reading app. The
-app should respect the high contrast settings chosen by the user.</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#stefan">Stefan</a></p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310">visual-310
-: Apply high contrast system configuration</a></p>
-<h4 id="the-user-must-be-able-to-change-the-display-brightness.">The
-user must be able to change the display brightness.</h4>
-<p>Some individuals with low vision or dyslexia may have photophobia or
-light sensitivity. The ability to dim the screen can make reading more
-comfortable for these users. For some people with age-related macular
-degeneration, brighter illumination has been shown to improve reading
-acuity, critical print size, and maximum reading speed. Adjusting
-brightness can enhance the contrast between text and background, making
-it easier for individuals with low vision to distinguish letters and
-words.</p>
-<p>The user must be able to adjust the display brightness when using the
-reading app. If this is not possible on the device or the operating
-system, it must be possible in the reading app itself.</p>
-<p>If it is possible to adjust the display brightness on the device or
-in the operating system, it could be possible in the reading app
-itself.</p>
-<p>Priority: Must-have</p>
-<p><a
-href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210">visual-210
-: Change brightness</a>, Legge G. E. (2016). Reading Digital with Low
-Vision. Visible language, 50(2), 102–125.
-(https://pmc.ncbi.nlm.nih.gov/articles/PMC5726769/)</p>
 <h3 id="navigation">Navigation</h3>
+<p>Effective navigation is a critical aspect of digital accessibility,
+particularly for users with diverse print disabilities. Users often face
+challenges in understanding where they are within a digital publication
+or application and how to move seamlessly between sections. Clear
+navigation structures, well-defined headings, and consistent cues are
+essential to help users orient themselves and access content
+efficiently. Screen reader users, who experience content in a linear
+format that is presented either as synthetic speech or via a braille
+display, depend heavily on these elements to avoid confusion and
+maintain a sense of control. Understanding and addressing these user
+requirements is key to creating inclusive digital experiences that
+empower all users to navigate content independently and with ease.</p>
 <h4
 id="the-user-must-have-a-simple-way-to-navigate-the-list-of-available-publications-and-open-a-selected-title.">The
 user must have a simple way to navigate the list of available
 publications and open a selected title.</h4>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#oxana">Oxana</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis">Louis</a></p>
 <p>Priority: Must-have</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210">EPUBTest
@@ -403,10 +148,6 @@ subsections).</p>
 <p>Page numbers or percentage information could be provided in the table
 of contents. The user could be able to search within the table of
 contents.</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria">Maria</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
 <p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210">EPUBTest
@@ -421,10 +162,6 @@ navigate by page numbers. If the publication does not include page
 markup it could be possible to navigate by ‘pseudo pages’ (where the app
 uses an algorithm to approximate navigation points equivalent to typical
 page lengths).</p>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria">Maria</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#javier">Javier</a></p>
 <p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/file-210">EPUBTest
@@ -444,8 +181,6 @@ approach.</p>
 id="screen-readerassistive-technology-users-must-be-able-to-navigate-through-content-by-headings-block-items-lines-words-and-characters.">Screen
 reader/assistive technology users must be able to navigate through
 content by headings, block items, lines, words and characters.</h4>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#maria">Maria</a></p>
 <p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-810">EPUBTest
@@ -461,11 +196,7 @@ id="screen-readerassistive-technology-users-must-be-able-to-read-continuously-fr
 reader/assistive technology users must be able to read continuously from
 the current position, and be able to pause, then resume reading from the
 paused reading location.</h4>
-<p>User story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#alice">Alice</a>,
-<a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#liviu">Liviu</a></p>
-<p>Priority: Must</p>
+<p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-010">reading-010
 : Initiate “read from here”</a>, <a
@@ -495,261 +226,16 @@ publication.</p>
 <p>Source: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/nav-310">nav-310
 Read navigation information</a></p>
-<h3 id="read-aloud">Read Aloud</h3>
-<p>In this requirements document the term “read aloud” refers to the app
-using Text To Speech (TTS) to provide an audio option for text-based
-content.</p>
-<h4
-id="the-user-must-be-able-to-listen-to-text-based-content-using-synthetic-speech-text-to-speech.">The
-user must be able to listen to text-based content using synthetic speech
-(Text To Speech).</h4>
-<p>The user must be able to use a TTS read aloud feature for text-based
-content. If the publication also has synchronised audio with the text
-then the user must be able to choose the alternative of listening to the
-TTS read aloud.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-010">ReadAloud-010
-: The content can be read aloud</a></p>
-<h4
-id="the-user-must-be-able-to-control-the-starting-position-of-the-read-aloud.">The
-user must be able to control the starting position of the read
-aloud.</h4>
-<p>The user should be able to choose the position from where the read
-aloud begins.</p>
-<p>If a screen reader is being used then the read aloud should start
-from the screen reader position.</p>
-<p>If a screen reader is not being used then:</p>
-<ul>
-<li>If the user has indicated a start position then read aloud should
-start from there.</li>
-<li>If the user has made no selection, then read aloud should start from
-an approximate reading position (eg the first visible text on the
-display).</li>
-</ul>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-read-aloud-selected-parts-of-the-content.">The
-user must be able to read aloud selected parts of the content.</h4>
-<p>The user should be able to select text (e.g. word, phrase, sentence,
-paragraph) and have that read aloud.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-listen-to-the-read-aloud-without-having-to-manually-advance-to-subsequent-pages-or-chapters.">The
-user must be able to listen to the read aloud without having to manually
-advance to subsequent pages or chapters.</h4>
-<p>The read aloud must be able to read continuously until the end of the
-publication unless interupted by the user.</p>
-<p>The read aloud could support a sleep function, pausing the read aloud
-after a user determined period of time.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-could-be-able-to-choose-from-a-range-of-read-aloud-modes.">The
-user could be able to choose from a range of read aloud modes.</h4>
-<p>The user could be able to set the mode so that read aloud is not
-continuous. The amount read should be chosen by the user (eg read aloud
-stop after each word, sentence, paragraph, page or chapter).</p>
-<p>Priority: Could-have</p>
-<h4
-id="the-user-must-be-able-to-have-the-content-read-aloud-in-the-logical-reading-order.">The
-user must be able to have the content read aloud in the logical reading
-order.</h4>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">reading-210
-: All text should be read in the proper order</a>, <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310">ReadAloud-310
-: All text should be read in the proper order</a></p>
-<h4
-id="the-user-of-read-aloud-must-hear-appropriate-pauses-after-headings-paragraphs-list-items-etc.">The
-user of read aloud must hear appropriate pauses after headings,
-paragraphs, list items, etc.</h4>
-<p>The read aloud must use appropriate pauses after headings, list items
-etc., rather than reading as if it is one continuous section of text.
-The read aloud implementation should pay attention to commonly used text
-content such as numbered heading and lists.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510">EPUBTest
-reading-510 : TTS allows pause for indicating headings, paragraphs, list
-items, etc</a>, <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510">ReadAloud-510
-: Text to Speech handles punctuation and document structure
-appropriately</a></p>
-<h4
-id="the-user-could-be-able-to-adjust-read-aloud-to-change-the-pause-length-between-content-blocks.">The
-user could be able to adjust read aloud to change the pause length
-between content blocks.</h4>
-<p>The user could be able to adjust the pauses between sentences,
-paragraphs, etc.</p>
-<p>Priority: Could-have</p>
-<h4 id="the-user-must-be-able-to-view-the-text-being-read-aloud.">The
-user must be able to view the text being read aloud.</h4>
-<p>The user must be able to see the text that is being read aloud, and
-the display must automatically update to keep the spoken text in view.
-The techniques for changing the text in display might include scrolling
-the text to keep the text being read in the centre of the display, or
-displaying a new screen of text and starting again at the top. Note that
-users may be reading with large text, so additional care should be taken
-to consider that the complete text of the first and last sentence may
-not be in view. The user should be able to see the text being read. If
-starting from the top of the display then the read aloud should start
-from the first visble text in view (that is, should not read text that
-is not visible). The display should promptly update to always show the
-text being read, even if this is partway through a sentence at the
-bottom of the display.</p>
-<p>The user could have the ability to move to a different part of the
-text whilst the read aloud continues. If viewing a different part of the
-text the user should be able to initiate the read aloud from a part of
-the text they select.</p>
-<p>The user could have the option to use read aloud without the text
-displayed.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-visually-emphasize-the-text-being-read-aloud-and-be-able-to-turn-this-feature-off.">The
-user must be able to visually emphasize the text being read aloud and be
-able to turn this feature off.</h4>
-<p>The user must be able to visually emphasize the text as it is read
-aloud using a contrasting highlight, underlining, or other means. Some
-users will be hindered by this visual cue, e.g. due to health concerns
-such as epilepsy. Overly granular, like word-by-word highlighting could
-also be distracting.</p>
-<p>The user must be able to to turn off the read aloud visual
-emphasis.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
-: Text is emphasised as it is spoken by read aloud</a></p>
-<h4
-id="the-user-must-be-able-to-change-the-color-or-style-of-the-visual-emphasis.">The
-user must be able to change the color or style of the visual
-emphasis.</h4>
-<p>The user must be able to adjust the visual emphasis.</p>
-<p>The user could be able to adjust the number of words that are
-highlighted at any time.</p>
-<p>Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
-: Text is emphasised as it is spoken by read aloud</a></p>
-<h4
-id="the-user-of-read-aloud-must-hear-content-in-the-correct-language.">The
-user of read aloud must hear content in the correct language.</h4>
-<p>The user must be able to hear the read aloud using the correct voice
-when reading content with language tags (if available to the reading
-app). The user should be able to override language switching and select
-the language to be used for all content.</p>
-<p>The read aloud could switch between dialects of the same language. If
-this feature is supported the user must be able to disable it.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510">reading-1510
-: TTS Change Languages Automatically</a></p>
-<p>User Story: <a
-href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/#louis">Louis</a></p>
-<h4
-id="the-user-must-be-able-to-control-the-rate-of-the-read-aloud.">The
-user must be able to control the rate of the read aloud.</h4>
-<p>The user must be able to choose the speed of the read aloud voice.
-The reading app must not distort the pitch when the user has selected
-higher listening speeds.</p>
-<p>The reading app could provide an audio preview to assist the user in
-selection.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-control-the-voice-of-the-read-aloud.">The
-user must be able to control the voice of the read aloud.</h4>
-<p>The user must be able to select from a range of voices.</p>
-<p>Consideration should made of how the voice options are presented (by
-region or language, online/offline, etc). The reading app could provide
-an audio preview to assist the user in their selection.</p>
-<p>Priority: Must-have</p>
-<p>Source: <a
-href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
-: Change Read Aloud reading voice</a></p>
-<h4 id="the-user-must-be-able-to-listen-to-image-alt-text.">The user
-must be able to listen to image alt text.</h4>
-<p>The read aloud feature must be able to announce the alt text of
-images.</p>
-<p>The user must be able to turn off the read aloud of image alt text.
-The user should be able to escape from the image alt text once the read
-aloud has started.</p>
-<p>The image alt text could be distinguished from text content with an
-announcement, use of different voice, or other technique.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-could-be-able-to-choose-to-have-semantic-expressiveness-for-read-aloud.">The
-user could be able to choose to have semantic expressiveness for read
-aloud.</h4>
-<p>The user could be able to adjust the pitch or style for emphasized
-text (eg bold, italic, underlined). If this feature is supported the
-user must be able to disable it.</p>
-<p>Priority: Could-have</p>
-<h4
-id="the-user-must-be-able-to-listen-to-math-content-when-using-read-aloud.">The
-user must be able to listen to math content when using read aloud.</h4>
-<p>The read aloud feature must be able to announce encoded math content
-(eg MathML).</p>
-<p>The user should be able to adjust the announcement of math content
-according to their preference (eg relative reading speed, reading style,
-verbosity).</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-lock-their-mobile-device-and-use-read-aloud.">The
-user must be able to lock their mobile device and use read aloud.</h4>
-<p>On a mobile device the user must be lock the device without the read
-aloud stopping. The user must be able to listen and control read aloud
-(pause, resume, go back and forward) from the lock screen, to the extent
-this is supported on the platform. The display could show relevant
-information such as the current position in the title.</p>
-<p>Editor’s note - this probably also applies to audio playback.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-control-read-aloud-playback-using-the-devices-media-controls.">The
-user must be able to control read-aloud playback using the device’s
-media controls.</h4>
-<p>If supported on the device and platform the user must be able to
-control read-aloud playback using the device’s media controls, such
-including play, pause, skip forward, skip backward, and stop functions
-on a keyboard or headset.</p>
-<p>Priority: Must-have</p>
-<h4 id="the-user-should-be-able-to-use-read-aloud-with-tables.">The user
-should be able to use read aloud with tables.</h4>
-<p>The read aloud must read the table contents from left to right and
-top to bottom. The read aloud could indicate the start of the table
-though an announcement or other notification.</p>
-<p>Priority level: Must-have.</p>
-<h4
-id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsable-content"><strong>The
-user must be able to use read aloud with expandable/collapsable
-content</strong></h4>
-<p>Expanded content must be read aloud. Collapsed content must not be
-read aloud.</p>
-<p>Priority level: Must-have.</p>
-<h4
-id="the-user-must-be-able-escape-from-certain-structures-when-using-read-aloud.">The
-user must be able escape from certain structures when using read
-aloud.</h4>
-<p>The user must be able to control the read aloud so they can escape
-from reading all the way through escapable items and to continue read
-aloud from the item following the table.</p>
-<p>The escapable items are defined by each format specification.</p>
-<p>Priority level: Must-have.</p>
-<p>Source:
-https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-escapable-roles</p>
-<h4
-id="the-user-must-be-able-to-decide-the-read-aloud-should-skip-over-certain-content.">The
-user must be able to decide the read aloud should skip over certain
-content.</h4>
-<p>The user must be able to configure their reading app so that it does
-not announce skipable elements.</p>
-<p>The user preference for skipping non-core content could be set on a
-per-title basis.</p>
-<p>The skippable items are defined by each format specification.</p>
-<p>Priority: Must-have</p>
-<p>Sources:
-https://daisy.org/activities/standards/daisy/daisy-2/daisy-2-02-skippable-structures-recommendation/#intro_1,
-https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-skippable-roles</p>
-<h3 id="screen-reader-support">Screen reader support</h3>
+<h3 id="screen-reader-support">Screen Reader Support</h3>
+<p>Effective screen reader support depends not only on well-structured
+content but also on the reading app’s ability to interact seamlessly
+with assistive technologies. The application or platform must enable
+screen readers to accurately interpret and present semantic markup,
+navigation elements, and interactive features to users. This close
+collaboration between the reading app and screen reader ensures that
+users can navigate, access, and understand content efficiently.
+Addressing these technical requirements is essential to provide a fully
+accessible and usable experience for screen reader users.</p>
 <h4
 id="the-user-must-be-able-to-use-their-screen-reader-in-the-user-interface.">The
 user must be able to use their screen reader in the user interface.</h4>
@@ -778,16 +264,6 @@ user must be able to use their screen reader in a scrolling mode.</h4>
 mode) to enable the use of screen reader features such as navigating to
 next/previous heading, landmark, graphic, etc.</p>
 <p>Priority: Must-have</p>
-<h4
-id="the-user-could-use-additional-navigation-features-of-the-reading-app.">The
-user could use additional navigation features of the reading app.</h4>
-<p>In addition to the table of contents and other navigation provided by
-the content creator, the user could use additional navigation features
-offered by the reading app that will be especially beneficial to print
-disabled readers. For example, the app could provide navigation by
-heading, between landmarks, tables, images and mathematics expressions,
-irrespective of whether they are in the same content document.</p>
-<p>Priority: Could-have</p>
 <h4
 id="screen-reader-users-must-be-able-to-navigate-confidently-between-internal-hyperlinks.">Screen
 reader users must be able to navigate confidently between internal
@@ -834,13 +310,557 @@ footnote.</p>
 href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-420">reading-420
 : Footnote Reading</a></p>
 <h4
-id="todo-the-user-should-be-able-to-add-review-and-edit-highlights.">TODO:
-The user should be able to add, review and edit highlights.</h4>
+id="the-user-could-use-additional-navigation-features-of-the-reading-app.">The
+user could use additional navigation features of the reading app.</h4>
+<p>In addition to the table of contents and other navigation provided by
+the content creator, the user could use additional navigation features
+offered by the reading app that will be especially beneficial to print
+disabled readers. For example, the app could provide navigation by
+heading, between landmarks, tables, images and mathematics expressions,
+irrespective of whether they are in the same content document.</p>
+<p>Priority: Could-have</p>
+<h3 id="read-aloud">Read Aloud</h3>
+<p>In this requirements document the term “read aloud” refers to the app
+using Text To Speech (TTS) to provide an audio option for text-based
+content.</p>
+<p>Read aloud functionality plays a crucial role in making digital
+content accessible to people with print disabilities, such as visual
+impairments, dyslexia, or other reading challenges. By leveraging Text
+To Speech (TTS) technology, reading apps provide an alternative way to
+access text-based information through audio, reducing barriers to
+reading and comprehension. To offer a smooth and flexible listening
+experience, the reading app must work seamlessly with the TTS engine to
+manage how text is processed, queued, and delivered. This includes
+supporting logical reading order, language changes, and user control
+over playback and navigation. Such close integration ensures that users
+can access content audibly in a way that meets their individual needs,
+enhancing independence, inclusivity, and overall usability.</p>
+<h4
+id="the-user-must-be-able-to-listen-to-text-based-content-using-synthetic-speech-text-to-speech.">The
+user must be able to listen to text-based content using synthetic speech
+(Text To Speech).</h4>
+<p>The user must be able to use a TTS read aloud feature for text-based
+content. If the publication also has synchronised audio with the text
+then the user must be able to choose the alternative of listening to the
+TTS read aloud.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-010">ReadAloud-010
+: The content can be read aloud</a></p>
+<h4
+id="the-user-must-be-able-to-control-the-starting-position-of-the-read-aloud.">The
+user must be able to control the starting position of the read
+aloud.</h4>
+<p>The user should be able to choose the position from where the read
+aloud begins.</p>
+<p>If a screen reader is being used then the read aloud should start
+from the screen reader position.</p>
+<p>If a screen reader is not being used then:</p>
+<ul>
+<li>If the user has indicated a start position then read aloud should
+start from there.</li>
+<li>If the user has made no selection, then read aloud should start from
+an approximate reading position (eg the first visible text on the
+display).</li>
+</ul>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-read-aloud-selected-parts-of-the-content.">The
+user must be able to read aloud selected parts of the content.</h4>
+<p>The user must be able to select text (e.g. word, phrase, sentence,
+paragraph) and have that read aloud.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-listen-to-the-read-aloud-without-having-to-manually-advance-to-subsequent-pages-or-chapters.">The
+user must be able to listen to the read aloud without having to manually
+advance to subsequent pages or chapters.</h4>
+<p>The read aloud must be able to read continuously until the end of the
+publication unless interupted by the user.</p>
+<p>The read aloud could support a sleep function, pausing the read aloud
+after a user determined period of time.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-have-the-content-read-aloud-in-the-logical-reading-order.">The
+user must be able to have the content read aloud in the logical reading
+order.</h4>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-210">reading-210
+: All text should be read in the proper order</a>, <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-310">ReadAloud-310
+: All text should be read in the proper order</a></p>
+<h4
+id="the-user-of-read-aloud-must-hear-appropriate-pauses-after-headings-paragraphs-list-items-etc.">The
+user of read aloud must hear appropriate pauses after headings,
+paragraphs, list items, etc.</h4>
+<p>The read aloud must use appropriate pauses after headings, list items
+etc., rather than reading as if it is one continuous section of text.
+The read aloud implementation should pay attention to commonly used text
+content such as numbered heading and lists.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-510">EPUBTest
+reading-510 : TTS allows pause for indicating headings, paragraphs, list
+items, etc</a>, <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-510">ReadAloud-510
+: Text to Speech handles punctuation and document structure
+appropriately</a></p>
+<h4 id="the-user-must-be-able-to-view-the-text-being-read-aloud.">The
+user must be able to view the text being read aloud.</h4>
+<p>The user must be able to see the text that is being read aloud, and
+the display must automatically update to keep the spoken text in view.
+The techniques for changing the text in display might include scrolling
+the text to keep the text being read in the centre of the display, or
+displaying a new screen of text and starting again at the top. Note that
+users may be reading with large text, so additional care should be taken
+to consider that the complete text of the first and last sentence may
+not be in view. The user should be able to see the text being read. If
+starting from the top of the display then the read aloud should start
+from the first visble text in view (that is, should not read text that
+is not visible). The display should promptly update to always show the
+text being read, even if this is partway through a sentence at the
+bottom of the display.</p>
+<p>The user could have the ability to move to a different part of the
+text whilst the read aloud continues. If viewing a different part of the
+text the user should be able to initiate the read aloud from a part of
+the text they select.</p>
+<p>The user could have the option to use read aloud without the text
+displayed.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-visually-emphasize-the-text-being-read-aloud-and-be-able-to-turn-this-feature-off.">The
+user must be able to visually emphasize the text being read aloud and be
+able to turn this feature off.</h4>
+<p>The user must be able to visually emphasize the text as it is read
+aloud using a contrasting highlight, underlining, or other means. Some
+users will be hindered by this visual cue, e.g. due to health concerns
+such as epilepsy. Overly granular, like word-by-word highlighting could
+also be distracting.</p>
+<p>The user must be able to to turn off the read aloud visual
+emphasis.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
+: Text is emphasised as it is spoken by read aloud</a></p>
+<h4
+id="the-user-must-be-able-to-change-the-color-or-style-of-the-visual-emphasis.">The
+user must be able to change the color or style of the visual
+emphasis.</h4>
+<p>The user must be able to adjust the visual emphasis.</p>
+<p>The user could be able to adjust the number of words that are
+highlighted at any time.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
+: Text is emphasised as it is spoken by read aloud</a></p>
+<h4
+id="the-user-of-read-aloud-must-hear-content-in-the-correct-language.">The
+user of read aloud must hear content in the correct language.</h4>
+<p>The user must be able to hear the read aloud using the correct voice
+when reading content with language tags (if available to the reading
+app). The user should be able to override language switching and select
+the language to be used for all content.</p>
+<p>The read aloud could switch between dialects of the same language. If
+this feature is supported the user must be able to disable it.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/non-visual-reading/2.0.0/reading-1510">reading-1510
+: TTS Change Languages Automatically</a></p>
+<h4
+id="the-user-must-be-able-to-control-the-rate-of-the-read-aloud.">The
+user must be able to control the rate of the read aloud.</h4>
+<p>The user must be able to choose the speed of the read aloud voice.
+The reading app must not distort the pitch when the user has selected
+higher listening speeds.</p>
+<p>The reading app could provide an audio preview to assist the user in
+selection.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-control-the-voice-of-the-read-aloud.">The
+user must be able to control the voice of the read aloud.</h4>
+<p>The user must be able to select from a range of voices.</p>
+<p>Consideration should made of how the voice options are presented (by
+region or language, online/offline, etc). The reading app could provide
+an audio preview to assist the user in their selection.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-400">ReadAloud-400
+: Change Read Aloud reading voice</a></p>
+<h4 id="the-user-must-be-able-to-listen-to-image-alt-text.">The user
+must be able to listen to image alt text.</h4>
+<p>The read aloud feature must be able to announce the alt text of
+images.</p>
+<p>The user must be able to turn off the read aloud of image alt text.
+The user should be able to escape from the image alt text once the read
+aloud has started.</p>
+<p>The image alt text could be distinguished from text content with an
+announcement, use of different voice, or other technique.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-listen-to-math-content-when-using-read-aloud.">The
+user must be able to listen to math content when using read aloud.</h4>
+<p>The read aloud feature must be able to announce encoded math content
+(eg MathML).</p>
+<p>The user should be able to adjust the announcement of math content
+according to their preference (eg relative reading speed, reading style,
+verbosity).</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-lock-their-mobile-device-and-use-read-aloud.">The
+user must be able to lock their mobile device and use read aloud.</h4>
+<p>On a mobile device the user must be lock the device without the read
+aloud stopping. The user must be able to listen and control read aloud
+(pause, resume, go back and forward) from the lock screen, to the extent
+this is supported on the platform. The display could show relevant
+information such as the current position in the title.</p>
+<p>Editor’s note - this probably also applies to audio playback.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-control-read-aloud-playback-using-the-devices-media-controls.">The
+user must be able to control read-aloud playback using the device’s
+media controls.</h4>
+<p>If supported on the device and platform the user must be able to
+control read-aloud playback using the device’s media controls, such
+including play, pause, skip forward, skip backward, and stop functions
+on a keyboard or headset.</p>
+<p>Priority: Must-have</p>
+<h4 id="the-user-must-be-able-to-use-read-aloud-with-tables.">The user
+must be able to use read aloud with tables.</h4>
+<p>The read aloud must read the table contents from left to right and
+top to bottom. The read aloud could indicate the start of the table
+though an announcement or other notification.</p>
+<p>Priority: Must-have.</p>
+<h4
+id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsable-content"><strong>The
+user must be able to use read aloud with expandable/collapsable
+content</strong></h4>
+<p>Expanded content must be read aloud. Collapsed content must not be
+read aloud.</p>
+<p>Priority: Must-have.</p>
+<h4
+id="the-user-must-be-able-escape-from-certain-structures-when-using-read-aloud.">The
+user must be able escape from certain structures when using read
+aloud.</h4>
+<p>The user must be able to control the read aloud so they can escape
+from reading all the way through escapable items and to continue read
+aloud from the item following the table.</p>
+<p>The escapable items are defined by each format specification.</p>
+<p>Priority: Must-have.</p>
+<p>Source:
+https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-escapable-roles</p>
+<h4
+id="the-user-must-be-able-to-decide-the-read-aloud-should-skip-over-certain-content.">The
+user must be able to decide the read aloud should skip over certain
+content.</h4>
+<p>The user must be able to configure their reading app so that it does
+not announce skipable elements.</p>
+<p>The user preference for skipping non-core content could be set on a
+per-title basis.</p>
+<p>The skippable items are defined by each format specification.</p>
+<p>Priority: Must-have</p>
+<p>Sources:
+https://daisy.org/activities/standards/daisy/daisy-2/daisy-2-02-skippable-structures-recommendation/#intro_1,
+https://github.com/readium/guided-navigation/blob/main/roles.md#list-of-skippable-roles</p>
+<h4
+id="the-user-could-be-able-to-choose-from-a-range-of-read-aloud-modes.">The
+user could be able to choose from a range of read aloud modes.</h4>
+<p>The user could be able to set the mode so that read aloud is not
+continuous. The amount read should be chosen by the user (eg read aloud
+stop after each word, sentence, paragraph, page or chapter).</p>
+<p>Priority: Could-have</p>
+<h4
+id="the-user-could-be-able-to-adjust-read-aloud-to-change-the-pause-length-between-content-blocks.">The
+user could be able to adjust read aloud to change the pause length
+between content blocks.</h4>
+<p>The user could be able to adjust the pauses between sentences,
+paragraphs, etc.</p>
+<p>Priority: Could-have</p>
+<h4
+id="the-user-could-be-able-to-choose-to-have-semantic-expressiveness-for-read-aloud.">The
+user could be able to choose to have semantic expressiveness for read
+aloud.</h4>
+<p>The user could be able to adjust the pitch or style for emphasized
+text (eg bold, italic, underlined). If this feature is supported the
+user must be able to disable it.</p>
+<p>Priority: Could-have</p>
+<h3 id="visual-adjustments">Visual Adjustments</h3>
+<p>Flexible display options in a reading app are essential for people
+with print disabilities, especially those with low vision or dyslexia.
+Allowing users to customize the visual presentation of text and images —
+including font type, size, color contrast, spacing, and margins —
+significantly improves readability and comfort. These adaptations reduce
+visual stress and cognitive load, making it easier for users to process
+and understand content. By removing visual barriers, reading apps become
+more accessible, empowering users to have a more personalized and
+effective reading experience.</p>
+<h4 id="the-user-must-be-able-to-change-the-typeface.">The user must be
+able to change the typeface.</h4>
+<p>The user should be able to change the typeface of all text, choosing
+from a range including sans serif and serif fonts. Individuals with low
+vision or dyslexia often have specific preferences for font styles that
+optimize their reading experience. Typefaces with preferred letter
+shapes can aid in visual processing, improve comprehension and reduce
+cognitive load.</p>
+<p>Priority: Must-have</p>
 <p>Sources: <a
-href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010">EPUBTest
-anno-010 : Add a Bookmark or Highlight</a>, <a
-href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110">EPUBTest
-anno-110 : Review and navigate Bookmarks or Highlights</a></p>
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-510">visual-010
+: Change font</a>, <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#font">Accessibility
+Requirements for People with Low Vision: font face</a></p>
+<h4 id="the-user-must-be-able-to-change-the-font-weight.">The user must
+be able to change the font weight.</h4>
+<p>Visual readability of text requires good visual contrast. Visual
+contrast is a product of the text characteristics, such as font weight
+(thickness, font stroke width) and font size, the lightness/darkness
+difference of the colors used for the text and the background, and other
+factors. For some people, bold text is easier to read which is why they
+should be have bold font options. Many typefaces have a bold font and
+some offer variable weight.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://www.w3.org/WAI/GL/WCAG3/2020/methods/font-characteristics-contrast/">WCAG
+Accessibility Guidelines 3.0 - Draft version: visual contrast of
+text</a>, <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
+Requirements for People with Low Vision: text style</a></p>
+<h4 id="the-user-must-be-able-to-change-the-text-size.">The user must be
+able to change the text size.</h4>
+<p>Some people need to increase the size of text in order to read it.
+Although increasing size is most common, some people with tunnel vision
+and good visual acuity may prefer to decrease the size so they can see
+more text at a time.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-010">visual-010
+: Change font size</a>, <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-size">Accessibility
+Requirements for People with Low Vision: font size</a>, <a
+href="https://doi.org/10.1111/j.1467-9817.2005.00273.x">The effect of
+print size on reading speed in dyslexia. Journal of Research in
+Reading</a></p>
+<h4
+id="the-user-must-be-able-change-the-line-spacing-word-spacing-and-letter-spacing.">The
+user must be able change the line spacing, word spacing and letter
+spacing.</h4>
+<p>The amount of line spacing (leading), word spacing (space between
+words) and letter spacing (space between letters/characters) impacts
+readability. Some people need more space to read text and will have
+individual preferences. Line spacing also helps with tracking.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html">Accessibility
+Requirements for People with Low Vision: line spacing</a>, <a
+href="https://doi.org/10.1073/pnas.1205566109">Extra-large letter
+spacing improves reading in dyslexia</a>.</p>
+<h4
+id="the-user-must-be-able-turn-off-justification-and-center-alignment-of-blocks-of-text.">The
+user must be able turn off justification and center-alignment of blocks
+of text.</h4>
+<p>Justification impacts readability and tracking. Fully justified text
+creates uneven spaces between words and letters, leading to “rivers of
+white space” that disrupt reading flow and visual tracking, particularly
+for people with dyslexia. Users with low vision who rely on screen
+magnifiers may encounter exaggerated gaps or overlapping characters in
+justified text, making it harder to read. Center-aligned text is also
+problematic for multi-line blocks, as it disrupts smooth reading flow
+and makes it harder to find the beginning of lines. Depending on the
+reading order of the language concerned (left to right, or right to
+left) turning the justification or center-alignment off results in a
+left-aligned or right-aligned text.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#justification">Accessibility
+Requirements for People with Low Vision: justification/alignment</a></p>
+<h4
+id="the-user-must-be-able-to-change-the-margins-and-adjust-the-line-length-for-blocks-of-text.">The
+user must be able to change the margins and adjust the line length for
+blocks of text.</h4>
+<p>Having wide margins results in shorter line lengths. This can be
+helpful for some people with specific learning disabilities. Having wide
+margins around blocks of text helps some people focus on the text and
+not get distracted by other content.</p>
+<p>Conversely, wide margins can make line length too short for people
+who use large text.</p>
+<p>Priority: Must-have</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#margins-and-borders">Accessibility
+Requirements for People with Low Vision: margins and borders</a>, <a
+href="https://doi.org/10.1371/journal.pone.0071161">Shorter Lines
+Facilitate Reading in Those Who Struggle</a></p>
+<h4
+id="the-user-must-be-able-to-view-the-content-in-a-scrolling-view.">The
+user must be able to view the content in a scrolling view.</h4>
+<p>For reflowable content, if the reader offers a paginated view, then
+the user should also be able to vie it in a scrollabe view.</p>
+<p>Priority: Must-have</p>
+<h4 id="the-user-must-be-able-to-enlarge-images.">The user must be able
+to enlarge images.</h4>
+<p>The user should be able to select an image and make it larger. There
+should be controls to adjust the size and to pan around an image when it
+no longer fits within the display.</p>
+<p>A custom color theme used for viewing the text can sometimes render
+parts of the image difficult to see. There could be the option in the
+image viewer to revert to the default color mode, or to choose different
+color themes.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-710">visual-710
+: Enlarge SVG Images</a></p>
+<h4
+id="the-user-must-be-able-to-adjust-the-size-and-color-of-math-expressions-by-adjusting-the-texts-font-size-and-color.">The
+user must be able to adjust the size and color of math expressions by
+adjusting the text’s font size and color.</h4>
+<p>Math expressions included as MathML (or LaTeX, if supported) should
+be displayed correctly. As the user adjusts the size and colors of the
+text content, the math expressions should change accordingly. As the
+text size is increased, so should the math expressions in proportion. As
+the user changes the colors for the text content, this should also
+affect the math expressions.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-550">visual-550
+: Viewing MathML</a></p>
+<h4
+id="the-user-must-be-able-to-personalize-the-background-and-foreground-colors.">The
+user must be able to personalize the background and foreground
+colors.</h4>
+<p>The user should be able to set the background and text color from the
+full color spectrum.</p>
+<p>Some people need high contrast between text and background, including
+many older people who lose contrast sensitivity from ageing. Some read
+better with dark text on light background. Others find it easier to read
+with low contrast and colors that present less glare.</p>
+<p>For some people, common color combinations or colors from a limited
+color palette work fine, for example, black text on white background or
+the inverse with white text on black background. For instance, black
+text on a white background is specifically useful for people with
+dyslexia. Other people need to select more specific background and text
+colors. For example, people who need low brightness overall, need to
+select the specific background and text colors that provide sufficient
+contrast for them yet not too high brightness. Readable and optimal
+color combinations differs vastly among individuals and can even vary
+for one individual depending on conditions such as fatigue and
+lighting.</p>
+<p>Priority: [Must-have for a limited color palette; Should-have for
+more specific background and text colors]</p>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-110">visual-110
+: Change background and foreground color</a>, <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#text-contrast">Accessibility
+Requirements for People with Low Vision: text contrast</a></p>
+<h4
+id="the-user-must-be-able-to-use-the-app-with-the-high-contrast-and-magnification-features-of-the-operating-system-platform.">The
+user must be able to use the app with the high contrast and
+magnification features of the operating system platform.</h4>
+<p>Some people use high contrast modes on their device because it
+increases readability by maximizing the difference between text and
+background. Some people use the magnification feature of the operating
+system, or third party tools, to increase the size of text and images on
+the display.</p>
+<p>Users must be able to use these features with the reading app. The
+app should respect the high contrast settings chosen by the user.</p>
+<p>Priority: Must-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-310">visual-310
+: Apply high contrast system configuration</a></p>
+<h4 id="the-user-must-be-able-to-change-the-display-brightness.">The
+user must be able to change the display brightness.</h4>
+<p>Some individuals with low vision or dyslexia may have photophobia or
+light sensitivity. The ability to dim the screen can make reading more
+comfortable for these users. For some people with age-related macular
+degeneration, brighter illumination has been shown to improve reading
+acuity, critical print size, and maximum reading speed. Adjusting
+brightness can enhance the contrast between text and background, making
+it easier for individuals with low vision to distinguish letters and
+words.</p>
+<p>The user must be able to adjust the display brightness when using the
+reading app. If this is not possible on the device or the operating
+system, it must be possible in the reading app itself.</p>
+<p>If it is possible to adjust the display brightness on the device or
+in the operating system, it could be possible in the reading app
+itself.</p>
+<p>Priority: Must-have</p>
+<p><a
+href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210">visual-210
+: Change brightness</a>, Legge G. E. (2016). Reading Digital with Low
+Vision. Visible language, 50(2), 102–125.
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC5726769/)</p>
+<h4
+id="the-user-should-be-able-to-remove-the-visual-text-styling-underline-italic-bold.">The
+user should be able to remove the visual text styling (underline,
+italic, bold).</h4>
+<p>For some people, it is difficult to read text that is italicized,
+underlined or bold. Users should have the option to view the text
+without these visual formatting styles. However, underlining should be
+retained for hyperlinks. While removing formatting may result in the
+loss of some semantic significance, users should be able to toggle back
+to the visually formatted version as needed.</p>
+<p>Priority: Should-have</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#style">Accessibility
+Requirements for People with Low Vision: text style</a></p>
+<h4
+id="the-user-should-be-able-to-visually-emphasize-the-text-being-read-using-a-contrasting-highlight-ruler-lines-deemphasizing-the-surrounding-text-or-other-means.">The
+user should be able to visually emphasize the text being read using a
+contrasting highlight, ruler lines, deemphasizing the surrounding text,
+or other means.</h4>
+<p>There are many ways this can be done. Here are some implementation
+examples: […]</p>
+<p>Priority: Should-have</p>
+<p>Source: <a
+href="https://www.epubtest.org/test-books/read-aloud/2.0.0/ReadAloud-610">ReadAloud-610
+: Text is emphasised as it is spoken by read aloud</a></p>
+<h4
+id="the-user-should-be-able-to-enlarge-math-expressions-for-closer-inspection.">The
+user should be able to enlarge math expressions for closer
+inspection.</h4>
+<p>Math expressions often contain small symbols such as exponents,
+indices, dot notations and derivatives. It should be possible for the
+user to view a math expression as a separate item and enlarge it.</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-could-be-able-change-the-capitalization-of-text-to-sentence-style.">The
+user could be able change the capitalization of text to sentence
+style.</h4>
+<p>Text written in all capital letters or all small capital letters is
+more difficult to read for most people, with and without disabilities.
+Users should have the option to choose a sentence-style version.
+Acronyms that are correctly marked as abbreviations will remain in
+uppercase; otherwise, they will be converted to sentence style. Users
+should also be able to toggle between the different styles as
+needed.</p>
+<p>Priority: Could-have</p>
+<p>Sources: <a
+href="https://w3c.github.io/low-vision-a11y-tf/requirements.html#capitalization">Accessibility
+Requirements for People with Low Vision: capitalization</a></p>
+<h4
+id="the-user-could-be-able-to-view-the-content-in-a-paginated-view.">The
+user could be able to view the content in a paginated view.</h4>
+<p>For many users a scrolling view is preferable, some may prefer a
+paginated view.</p>
+<p>Priority: Could-have</p>
+<h4
+id="the-user-could-be-able-to-flatten-the-colors-of-math-expressions.">The
+user could be able [to flatten the colors of math expressions].</h4>
+<p>Certain parts of math expressions are sometimes presented in special
+colors, e.g. superscript in red. For some people this can present
+problems. The user could be able to remove the color formatting used in
+math expressions so the chosen text color is always used.</p>
+<p>Priority: Could-have</p>
+<h3 id="making-notes">Making Notes</h3>
+<p>The ability to add, review, and edit notes within a reading app is an
+important feature for many users, especially those with print
+disabilities or learning challenges. Notes provide a flexible way to
+capture thoughts, highlight important information, or add personal
+annotations, which can aid comprehension and retention. For users who
+rely on assistive technologies, well-integrated note functionality (such
+as audio notes, easy navigation, and synchronization) ensures that these
+annotations are accessible and usable across different contexts and
+devices. Supporting notes alongside the text also enhances interactivity
+and engagement with the content, making the reading experience more
+personalized and effective.</p>
+<p>This section had a good discussion in the working group and will now
+be written up by the editors.</p>
 <h4
 id="todo-the-user-should-be-able-to-add-review-and-edit-notes.">TODO:
 The user should be able to add, review and edit notes.</h4>
@@ -849,14 +869,13 @@ href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EP
 anno-210 : Add a note</a>, <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
 anno-310 : Review and navigate Notes</a></p>
-<h3 id="notes">Notes</h3>
 <h4 id="the-user-must-be-able-to-add-notes.">The user must be able to
 add notes.</h4>
-<p>Notes may contain either plain text or audio. [How about Math and
-Chemistry?] Notes must be anchored to at least a text range within a
-paragraph. The element to which the note is attached, must be
-highlighted. Notes can be inserted at any position within the running
-text.</p>
+<p>Notes may contain either plain text or audio. It must be possible to
+insert notes at any position within the running text. Notes must be
+anchored to at least a text range within a paragraph. The element to
+which the note is attached must be visually indicated and must be
+identifiable with any screen reader.</p>
 <p>Priority: Must-have</p>
 <p>Sources: <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210">EPUBTest
@@ -864,15 +883,34 @@ anno-210 : Add a note</a>, <a
 href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310">EPUBTest
 anno-310 : Review and navigate Notes</a></p>
 <h4
+id="the-user-must-be-able-to-view-notes-alongside-the-text-for-example-in-the-margin.">The
+user must be able to view notes alongside the text, for example in the
+margin.</h4>
+<p>Priority: Must-have</p>
+<h4 id="the-user-must-be-able-to-review-and-edit-notes.">The user must
+be able to review and edit notes.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-navigate-from-one-note-to-another.">Screen
+reader users must be able to navigate from one note to another.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-save-notes-automatically-including-during-offline-use.">The
+user must be able to save notes automatically, including during offline
+use.</h4>
+<p>Notes must be synchronized once the device is online.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-view-previously-saved-notes-when-reopening-the-book.">The
+user must be able to view previously saved notes when reopening the
+book.</h4>
+<p>Priority: Must-have</p>
+<h4
 id="the-user-should-be-able-to-format-the-content-of-a-note-using-basic-rich-text-formatting.">The
 user should be able to format the content of a note using basic rich
 text formatting.</h4>
 <p>Supported formatting includes bold, italic, and underline.</p>
 <p>Priority: Should-have</p>
-<h4
-id="the-user-must-be-able-to-view-notes-alongside-the-text-for-example-in-the-margin.">The
-user must be able to view notes alongside the text, for example in the
-margin.</h4>
 <h4 id="the-user-should-be-able-to-hide-or-show-individual-notes.">The
 user should be able to hide or show individual notes.</h4>
 <p>Priority: Should-have</p>
@@ -888,20 +926,6 @@ id="the-user-should-be-able-to-have-all-notes-read-aloud-in-sequence.">The
 user should be able to have all notes read aloud in sequence.</h4>
 <p>Priority: Should-have</p>
 <h4
-id="screen-reader-users-must-be-able-to-navigate-from-one-note-to-another.">Screen
-reader users must be able to navigate from one note to another.</h4>
-<h4
-id="the-user-must-be-able-to-save-notes-automatically-including-during-offline-use.">The
-user must be able to save notes automatically, including during offline
-use.</h4>
-<p>Notes must be synchronized once the device is online.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-view-previously-saved-notes-when-reopening-the-book.">The
-user must be able to view previously saved notes when reopening the
-book.</h4>
-<p>Priority: Must-have</p>
-<h4
 id="the-user-should-be-able-to-synchronize-notes-across-multiple-devices.">The
 user should be able to synchronize notes across multiple devices.</h4>
 <p>Priority: Should-have</p>
@@ -910,25 +934,63 @@ able to export notes.</h4>
 <p>Priority: Should-have</p>
 <h4 id="the-user-could-be-able-to-share-notes-with-others.">The user
 could be able to share notes with others.</h4>
+<h4
+id="todo-the-user-should-be-able-to-add-review-and-edit-highlights.">TODO:
+The user should be able to add, review and edit highlights.</h4>
 <p>Priority: Could-have</p>
-<h3 id="entering-answers">Entering answers</h3>
+<h3 id="todo-entering-answers">TODO: Entering Answers</h3>
+<p>Entering answers directly within digital publications is a feature
+that enables active engagement and participation, especially for
+learners with print disabilities. These users often face significant
+challenges because if they cannot read or write directly in physical
+books, and working with separate files for answers can be time-consuming
+and mentally exhausting. They benefit greatly from being able to enter
+their responses exactly where the question or prompt appears in the
+digital content, making the process more intuitive and less fragmented.
+Supporting a variety of input types—from simple text fields to selection
+controls—ensures that all users can provide responses effectively and
+independently. Accessibility considerations, such as screen reader
+compatibility and the ability to save and edit answers, are essential to
+create an inclusive and seamless user experience. Moreover,
+synchronization and export capabilities enhance flexibility, allowing
+users to access and manage their answers across devices and
+contexts.</p>
+<p>Digital book reading apps have not typically included this
+functionality. This section is at an early stage of discussion. Input
+from educators and app developers will be important to craft the
+requirements in a way that seek to address the opportunity for new
+learning experiences whilst describing requirements that are
+achievable.</p>
 <h4
 id="the-user-must-be-able-to-enter-answers-into-input-fields-provided-in-a-publication.">The
 user must be able to enter answers into input fields provided in a
 publication.</h4>
 <p>Text, possibly audio, no MathML in text fields</p>
 <p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-enter-different-types-of-answers-depending-on-the-field-type.">The
-user must be able to enter different types of answers depending on the
-field type.</h4>
-<p>Supported types: Single-line text field, Multi-line text field, Radio
-buttons, Checkboxes, Dropdown menus</p>
+<h4 id="the-user-must-be-able-to-enter-different-types-of-answers.">The
+user must be able to enter different types of answers.</h4>
+<p>Supported field types: Single-line text field, Multi-line text field,
+Radio buttons, Checkboxes, Dropdown menus</p>
 <p>Priority: Must-have</p>
 <h4
-id="the-user-should-be-able-to-format-answers-in-long-text-fields-using-a-basic-rich-text-editor.">The
-user should be able to format answers in long-text fields using a basic
-rich text editor.</h4>
+id="the-user-must-be-able-to-review-and-edit-answers-in-the-input-fields.">The
+user must be able to review and edit answers in the input fields.</h4>
+<p>Priority: Must-have</p>
+<h4 id="the-user-must-be-able-to-save-answers.">The user must be able to
+save answers.</h4>
+<p>Preferably: automatically. Ambitious aim: save online, so answers can
+be synchronized across multiple devices. In that case, saving should
+happen including during offline use. Answers must sync once the device
+is online. More modest aim: save locally.</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-navigate-between-input-fields.">Screen
+reader users must be able to navigate between input fields.</h4>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-format-answers-in-text-fields-using-a-basic-rich-text-editor.">The
+user should be able to format answers in text fields using a basic rich
+text editor.</h4>
 <p>Formatting options: bold, italic, underline</p>
 <p>Priority: Should-have</p>
 <h4
@@ -938,38 +1000,32 @@ user should be able to add custom input fields where none exist.</h4>
 reader navigation, and be included in exports.</p>
 <p>Priority: Should-have</p>
 <h4
-id="the-user-must-be-able-to-save-answers-automatically-including-during-offline-use.">The
-user must be able to save answers automatically, including during
-offline use.</h4>
-<p>Answers must sync once the device is online.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-see-previously-saved-answers-when-reopening-a-book.">The
-user must be able to see previously saved answers when reopening a
+id="the-user-should-be-able-to-see-previously-saved-answers-when-reopening-a-book.">The
+user should be able to see previously saved answers when reopening a
 book.</h4>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-should-be-able-to-synchronize-answers-and-settings-across-multiple-devices.">The
-user should be able to synchronize answers and settings across multiple
-devices.</h4>
 <p>Priority: Should-have</p>
 <h4 id="the-user-should-be-able-to-export-answers.">The user should be
 able to export answers.</h4>
 <p>Priority: Should-have</p>
 <h4
-id="screen-reader-users-must-be-able-to-navigate-between-answer-fields.">Screen
-reader users must be able to navigate between answer fields.</h4>
-<p>Priority: Must-have</p>
+id="the-user-could-be-able-to-synchronize-answers-across-multiple-devices.">The
+user could be able to synchronize answers across multiple devices.</h4>
+<p>Priority: Could-have</p>
 <h4
-id="the-user-should-be-able-to-share-answers-with-others-e.g.-teachers-students.">The
-user should be able to share answers with others (e.g. teachers,
+id="the-user-could-be-able-to-share-answers-with-others-e.g.-teachers-students.">The
+user could be able to share answers with others (e.g. teachers,
 students).</h4>
-<p>Priority: Should-have</p>
+<p>Priority: Could-have</p>
 <h4
 id="the-user-could-be-able-to-have-their-answers-automatically-checked.">The
 user could be able to have their answers automatically checked.</h4>
 <p>Priority: Could-have</p>
-<h3 id="todo-switching-modalities">TODO: Switching modalities</h3>
+<p>Sources: <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010">EPUBTest
+anno-010 : Add a Bookmark or Highlight</a>, <a
+href="https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110">EPUBTest
+anno-110 : Review and navigate Bookmarks or Highlights</a></p>
+<h3 id="todo-switching-modalities">TODO: Switching Modalities</h3>
 <p>To include switching between embedded audio and read aloud.</p>
 <h3 id="todo-library-and-bookshelf">TODO: Library and Bookshelf</h3>
 <p>To include:</p>
@@ -979,6 +1035,13 @@ user could be able to have their answers automatically checked.</h4>
 <li>titles - book information (metadata), book
 rating/reviewing/recommending</li>
 </ul>
+</section>
+<section id="userstories">
+<h2 id="user-stories">User Stories</h2>
+<p>The <a
+href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/">user
+stories</a> referenced in this document were developed by the working
+group.</p>
 </section>
 <section id="acknowledgments">
 <h2 id="acknowledgements">Acknowledgements</h2>
