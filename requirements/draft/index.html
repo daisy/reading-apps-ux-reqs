@@ -16,9 +16,9 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 <hgroup>
 <h1 class="title" id="daisy-reading-apps-user-requirements">DAISY
 Reading Apps User Requirements</h1>
-<p><span class="subtitle">Public Working Draft</span></p>
+<p><span class="subtitle">Editors’ Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">1 June 2025</span></p>
+<p><span class="pubdate">30 June 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -965,7 +965,9 @@ achievable.</p>
 id="the-user-must-be-able-to-enter-answers-into-input-fields-provided-in-a-publication.">The
 user must be able to enter answers into input fields provided in a
 publication.</h4>
-<p>Text, possibly audio, no MathML in text fields</p>
+<p>Input formats: - text: essential - audio: there does not seem to be a
+usecase other than speech-to-text - math: linar math formats like LaTeX
+or Unicode math are ML in text fields</p>
 <p>Priority: Must-have</p>
 <h4 id="the-user-must-be-able-to-enter-different-types-of-answers.">The
 user must be able to enter different types of answers.</h4>
@@ -994,27 +996,35 @@ text editor.</h4>
 <p>Formatting options: bold, italic, underline</p>
 <p>Priority: Should-have</p>
 <h4
-id="the-user-should-be-able-to-add-custom-input-fields-where-none-exist.">The
-user should be able to add custom input fields where none exist.</h4>
-<p>These must support the same input types, be accessible via screen
-reader navigation, and be included in exports.</p>
-<p>Priority: Should-have</p>
-<h4
-id="the-user-should-be-able-to-see-previously-saved-answers-when-reopening-a-book.">The
-user should be able to see previously saved answers when reopening a
+id="the-user-must-be-able-to-see-previously-saved-answers-when-reopening-a-book.">The
+user must be able to see previously saved answers when reopening a
 book.</h4>
-<p>Priority: Should-have</p>
+<p>Priority: Must-have</p>
 <h4 id="the-user-should-be-able-to-export-answers.">The user should be
 able to export answers.</h4>
+<p>Simple export in a file format such as .csv or other. This file can
+then be used to send it to teachers or other students, etc.</p>
 <p>Priority: Should-have</p>
-<h4
-id="the-user-could-be-able-to-synchronize-answers-across-multiple-devices.">The
-user could be able to synchronize answers across multiple devices.</h4>
-<p>Priority: Could-have</p>
 <h4
 id="the-user-could-be-able-to-share-answers-with-others-e.g.-teachers-students.">The
 user could be able to share answers with others (e.g. teachers,
 students).</h4>
+<p>Share with other users of the same reading system. More sophisticated
+than the simple export in the previous UR.</p>
+<p>Priority: Could-have</p>
+<h4
+id="the-user-should-be-able-to-add-custom-input-fields-where-none-exist.">The
+user should be able to add custom input fields where none exist.</h4>
+<p>In some cases it’s difficult for providers of accessible content to
+locate all questions/assignments etc. where an input field is needed. If
+the provider of the accessible publication has missed one of these
+elements, it’s useful if users can add their own input fields. These
+must support the same input types, be accessible via screen reader
+navigation, and be included in exports.</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-could-be-able-to-synchronize-answers-across-multiple-devices.">The
+user could be able to synchronize answers across multiple devices.</h4>
 <p>Priority: Could-have</p>
 <h4
 id="the-user-could-be-able-to-have-their-answers-automatically-checked.">The
@@ -1034,6 +1044,113 @@ anno-110 : Review and navigate Bookmarks or Highlights</a></p>
 <li>bookshelf- sorting, adding and removing books</li>
 <li>titles - book information (metadata), book
 rating/reviewing/recommending</li>
+</ul>
+<h4
+id="the-user-must-have-a-simple-way-to-log-in-to-the-reading-system">The
+user must have a simple way to log in to the reading system</h4>
+<p>Manual login with username/membership number/email address and
+password Additional features: - automatic login: must-have - ‘Forgot
+Password’ feature: must-have - Password visibility toggle: must-have</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-read-titles-from-multiple-providers.">The
+user must be able to read titles from multiple providers.</h4>
+<p>Books from different providers on 1 bookshelf, or several bookshelves
+in one system, depending on implementation. Intuitive interface. Easy
+way of adding multiple providers.</p>
+<h4
+id="the-user-must-have-be-able-to-browse-and-search-for-titles-in-the-collection-of-the-provider-and-add-titles-to-the-bookshelf.">The
+user must have be able to browse and search for titles in the collection
+of the provider and add titles to the bookshelf.</h4>
+<ul>
+<li>advanced filters (genre, author, language, etc)</li>
+<li>“to read list” functionality</li>
+<li>reading history</li>
+</ul>
+<h4
+id="the-user-must-have-a-simple-way-to-subscribe-to-subscription-based-products-and-to-end-the-subscription.">The
+user must have a simple way to subscribe to subscription-based products,
+and to end the subscription.</h4>
+<p>e.g. periodicals (newspapers, magazines)</p>
+<h4
+id="the-user-mustshouldcould-be-able-to-add-titles-through-sideloading.">The
+user must/should/could be able to add titles through sideloading.</h4>
+<h4
+id="the-user-must-be-able-to-return-titles-and-remove-them-from-the-bookshelf.">The
+user must be able to return titles (and remove them from the
+bookshelf).</h4>
+<ul>
+<li>Confirmations before actions: To prevent accidental taps (e.g. “Are
+you sure you want to return this book?”)</li>
+</ul>
+<h4
+id="the-user-must-be-able-to-download-titles-and-read-them-offline.">The
+user must be able to download titles and read them offline.</h4>
+<p>Downloading is not standard; there should be an option to download.
+The user should be able to choose whether the download is saved on
+internal or external memory. Advanced option: setting for standard
+downloading of certain types of content, e.g. magazines yes, books
+no.</p>
+<h4
+id="the-user-must-be-able-to-sort-the-bookshelf-by-multiple-criteria-e.g.-title-author-date-added-and-last-opened">The
+user must be able to sort the bookshelf by multiple criteria (e.g.,
+title, author, date added, and last opened)</h4>
+<p>Common sort criteria: - By Title (A–Z / Z–A): Alphabetical order by
+book title. - By Author (A–Z / Z–A): Sort books based on the author’s
+last name. - By Date Added: Most recently added books appear first or
+last. - By Last Opened: Shows the most recently read books first — great
+for resuming quickly. - By Reading Progress: Sort by how far along the
+user is (e.g. unfinished at the top). - By Publication Date: Newest or
+oldest titles first. - By Format: E.g. Audiobooks first, then e-books,
+or vice versa. Advanced: - Custom sort order: manually reorder books -
+Sort by language: useful in multilingual environments</p>
+<h4
+id="the-user-must-have-a-simple-way-to-navigate-the-list-of-available-publications-and-open-a-selected-title.-1">The
+user must have a simple way to navigate the list of available
+publications and open a selected title.</h4>
+<p>[this is in Navigation. Should it stay there, or is this a Bookshelf
+functionality?] [‘available publications’ = do we mean ‘available on
+bookshelf’] Advanced option: search the titles on the bookshelf by
+author or title (This is interesting only with long lists)</p>
+<h4
+id="the-user-must-have-access-to-the-book-covers-of-the-titles-on-the-bookshelf.">The
+user must have access to the book covers of the titles on the
+bookshelf.</h4>
+<p>Book covers must be shown on the bookshelf. The user should be able
+to enlarge book covers.</p>
+<h4
+id="the-user-must-be-able-to-see-an-up-to-date-bookshelf-that-automatically-reflects-changes-made-on-other-platforms-such-as-newly-added-books-via-the-website.">The
+user must be able to see an up-to-date bookshelf that automatically
+reflects changes made on other platforms, such as newly added books via
+the website.</h4>
+<p>Optional additional feature: popup message “These books have been
+added/deleted”</p>
+<h4
+id="the-user-must-be-able-to-view-the-general-title-information-metadata-that-is-available.">The
+user must be able to view the general title information (metadata) that
+is available.</h4>
+<ul>
+<li>bibliographic information, duration, size, subject</li>
+<li>in a navigable list</li>
+<li>both when browsing/searching the collection and when the title is on
+the bookshelf</li>
+</ul>
+<h4
+id="the-user-must-be-able-to-view-the-accessibility-metadata-of-a-title-when-available.">The
+user must be able to view the accessibility metadata of a title when
+available.</h4>
+<ul>
+<li>display the schema.org information in the content for the user</li>
+<li>in a navigable list</li>
+<li>both when browsing/searching the collection and when the title is on
+the bookshelf</li>
+</ul>
+<h4
+id="the-user-must-be-able-to-listen-to-an-audio-preview-when-available.">The
+user must be able to listen to an audio preview when available.</h4>
+<ul>
+<li>both when browsing/searching the collection and when the title is on
+the bookshelf</li>
 </ul>
 </section>
 <section id="userstories">

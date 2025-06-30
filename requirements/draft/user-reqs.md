@@ -23,11 +23,11 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 <hgroup>
 
 # DAISY Reading Apps User Requirements {.title}
-[Public Working Draft]{.subtitle}
+[Editors' Working Draft]{.subtitle}
 
 </hgroup>
 
-[1 June 2025]{.pubdate}
+[30 June 2025]{.pubdate}
 
 Editors:
 
@@ -675,7 +675,10 @@ Digital book reading apps have not typically included this functionality. This s
 
 #### The user must be able to enter answers into input fields provided in a publication.
 
-Text, possibly audio, no MathML in text fields
+Input formats:
+- text: essential
+- audio: there does not seem to be a usecase other than speech-to-text
+- math: linar math formats like LaTeX or Unicode math are ML in text fields
 
 Priority: Must-have
 
@@ -707,17 +710,25 @@ Formatting options: bold, italic, underline
 
 Priority: Should-have
 
-#### The user should be able to add custom input fields where none exist.
+#### The user must be able to see previously saved answers when reopening a book.
 
-These must support the same input types, be accessible via screen reader navigation, and be included in exports.
-
-Priority: Should-have
-
-#### The user should be able to see previously saved answers when reopening a book.
-
-Priority: Should-have
+Priority: Must-have
 
 #### The user should be able to export answers.
+
+Simple export in a file format such as .csv or other. This file can then be used to send it to teachers or other students, etc.
+
+Priority: Should-have
+
+#### The user could be able to share answers with others (e.g. teachers, students).
+
+Share with other users of the same reading system. More sophisticated than the simple export in the previous UR.
+
+Priority: Could-have
+
+#### The user should be able to add custom input fields where none exist.
+
+In some cases it's difficult for providers of accessible content to locate all questions/assignments etc. where an input field is needed. If the provider of the accessible publication has missed one of these elements, it's useful if users can add their own input fields.  These must support the same input types, be accessible via screen reader navigation, and be included in exports.
 
 Priority: Should-have
 
@@ -725,9 +736,6 @@ Priority: Should-have
 
 Priority: Could-have
 
-#### The user could be able to share answers with others (e.g. teachers, students).
-
-Priority: Could-have
 
 #### The user could be able to have their answers automatically checked.
 
@@ -747,6 +755,73 @@ To include:
 - library- logging in, discovery, download, return
 - bookshelf- sorting, adding and removing books
 - titles - book information (metadata), book rating/reviewing/recommending
+
+#### The user must have a simple way to log in to the reading system
+Manual login with username/membership number/email address and password
+Additional features:
+- automatic login: must-have
+- 'Forgot Password' feature: must-have
+- Password visibility toggle: must-have
+
+Priority: Must-have
+
+#### The user must be able to read titles from multiple providers.
+Books from different providers on 1 bookshelf, or several bookshelves in one system, depending on implementation. Intuitive interface. Easy way of adding multiple providers.
+
+#### The user must have be able to browse and search for titles in the collection of the provider and add titles to the bookshelf.
+- advanced filters (genre, author, language, etc)
+- "to read list" functionality
+- reading history
+
+#### The user must have a simple way to subscribe to subscription-based products, and to end the subscription.
+e.g. periodicals (newspapers, magazines)
+
+#### The user must/should/could be able to add titles through sideloading.
+
+#### The user must be able to return titles (and remove them from the bookshelf).
+- Confirmations before actions: To prevent accidental taps (e.g. "Are you sure you want to return this book?")
+
+#### The user must be able to download titles and read them offline.
+Downloading is not standard; there should be an option to download. The user should be able to choose whether the download is saved on internal or external memory.
+Advanced option: setting for standard downloading of certain types of content, e.g. magazines yes, books no.
+
+#### The user must be able to sort the bookshelf by multiple criteria (e.g., title, author, date added, and last opened)
+Common sort criteria:
+- By Title (A–Z / Z–A): Alphabetical order by book title.
+- By Author (A–Z / Z–A): Sort books based on the author’s last name.
+- By Date Added: Most recently added books appear first or last.
+- By Last Opened: Shows the most recently read books first — great for resuming quickly.
+- By Reading Progress: Sort by how far along the user is (e.g. unfinished at the top).
+- By Publication Date: Newest or oldest titles first.
+- By Format: E.g. Audiobooks first, then e-books, or vice versa.
+Advanced:
+- Custom sort order: manually reorder books
+- Sort by language: useful in multilingual environments
+
+#### The user must have a simple way to navigate the list of available publications and open a selected title.
+[this is in Navigation. Should it stay there, or is this a Bookshelf functionality?]
+['available publications' = do we mean 'available on bookshelf']
+Advanced option: search the titles on the bookshelf by author or title (This is interesting only with long lists)
+
+#### The user must have access to the book covers of the titles on the bookshelf.
+Book covers must be shown on the bookshelf. 
+The user should be able to enlarge book covers.
+
+#### The user must be able to see an up-to-date bookshelf that automatically reflects changes made on other platforms, such as newly added books via the website.
+Optional additional feature: popup message "These books have been added/deleted"
+
+#### The user must be able to view the general title information (metadata) that is available.
+- bibliographic information, duration, size, subject
+- in a navigable list
+- both when browsing/searching the collection and when the title is on the bookshelf
+
+#### The user must be able to view the accessibility metadata of a title when available.
+- display the schema.org information in the content for the user
+- in a navigable list
+- both when browsing/searching the collection and when the title is on the bookshelf
+
+#### The user must be able to listen to an audio preview when available.
+- both when browsing/searching the collection and when the title is on the bookshelf
 
 :::
 ::: {#userstories .section}
