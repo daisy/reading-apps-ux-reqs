@@ -23,7 +23,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 <hgroup>
 
 # DAISY Reading Apps User Requirements {.title}
-[Public Working Draft]{.subtitle}
+[Editors' Working Draft]{.subtitle}
 
 </hgroup>
 
