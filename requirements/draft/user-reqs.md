@@ -23,11 +23,11 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 <hgroup>
 
 # DAISY Reading Apps User Requirements {.title}
-[Editors' Working Draft]{.subtitle}
+[Public Working Draft]{.subtitle}
 
 </hgroup>
 
-[30 June 2025]{.pubdate}
+[4 July 2025]{.pubdate}
 
 Editors:
 
@@ -56,9 +56,8 @@ Copyright © 2025 DAISY Consortium
   - [Read Aloud](#read-aloud)
   - [Visual Adjustments](#visual-adjustments)
   - [Making Notes](#making-notes)
-  - [TODO: Entering Answers](#todo-entering-answers)
-  - [TODO: Switching Modalities](#todo-switching-modalities)
-  - [TODO: Library and Bookshelf](#todo-library-and-bookshelf)
+  - [Entering Answers](#entering-answers)
+  - [Library, Bookstore and Bookshelf](#library-bookstore-and-bookshelf)
 - [User Stories](#user-stories)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
@@ -214,7 +213,7 @@ Screen user readers must be able to get information about their current position
 
 Priority: Must-have
 
-#### TODO: Screen reader users must be able to use footnotes
+#### Screen reader users must be able to use footnotes
 
 Users must be able to detect the reference to a footnote, reach the content of the footnote, read the content of the footnote and provide a mechanism to move back to the original reading position from the footnote.
 
@@ -593,7 +592,7 @@ The ability to add, review, and edit notes within a reading app is an important 
 
 This section had a good discussion in the working group and will now be written up by the editors.
 
-#### TODO: The user should be able to add, review and edit notes.
+#### The user should be able to add, review and edit notes.
 
 Sources: [EPUBTest anno-210 : Add a note](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-210),
 [EPUBTest anno-310 : Review and navigate Notes](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-310)
@@ -663,40 +662,36 @@ Priority: Should-have
 
 #### The user could be able to share notes with others.
 
-#### TODO: The user should be able to add, review and edit highlights.
+####  The user should be able to add, review and edit highlights.
 
 Priority: Could-have
 
-### TODO: Entering Answers
+###  Entering Answers
 
 Entering answers directly within digital publications is a feature that enables active engagement and participation, especially for learners with print disabilities. These users often face significant challenges because if they cannot read or write directly in physical books, and working with separate files for answers can be time-consuming and mentally exhausting. They benefit greatly from being able to enter their responses exactly where the question or prompt appears in the digital content, making the process more intuitive and less fragmented. Supporting a variety of input types—from simple text fields to selection controls—ensures that all users can provide responses effectively and independently. Accessibility considerations, such as screen reader compatibility and the ability to save and edit answers, are essential to create an inclusive and seamless user experience. Moreover, synchronization and export capabilities enhance flexibility, allowing users to access and manage their answers across devices and contexts.
 
 Digital book reading apps have not typically included this functionality. This section is at an early stage of discussion. Input from educators and app developers will be important to craft the requirements in a way that seek to address the opportunity for new learning experiences whilst describing requirements that are achievable.
 
-#### The user must be able to enter answers into input fields provided in a publication.
+#### The user must be able to enter answers into input fields provided in a publication, in different types of input fields, and edit and review them.
 
 Input formats:
 - text: essential
 - audio: there does not seem to be a usecase other than speech-to-text
 - math: linar math formats like LaTeX or Unicode math are ML in text fields
 
-Priority: Must-have
-
-#### The user must be able to enter different types of answers.
-
-Supported field types:
+Required field types:
 Single-line text field, Multi-line text field, Radio buttons, Checkboxes, Dropdown menus
 
 Priority: Must-have
 
-#### The user must be able to review and edit answers in the input fields.
-
-Priority: Must-have
-
-#### The user must be able to save answers.
+#### The user must be able to save their answers.
 
 Preferably: automatically. Ambitious aim: save online, so answers can be synchronized across multiple devices. In that case, saving should happen including during offline use. Answers must sync once the device is online.
 More modest aim: save locally.
+
+Priority: Must-have
+
+#### The user must be able to see previously saved answers when reopening a book.
 
 Priority: Must-have
 
@@ -710,32 +705,25 @@ Formatting options: bold, italic, underline
 
 Priority: Should-have
 
-#### The user must be able to see previously saved answers when reopening a book.
+#### The user should be able to share answers with others (e.g. teachers, students).
 
-Priority: Must-have
-
-#### The user should be able to export answers.
-
-Simple export in a file format such as .csv or other. This file can then be used to send it to teachers or other students, etc.
+A simple way to share the answers would be by exporting the answers, with reference to the assignments/questions they belong to, in a separate file, e.g. in a file format such as .html, .csv or other. This file can then be used to send it to teachers or other students, etc.
 
 Priority: Should-have
 
-#### The user could be able to share answers with others (e.g. teachers, students).
-
-Share with other users of the same reading system. More sophisticated than the simple export in the previous UR.
+A more sophisticated way of sharing could be by sharing with other users of the same reading system through the reading system itself.
 
 Priority: Could-have
 
-#### The user should be able to add custom input fields where none exist.
+#### The user could be able to add custom input fields where none exist.
 
 In some cases it's difficult for providers of accessible content to locate all questions/assignments etc. where an input field is needed. If the provider of the accessible publication has missed one of these elements, it's useful if users can add their own input fields.  These must support the same input types, be accessible via screen reader navigation, and be included in exports.
 
-Priority: Should-have
+Priority: Could-have
 
 #### The user could be able to synchronize answers across multiple devices.
 
 Priority: Could-have
-
 
 #### The user could be able to have their answers automatically checked.
 
@@ -744,46 +732,63 @@ Priority: Could-have
 Sources: [EPUBTest anno-010 : Add a Bookmark or Highlight](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-010), 
 [EPUBTest anno-110 : Review and navigate Bookmarks or Highlights](https://www.epubtest.org/test-books/basic-functionality/2.0.0/anno-110)
 
-### TODO: Switching Modalities
-
-To include switching between embedded audio and read aloud.
-
-### TODO: Library and Bookshelf
+### Library, Bookstore and Bookshelf
 
 To include:
 
-- library- logging in, discovery, download, return
-- bookshelf- sorting, adding and removing books
+- library - logging in, discovery, download, return
+- bookstore - catalogue, buying or pre-ordering content
+- bookshelf - sorting, adding and removing books
 - titles - book information (metadata), book rating/reviewing/recommending
 
 #### The user must have a simple way to log in to the reading system
-Manual login with username/membership number/email address and password
+Manual login; authentication methods should be compatible with modern standards (e.g. passkeys, cryptographic authenticators).
 Additional features:
 - automatic login: must-have
 - 'Forgot Password' feature: must-have
 - Password visibility toggle: must-have
+- No accessibility barriers when tasks redirect users to external sites or apps, or inaccessible captchas.
 
 Priority: Must-have
 
-#### The user must be able to read titles from multiple providers.
+#### The user could be able to read titles from multiple providers.
 Books from different providers on 1 bookshelf, or several bookshelves in one system, depending on implementation. Intuitive interface. Easy way of adding multiple providers.
+This depends on the app's scope: general reading apps may need it as a must-have, but not specialized systems.
+Potential sources: libraries, bookstores, Learning Management Systems.
+Need for users to identify content sources to manage purchases, pre-orders or returns, e.g. with metadata.
 
-#### The user must have be able to browse and search for titles in the collection of the provider and add titles to the bookshelf.
+Priority: Could-have
+
+#### The user must be able to browse and search for titles in the collection of the provider and add titles to the bookshelf.
 - advanced filters (genre, author, language, etc)
 - "to read list" functionality
 - reading history
 
+Priority: Must-have
+
+#### The user must/should/could be able to add titles through sideloading.
+
+Integration and sideloading from external sources rather than relying solely on in-app features are important. The flexibility and web browser options are preferable.
+For researchers more advanced search capabilities beyond basic bibliographic data, such as chapter-level search in anthologies, are necessary: Sophisticated external search with import functionality may be a better fit. 
+ability to search across platforms (federated search) and read content from multiple providers in a single reading system
+
+Priority:
+
 #### The user must have a simple way to subscribe to subscription-based products, and to end the subscription.
 e.g. periodicals (newspapers, magazines)
 
-#### The user must/should/could be able to add titles through sideloading.
+Priority:
 
 #### The user must be able to return titles (and remove them from the bookshelf).
 - Confirmations before actions: To prevent accidental taps (e.g. "Are you sure you want to return this book?")
 
+Priority:
+
 #### The user must be able to download titles and read them offline.
 Downloading is not standard; there should be an option to download. The user should be able to choose whether the download is saved on internal or external memory.
 Advanced option: setting for standard downloading of certain types of content, e.g. magazines yes, books no.
+
+Priority:
 
 #### The user must be able to sort the bookshelf by multiple criteria (e.g., title, author, date added, and last opened)
 Common sort criteria:
@@ -798,30 +803,44 @@ Advanced:
 - Custom sort order: manually reorder books
 - Sort by language: useful in multilingual environments
 
+Priority:
+
 #### The user must have a simple way to navigate the list of available publications and open a selected title.
 [this is in Navigation. Should it stay there, or is this a Bookshelf functionality?]
 ['available publications' = do we mean 'available on bookshelf']
 Advanced option: search the titles on the bookshelf by author or title (This is interesting only with long lists)
 
+Priority:
+
 #### The user must have access to the book covers of the titles on the bookshelf.
 Book covers must be shown on the bookshelf. 
 The user should be able to enlarge book covers.
 
+Priority:
+
 #### The user must be able to see an up-to-date bookshelf that automatically reflects changes made on other platforms, such as newly added books via the website.
 Optional additional feature: popup message "These books have been added/deleted"
+
+Priority:
 
 #### The user must be able to view the general title information (metadata) that is available.
 - bibliographic information, duration, size, subject
 - in a navigable list
 - both when browsing/searching the collection and when the title is on the bookshelf
 
+Priority:
+
 #### The user must be able to view the accessibility metadata of a title when available.
 - display the schema.org information in the content for the user
 - in a navigable list
 - both when browsing/searching the collection and when the title is on the bookshelf
 
+Priority:
+
 #### The user must be able to listen to an audio preview when available.
 - both when browsing/searching the collection and when the title is on the bookshelf
+
+Priority:
 
 :::
 ::: {#userstories .section}
