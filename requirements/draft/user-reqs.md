@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[29 July 2025]{.pubdate}
+[11 September 2025]{.pubdate}
 
 Editors:
 
@@ -57,6 +57,8 @@ Copyright © 2025 DAISY Consortium
   - [Read Aloud](#read-aloud)
   - [Embedded Audio](#embedded-audio)
   - [Visual Adjustments](#visual-adjustments)
+  - [Clarifying Note on Bookmarks, Notes and Highlights](#clarifying-note-on-bookmarks-notes-and-highlights)
+  - [Bookmarking](#bookmarking)
   - [Making Notes](#making-notes)
   - [Highlighting](#highlighting)
   - [Entering Answers](#entering-answers)
@@ -122,7 +124,7 @@ cues. Understanding and addressing these user requirements is key to
 creating inclusive digital experiences that empower all users to
 navigate content independently and with ease.
 
-#### The user must have a straightforward way to navigate forward and backward through the content.
+#### The user must have a straightforward way to navigate forward and backward through the content
 
 For content with text it must be possible to move forward and backward
 from the currently displayed screen. For content with audio it must be
@@ -130,7 +132,7 @@ possible to move forward and backward using time-based navigation.
 
 Priority: Must-have
 
-#### The user must be able to navigate the publication using the Table of Contents.
+#### The user must be able to navigate the publication using the Table of Contents
 
 When displaying the table of contents, the focus must be on the entry
 that matches the user\'s current reading position. If the publication's
@@ -148,7 +150,7 @@ The user could be able to search within the table of contents.
 
 Priority: Must-have
 
-#### The user must have a way to navigate the content by pages.
+#### The user must have a way to navigate the content by pages
 
 When the publication includes page markup, then it must be possible to
 navigate by page numbers. If the publication does not include page
@@ -158,18 +160,25 @@ page lengths).
 
 Priority: Must-have
 
-#### The user must have a way to go to a specific location in audio-based content.
+#### The user must have a way to go to a specific location in audio-based content
 
 When reading audio-based content it must be possible to go to a specific
 location. This could be based on time, percentage, or another approach.
 
 Priority: Must-have
 
-#### Screen reader/assistive technology users must be able to navigate through content by headings, block items, lines, words and characters.
+#### Screen reader/assistive technology users must be able to navigate through content by headings, block items, lines, words and characters
+
+This functionality is provided by the screen reader or assistive 
+technology, but it relies on how the audio and text content is exposed 
+within the app. To support navigation by headings, blocks, lines, words, 
+and characters, the content must be properly structured and tagged so 
+that the screen reader can interpret and present it accurately to the 
+user.
 
 Priority: Must-have
 
-#### Screen reader users must be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location.
+#### Screen reader users must be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location
 
 For content with text it must be possible to use the continuous reading
 feature of a screen reader to start, pause and resume continuous
@@ -178,7 +187,7 @@ continue until the end is reached or stopped by the user.
 
 Priority: Must-have
 
-#### The user must be able to return to the last location the next time they open the publication.
+#### The user must be able to return to the last location the next time they open the publication
 
 The saving of the user\'s location must happen automatically, for
 example when closing the app. When reading text-based content it must be
@@ -191,7 +200,7 @@ exact last location.
 
 Priority: Must-have
 
-#### The user must be able to determine their location in the content.
+#### The user must be able to determine their location in the content
 
 The user must be able to get information about their current position in
 the publication without losing their reading position. The minimum
@@ -201,20 +210,24 @@ The user should be able to determine the current chapter, section, and
 current page number where this information is provided in the
 publication.
 
-Screen user readers must be able to get information about their current
+Screen reader users must be able to get information about their current
 position in the content without losing their reading position.
 
 Priority: Must-have
 
-#### The user could be able to go back to a previous location in the content.
+#### The user could be able to go back to a previous location in the content
 
-A "go back" feature allows users to return to a previous location after
-navigating through a digital publication, such as following an internal
-link or jumping to a search result. This supports orientation and
-reduces cognitive load, especially for users with print disabilities who
-may rely on assistive technologies and benefit from predictable,
-reversible navigation paths. The app could support multiple location
-histories.
+A "go back" feature within the reading application allows users to 
+explicitly return to a previous location after navigating through a 
+digital publication, for example, after following an internal link, 
+jumping to a search result, or accessing a glossary entry. While some 
+screen readers offer limited navigation history, an in-app "go back" 
+function provides a more predictable and user-controlled experience, and 
+it benefits users who do not use screen readers as well. This is 
+particularly beneficial for users with print disabilities, as it 
+supports orientation and reduces cognitive load. The application could 
+optionally support multiple location histories to enhance usability 
+across complex publications.
 
 Priority: Could-have
 
@@ -230,7 +243,7 @@ users can navigate, access, and understand content efficiently.
 Addressing these technical requirements is essential to provide a fully
 accessible and usable experience for screen reader users.
 
-#### The user must be able to use their screen reader in the user interface.
+#### The user must be able to use their screen reader in the user interface
 
 The user must be able to navigate and interact with all elements of the
 app---including menus, dialogs, buttons, and content---using their
@@ -240,19 +253,19 @@ such as WCAG 2.1 and ARIA guidelines.
 
 Priority: Must-have
 
-#### The user must be able to take advantage of their screen reader's ability to leverage semantic markup in the content.
+#### The user must be able to take advantage of their screen reader's ability to leverage semantic markup in the content
 
 The application must allow users to read publication content using a
 screen reader. The rendered content must expose the accessibility
 semantics to the screen reader. Thus headings, lists, tables, images,
 and other semantic elements must be exposed to the screen reader so that
-it can be interpreted by the screen reader. Additionally, the semantics
+it can be interpreted by the screen reader. Where present, the semantics
 of links---such as whether they are bibliographic references or
 footnotes---should be made available to screen readers.
 
 Priority: Must-have
 
-#### The user must be able to use their screen reader in a scrolling mode.
+#### The user must be able to use their screen reader in a scrolling mode
 
 The user must be able to use a scrolling (rather than a paginated mode)
 to enable the use of screen reader features (such as navigating to
@@ -260,7 +273,7 @@ next/previous heading, landmark, graphic, etc.).
 
 Priority: Must-have
 
-#### Screen reader users must be able to navigate confidently between internal hyperlinks.
+#### Screen reader users must be able to navigate confidently between internal hyperlinks
 
 When navigating to another place in the content (for example when using
 the table of contents, reading a footnote or following an internal
@@ -269,23 +282,27 @@ navigation position.
 
 Priority: Must-have
 
-#### Screen reader users must be able to activate actionable content.
+#### Screen reader users must be able to activate actionable content
 
 Screen reader users must be able to activate actionable content (such as
 links, buttons, expandable elements).
 
 Priority: Must-have
 
-#### Screen reader users must be able to return to their previous reading position.
+#### Screen reader users must be able to return to their previous reading position
 
-After navigating to a different part of the content (perhaps by
-following a footnote, internal hyperlink, referring to a glossary entry
-or going to a different page) the user must be able to return back to
-their previous reading position.
+After navigating to a different part of the content, such as following a 
+footnote, internal hyperlink, glossary entry, or switching to another 
+page, the user must be able to return to their previous reading 
+position. Most modern screen readers support navigation history or 
+reading position memory, allowing users to jump back to where they left 
+off. To enable this functionality effectively, the application must 
+maintain focus and structural consistency, ensuring that the screen 
+reader can track and restore the user's position within the content.
 
 Priority: Must-have
 
-#### Screen reader users must be able to use footnotes and endnotes.
+#### Screen reader users must be able to use footnotes and endnotes
 
 Users must be able to detect the reference to a footnote (or endnote),
 reach the content of the footnote, read the content of the footnote, and
@@ -294,7 +311,7 @@ the footnote.
 
 Priority: Must-have
 
-#### The user could use additional navigation features of the reading app.
+#### The user could use additional navigation features of the reading app
 
 In addition to the table of contents and other navigation provided by
 the content creator, the user could use additional navigation features
@@ -322,7 +339,7 @@ reading app must work seamlessly with the TTS engine to support logical
 reading order, language changes, and provide the user control over
 playback and navigation.
 
-#### The user must be able to listen to text-based content using synthetic speech (Text To Speech).
+#### The user must be able to listen to text-based content using synthetic speech (Text To Speech)
 
 The user must be able to use a TTS read aloud feature for text-based
 content. If the publication also has text synchronized with embedded
@@ -331,7 +348,7 @@ to the TTS read aloud.
 
 Priority: Must-have
 
-#### The user must be able to control the starting position of the read aloud.
+#### The user must be able to control the starting position of the read aloud
 
 The user must be able to choose the position from where the read aloud
 begins.
@@ -349,14 +366,14 @@ If a screen reader is not being used, then:
 
 Priority: Must-have
 
-#### The user must be able to read aloud selected parts of the content.
+#### The user must be able to read aloud selected parts of the content
 
-The user must be able to select text (e.g., word, phrase, sentence,
+The user must be able to select text (e.g., word, phrase, sentence,
 paragraph) and have that read aloud.
 
 Priority: Must-have
 
-#### The user must be able to listen to the read aloud without having to manually advance to subsequent pages or chapters.
+#### The user must be able to listen to the read aloud without having to manually advance to subsequent pages or chapters
 
 The app must be able to continuously read aloud until the end of the
 publication, unless interrupted by the user.
@@ -366,7 +383,7 @@ after a user determined period of time.
 
 Priority: Must-have
 
-#### The user must be able to have the content read aloud in the logical reading order.
+#### The user must be able to have the content read aloud in the logical reading order
 
 Priority: Must-have
 
@@ -379,7 +396,7 @@ content such as numbered headings and lists.
 
 Priority: Must-have
 
-#### The user must be able to view the text being read aloud.
+#### The user must be able to view the text being read aloud
 
 The user must be able to see the text that is being read aloud, and the
 display must automatically update to keep the spoken text in view. The
@@ -407,7 +424,7 @@ displayed.
 
 Priority: Must-have
 
-#### The user must be able to visually emphasize the text being read aloud and be able to turn this feature off.
+#### The user must be able to visually emphasize the text being read aloud and be able to turn this feature off
 
 The user must be able to visually emphasize the text as it is read aloud
 using a contrasting highlight, underlining, or other means. Some users
@@ -416,14 +433,14 @@ off the read aloud visual emphasis.
 
 Priority: Must-have
 
-#### The user must be able to change the color or style of the visual emphasis.
+#### The user must be able to change the color or style of the visual emphasis
 
 The user must be able to adjust the visual emphasis. The user could be
 able to adjust the number of words that are highlighted at any time.
 
 Priority: Must-have
 
-#### The user of read aloud must hear content in the correct language.
+#### The user of read aloud must hear content in the correct language
 
 The user must be able to hear the read aloud using the correct voice
 when reading content with language tags (if available to the reading
@@ -435,7 +452,7 @@ this feature is supported the user must be able to disable it.
 
 Priority: Must-have
 
-#### The user must be able to control the rate of the read aloud.
+#### The user must be able to control the rate of the read aloud
 
 The user must be able to choose the speed of the read aloud voice. The
 reading app must not distort the pitch when the user has selected higher
@@ -446,7 +463,7 @@ assist the user in selection.
 
 Priority: Must-have
 
-#### The user must be able to control the voice of the read aloud.
+#### The user must be able to control the voice of the read aloud
 
 The user must be able to select from a range of voices.
 
@@ -456,7 +473,7 @@ an audio preview to assist the user in their selection of voices.
 
 Priority: Must-have
 
-#### The user must be able to listen to image alt text.
+#### The user must be able to listen to image alt text
 
 The read aloud feature must be able to announce the alt text of images.
 
@@ -469,7 +486,7 @@ announcement, use of different voice, or other technique.
 
 Priority: Must-have
 
-#### The user must be able to listen to math content when using read aloud.
+#### The user must be able to listen to math content when using read aloud
 
 The read aloud feature must be able to announce encoded math content
 (e.g. MathML).
@@ -480,7 +497,7 @@ style, verbosity).
 
 Priority: Must-have
 
-#### The user must be able to lock their mobile device and use read aloud.
+#### The user must be able to lock their mobile device and use read aloud
 
 On a mobile device the user must be able to lock the device without the
 read aloud stopping. The user must be able to listen and control read
@@ -492,7 +509,7 @@ Editor's note - this probably also applies to audio playback.
 
 Priority: Must-have
 
-#### The user must be able to control read-aloud playback using the device's media controls.
+#### The user must be able to control read-aloud playback using the device's media controls
 
 If supported on the device and platform the user must be able to control
 read-aloud playback using the device's media controls, such including
@@ -501,7 +518,7 @@ keyboard or headset.
 
 Priority: Must-have
 
-#### The user must be able to use read aloud with tables.
+#### The user must be able to use read aloud with tables
 
 The read aloud must read the table contents from left to right and top
 to bottom. The read aloud could indicate the start of the table though
@@ -516,7 +533,7 @@ aloud.
 
 Priority: Must-have.
 
-#### The user must be able to escape from certain structures when using read aloud.
+#### The user must be able to escape from certain structures when using read aloud
 
 The user must be able to control the read aloud so they can avoid
 reading all the way through escapable items and to continue read aloud
@@ -526,7 +543,7 @@ Each format specification defines which items can be escaped.
 
 Priority: Must-have.
 
-#### The user must be able to decide that the read aloud should skip over certain content.
+#### The user must be able to decide that the read aloud should skip over certain content
 
 The user must be able to configure their reading app so that it does not
 announce skippable elements.
@@ -538,7 +555,7 @@ Each format\'s specification determines which items can be skipped.
 
 Priority: Must-have
 
-#### The user could be able to choose from a range of read aloud modes.
+#### The user could be able to choose from a range of read aloud modes
 
 The user could be able to set the mode so that reading aloud is not
 continuous. Users should decide how much they want to read (e.g. read
@@ -546,14 +563,14 @@ aloud then stop after each word, sentence, paragraph, page, or chapter).
 
 Priority: Could-have
 
-#### The user could be able to adjust read aloud to change the pause length between content blocks.
+#### The user could be able to adjust read aloud to change the pause length between content blocks
 
 The user could be able to adjust the pauses between sentences,
 paragraphs, etc.
 
 Priority: Could-have
 
-#### The user could be able to choose to have semantic expressiveness for read aloud.
+#### The user could be able to choose to have semantic expressiveness for read aloud
 
 The user could be able to adjust the pitch or style for emphasized text
 (eg bold, italic, underlined). If this feature is available, users
@@ -596,16 +613,16 @@ flexibly between listening and reading modes---such as pausing narration
 to read with a screen reader and resuming from the same point---is not
 yet addressed and remains an area for future development.
 
-#### The user must be able to access and play pre-recorded audio (human-narrated or pre-recorded TTS).
+#### The user must be able to access and play pre-recorded audio (human-narrated or pre-recorded TTS)
 
 The reading system must support pre-recorded audio playback
 (human-narrated or pre-recorded TTS), whether synchronized with the text
-or provided as standalone audio. Where synchronized audio is available,
+or provided as audio-only. Where synchronized audio is available,
 users must have the option to switch to TTS read aloud.
 
 Priority: Must-have
 
-#### The user must be able to control the starting position of the embedded audio.
+#### The user must be able to control the starting position of the embedded audio
 
 The user must have a way to start reading from a specific location in
 embedded audio content.
@@ -616,7 +633,7 @@ another approach.
 
 Priority: Must-have
 
-#### The user must be able to listen to the embedded audio without having to manually advance to subsequent pages or chapters.
+#### The user must be able to listen to the embedded audio without having to manually advance to subsequent pages or chapters
 
 The reading system must support uninterrupted playback of embedded audio
 across sections or chapters, allowing users to listen continuously
@@ -628,7 +645,7 @@ that pauses playback after a user-defined duration.
 
 Priority: Must-have
 
-#### The user must be able to listen to embedded audio content in the correct logical reading order, matching the intended structure of the publication.
+#### The user must be able to listen to embedded audio content in the correct logical reading order, matching the intended structure of the publication
 
 To ensure a coherent listening experience, the reading system must play
 embedded audio in the correct reading order. For audio-only
@@ -640,7 +657,7 @@ structure.
 
 Priority: Must-have
 
-#### The user must be able to view the corresponding text while listening to embedded audio, if synchronized text is available.
+#### The user must be able to view the corresponding text while listening to embedded audio, if synchronized text is available
 
 When embedded audio is synchronized with text, the user must be able to
 see the relevant text, and the display must automatically update to keep
@@ -671,7 +688,7 @@ does not apply.
 
 Priority: Must-have
 
-#### The user must be able to enable or disable visual emphasis of synchronized text during embedded audio playback, if synchronized text is available.
+#### The user must be able to enable or disable visual emphasis of synchronized text during embedded audio playback, if synchronized text is available
 
 When synchronized text is available, the user must be able to visually
 emphasize the text currently being played in the embedded audio. This
@@ -685,7 +702,7 @@ granularity of the emphasis.
 
 Priority: Must-have
 
-#### The user must be able to customize the color and style of the visual emphasis applied to synchronized text during embedded audio playback, if synchronized text is available.
+#### The user must be able to customize the color and style of the visual emphasis applied to synchronized text during embedded audio playback, if synchronized text is available
 
 The user must be able to adjust the visual emphasis of the synchronized
 text and audio.
@@ -695,7 +712,7 @@ highlighted at any time.
 
 Priority: Must-have
 
-#### The user must be able to adjust the playback speed of embedded audio without distortion of pitch.
+#### The user must be able to adjust the playback speed of embedded audio without distortion of pitch
 
 The user must be able to control the playback rate of embedded audio,
 enabling faster or slower listening according to their preference.
@@ -706,7 +723,7 @@ selected speed before applying the change.
 
 Priority: Must-have
 
-#### The user must be able to listen to alt texts included in embedded audio, and must be able to disable or skip them if supported by the publication.
+#### The user must be able to listen to alt texts included in embedded audio, and must be able to disable or skip them if supported by the publication
 
 If image descriptions are included in the embedded audio as alt texts,
 the reading system must allow users to hear them as part of the
@@ -718,7 +735,7 @@ content---such as through a brief introductory phrase, or audio cue.
 
 Priority: Must-have
 
-#### The user must be able to listen to math content included in embedded audio, if present in the publication. 
+#### The user must be able to listen to math content included in embedded audio, if present in the publication
 
 If math content is included in the embedded audio (e.g., MathML), the
 reading system must ensure it is presented clearly and accessibly as
@@ -731,7 +748,7 @@ style, verbosity).
 
 Priority: Must-have
 
-#### The user must be able to lock their mobile device and continue listening to embedded audio.
+#### The user must be able to lock their mobile device and continue listening to embedded audio
 
 When the user locks their mobile device, the embedded audio playback
 must continue uninterrupted. The user must be able to listen and control
@@ -742,7 +759,7 @@ information, such as the current chapter or time position in the title.
 
 Priority: Must-have
 
-#### The user must be able to control embedded audio playback using device-level media controls.
+#### The user must be able to control embedded audio playback using device-level media controls
 
 The user must be able to control embedded audio playback using the
 device's media controls, such as keyboard shortcuts, headset buttons, or
@@ -752,7 +769,7 @@ platform.
 
 Priority: Must-have
 
-#### The user must be able to listen to embedded audio that accurately conveys the structure and content of tables.
+#### The user must be able to listen to embedded audio that accurately conveys the structure and content of tables
 
 When tables are included in the publication, the embedded audio must
 present the content in a clear and logical order, typically left to
@@ -764,7 +781,7 @@ as spoken labels or brief announcements.
 
 Priority: Must-have.
 
-#### The user must be able to listen to embedded audio that reflects the current state of expandable or collapsible content, playing only content that is expanded.
+#### The user must be able to listen to embedded audio that reflects the current state of expandable or collapsible content, playing only content that is expanded
 
 When embedded audio is synchronized with structured content that
 includes expandable or collapsible sections, the user must be able to
@@ -776,7 +793,7 @@ current document state when determining which audio segments to play.
 
 Priority: Must-have.
 
-#### The user must be able to escape from defined structures during embedded audio playback and resume listening from the item that follows.
+#### The user must be able to escape from defined structures during embedded audio playback and resume listening from the item that follows
 
 The user must be able to interrupt playback of certain structures---such
 as tables or footnotes---and continue listening from the next item in
@@ -785,7 +802,7 @@ publication format and appropriately marked to support this behavior.
 
 Priority: Must-have.
 
-#### The user must be able to configure embedded audio playback to skip content marked as skippable. 
+#### The user must be able to configure embedded audio playback to skip content marked as skippable
 
 The user must be able to set preferences that cause embedded audio
 playback to skip over content defined as skippable, such as footnotes or
@@ -797,7 +814,7 @@ announce skippable elements.
 
 Priority: Must-have
 
-#### The user could be able to play embedded audio for a selected portion of the text, if the content is synchronized.
+#### The user could be able to play embedded audio for a selected portion of the text, if the content is synchronized
 
 If the embedded audio is synchronized with the text, the user could
 select specific portions such as a word, sentence, or paragraph, and
@@ -807,7 +824,7 @@ synchronization in the publication.
 
 Priority: Could-have
 
-#### The user could be able to choose from different playback modes for embedded audio, including non-continuous playback based on content units, if supported by the publication.
+#### The user could be able to choose from different playback modes for embedded audio, including non-continuous playback based on content units, if supported by the publication
 
 The user could configure embedded audio playback to stop after specific
 units such as a word, sentence, paragraph, page, or chapter. This allows
@@ -817,7 +834,7 @@ provided in the publication.
 
 Priority: Could-have
 
-#### The user could be able to adjust the pause length between content blocks during embedded audio playback, if supported by the publication.
+#### The user could be able to adjust the pause length between content blocks during embedded audio playback, if supported by the publication
 
 The user could configure the length of pauses between sentences,
 paragraphs, or other content blocks during embedded audio playback. This
@@ -839,9 +856,9 @@ and understand content. By removing visual barriers, reading apps become
 more accessible, empowering users to have a more personalized and
 effective reading experience.
 
-#### The user must be able to change the typeface.
+#### The user must be able to change the typeface
 
-The user should be able to change the typeface of all text, choosing
+The user must be able to change the typeface of all text, choosing
 from a range including sans serif and serif fonts. Individuals with low
 vision or dyslexia often have specific preferences for font styles that
 optimize their reading experience. Typefaces with preferred letter
@@ -850,7 +867,7 @@ cognitive load.
 
 Priority: Must-have
 
-#### The user must be able to change the font weight.
+#### The user must be able to change the font weight
 
 For some people, bold text is easier to read. Many typefaces have a bold
 font and some offer variable weight. The user must be able to select a
@@ -865,7 +882,7 @@ factors.
 
 Priority: Must-have
 
-#### The user must be able to change the text size.
+#### The user must be able to change the text size
 
 Some people need to increase the size of text in order to read it.
 Although increasing size is most common, some people with tunnel vision
@@ -874,7 +891,7 @@ more text at a time.
 
 Priority: Must-have
 
-#### The user must be able to change the line spacing, word spacing and letter spacing.
+#### The user must be able to change the line spacing, word spacing and letter spacing
 
 The amount of line spacing (leading), word spacing (space between words)
 and letter spacing (space between letters/characters) impacts
@@ -883,7 +900,7 @@ Some people increase line spacing to help with tracking.
 
 Priority: Must-have
 
-#### The user must be able to turn off justification and center-alignment of blocks of text.
+#### The user must be able to turn off justification and center-alignment of blocks of text
 
 Justification impacts readability and tracking. Fully justified text
 creates uneven spaces between words and letters, leading to "rivers of
@@ -899,7 +916,7 @@ left-aligned or right-aligned text.
 
 Priority: Must-have
 
-#### The user must be able to change the margins and adjust the line length for blocks of text.
+#### The user must be able to change the margins and adjust the line length for blocks of text
 
 Having wide margins results in shorter line lengths. This may be useful
 for individuals with certain learning disabilities. Wide margins around
@@ -911,14 +928,14 @@ use large text.
 
 Priority: Must-have
 
-#### The user must be able to view the content in a scrolling view.
+#### The user must be able to view the content in a scrolling view
 
 For reflowable content, if the reader offers a paginated view, then the
 user should also be able to view it in a scrollable view.
 
 Priority: Must-have
 
-#### The user must be able to enlarge images.
+#### The user must be able to enlarge images
 
 The user should be able to select an image and make it larger. There
 should be controls to adjust the size and to pan around an image when it
@@ -931,7 +948,7 @@ color themes.
 
 Priority: Must-have
 
-#### The user must be able to adjust the size and color of math expressions by adjusting the text's font size and color.
+#### The user must be able to adjust the size and color of math expressions by adjusting the text's font size and color
 
 Math expressions written in MathML or LaTeX (when that format is
 supported) need to be shown properly. As the user adjusts the size and
@@ -942,7 +959,7 @@ this should also affect the math expressions.
 
 Priority: Must-have
 
-#### The user must be able to personalize the background and foreground colors.
+#### The user must be able to personalize the background and foreground colors
 
 The user should be able to set the background and text color from the
 full color spectrum.
@@ -966,7 +983,7 @@ for one individual depending on conditions such as fatigue and lighting.
 Priority: \[Must-have for a limited color palette; Should-have for more
 specific background and text colors\]
 
-#### The user must be able to use the app with the high contrast and magnification features of the operating system platform.
+#### The user must be able to use the app with the high contrast and magnification features of the operating system platform
 
 Some people use high contrast modes on their device because it increases
 readability by maximizing the difference between text and background.
@@ -978,7 +995,7 @@ should respect the high contrast settings chosen by the user.
 
 Priority: Must-have
 
-#### The user must be able to change the display brightness.
+#### The user must be able to change the display brightness
 
 Some individuals with low vision or dyslexia may have photophobia or
 light sensitivity. The ability to dim the screen can make reading more
@@ -1003,7 +1020,7 @@ brightness](https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-
 Legge G. E. (2016). Reading Digital with Low Vision. Visible language,
 50(2), 102--125. (https://pmc.ncbi.nlm.nih.gov/articles/PMC5726769/)
 
-#### The user should be able to remove the visual text styling (underline, italic, bold).
+#### The user should be able to remove the visual text styling (underline, italic, bold)
 
 Some people find italicized, underlined, or bold text hard to read.
 Users should have the option to view the text without these visual
@@ -1014,7 +1031,7 @@ visually formatted version as needed.
 
 Priority: Should-have
 
-#### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means.
+#### The user should be able to visually emphasize the text being read using a contrasting highlight, ruler lines, deemphasizing the surrounding text, or other means
 
 The application should provide visual focus indicators to aid reading.
 This might include text highlighting, a horizontal bar or translucent
@@ -1023,7 +1040,7 @@ masking the text not currently being read.
 
 Priority: Should-have
 
-#### The user should be able to enlarge math expressions for closer inspection.
+#### The user should be able to enlarge math expressions for closer inspection
 
 Math expressions often contain small symbols such as exponents, indices,
 dot notations and derivatives. It should be possible for the user to
@@ -1031,162 +1048,34 @@ view a math expression as a separate item and enlarge it.
 
 Priority: Should-have
 
-#### The user could be able to change the capitalization of text to sentence style.
+#### The user could be able to change the capitalization of text to sentence style
 
 Text written in all capital letters or all small capital letters is more
 difficult to read for most people, with and without disabilities. Users
-should have the option to choose a sentence-style version. Acronyms that
+could have the option to choose a sentence-style version. Acronyms that
 are correctly marked as abbreviations will remain in uppercase;
-otherwise, they will be converted to sentence style. Users should also
+otherwise, they will be converted to sentence style. Users could also
 be able to toggle between the different styles as needed.
 
 Priority: Could-have
 
-#### The user could be able to view the content in a paginated view.
+#### The user could be able to view the content in a paginated view
 
 Many users prefer scrolling, while others like pagination. The user
 could be able to use a paginated reading mode.
 
 Priority: Could-have
 
-#### The user could be able \[to flatten the colors of math expressions\].
+#### The user could be able display mathematical expressions without color formatting, using a consistent text color instead
 
-Sometimes, specific sections of mathematical expressions are highlighted
-in distinct colors. For some people this can present problems. The user
-could be able to remove the color formatting used in math expressions,
+Sometimes, specific sections of mathematical expressions are highlighted 
+in distinct colors. For some people this can present problems. The user 
+could be able to remove the color formatting used in math expressions, 
 so the chosen text color is always used.
 
 Priority: Could-have
 
-### Making Notes
-
-The ability to add, review, and edit notes within a reading app is an
-important feature for many users, especially those with print
-disabilities or learning challenges. Notes provide a flexible way to
-capture thoughts, highlight important information, or add personal
-annotations, which can aid comprehension and retention. For users who
-rely on assistive technologies, well-integrated note functionality (such
-as easy navigation, and synchronization) ensures that these annotations
-are accessible and usable across different contexts and devices.
-Supporting notes alongside the text and/or the audio also enhances
-interactivity and engagement with the content, making the reading
-experience more personalized and effective.
-
-#### The user must be able to create, review, edit and delete notes during reading.
-
-Users must be able to manage notes---adding, reviewing, editing, and
-deleting them---while reading. Notes may be in text or audio format and
-must be anchored to a specific location in the content (at least a text
-range within a paragraph, or a timestamp). Visual indicators and screen
-reader compatibility are essential to ensure discoverability and
-usability for users with print disabilities.
-
-Priority: Must-have
-
-#### The user must be able to view notes in context, such as in a margin, overlay, or other adjacent display that maintains the user's reading position.
-
-Displaying notes alongside the text improves usability and allows users
-to reference their annotations without losing their place in the reading
-material.
-
-Priority: Must-have
-
-#### Screen reader users must be able to navigate from one note to another.
-
-Efficient navigation between notes is essential for screen reader users
-to manage and review annotations without losing context. This includes
-the ability to move sequentially through notes, jump to specific notes,
-and return to the reading position.
-
-Priority: Must-have
-
-#### The user must be able to save notes automatically, including during offline use.
-
-When the device connects to the internet, notes must be synced. When the
-book is reopened, any notes saved during the last session should be
-automatically restored.
-
-Priority: Must-have
-
-#### The user should be able to apply basic formatting to the content of a note.
-
-Formatting options (bold, italic, and underline) allow users to
-emphasize key points, structure their thoughts, and improve the clarity
-of their notes. This can be especially helpful for users with cognitive
-or learning disabilities who benefit from visual cues to organize
-information.
-
-Priority: Should-have
-
-#### The user should be able to hide or show notes, either individually or all at once.
-
-Controlling the visibility of notes helps users manage visual complexity
-and maintain focus, especially when reading for comprehension or
-studying.
-
-Priority: Should-have
-
-#### The user should be able to have notes read aloud, either individually or all in sequence.
-
-Listening to notes supports users who rely on audio for comprehension or
-who prefer auditory review. The ability to hear notes one at a time or
-in sequence allows for flexible interaction with annotations.
-
-Priority: Should-have
-
-#### The user should be able to access their notes across multiple devices through synchronization.
-
-Synchronizing notes across devices allows users to continue reading and
-working with their annotations without interruption. This is especially
-important for users who rely on different assistive technologies on
-different devices, or who move between environments such as home,
-school, or work.
-
-Priority: Should-have
-
-#### The user should be able to export notes in a structured format.
-
-A straightforward way to share notes is by exporting them in a separate
-file format (such as .HTML or .CSV). This exported file should include
-clear references to the text or timestamp the notes are anchored to,
-enabling recipients to understand the context. Users can then send this
-file to teachers, classmates, or others outside the reading system.
-
-Priority: Should-have
-
-A more advanced option would allow users to share notes directly within
-the reading system, enabling collaboration or review among users of the
-same platform. This could include features such as real-time sharing,
-commenting, or integrated feedback mechanisms.
-
-Priority: Could-have
-
-#### The user could organize notes using color coding or labels.
-
-Color coding or labeling helps users categorize notes in a way that
-supports their reading goals, making it easier to locate and review
-related information later.
-
-Priority: Could-have
-
-#### The user could be able to create notes in formats beyond plain text, such as handwriting, math notation, or video.
-
-Supporting multiple formats for notes allows users to express ideas in
-ways that suit their needs and preferences. This flexibility is
-especially valuable for users who find visual, symbolic, or spoken forms
-more accessible than typed text.
-
-Priority: Could-have
-
-#### The user could attach notes to bookmarks.
-
-Priority: Could-have
-
-### Highlighting
-
-Introductory text
-
-Clarifying Note to distinguish: Notes, Bookmarks, and Highlights
+### Clarifying Note on Bookmarks, Notes and Highlights
 
 Notes, bookmarks, and highlights are distinct features that support
 different user needs in digital reading environments:
@@ -1208,36 +1097,254 @@ note to a highlight or a bookmark---they should remain functionally
 distinct to support a wide range of user strategies and accessibility
 needs.
 
-#### The user must be able to create, review, edit and delete highlights.
+### Bookmarking
+
+The bookmarking features enable users to record their place in the 
+content and return to it at a later point, which is particularly 
+valuable in educational and reference contexts. The ability to create 
+and manage multiple bookmarks is beneficial for all users. It is 
+essential that this functionality be fully accessible to readers with 
+print disabilities to ensure equitable use.
+
+#### The user must be able to create bookmarks
+
+The application must allow the user to set a bookmark at any arbitrary 
+position within the content, whether being read in text or audio format. 
+The application must allow the user to create and store multiple 
+bookmarks within a single title.
+
+Priority: Must-have
+
+#### The user must be able to delete bookmarks
+
+The application must allow the user to delete bookmarks individually 
+within a title. The application could provide the option to delete all 
+bookmarks within a title in a single action.
+
+Priority: Must-have
+
+#### The user must be able to view an overview of all bookmarks and navigate from there
+
+The application must provide an overview of bookmarks sorted by their 
+order of appearance in the book. This overview should be presented in a 
+clear and navigable list, enabling users to identify bookmarked 
+positions, select a bookmark to navigate directly to that point in the 
+content. The application could allow the user to jump directly between 
+bookmarks without going via the overview.
+
+Priority: Must-have
+
+#### The user must be able to identify each bookmark
+
+The user must be able to identify each bookmark through a 
+system-generated title that is both meaningful and distinguishable from 
+other bookmarks.
+
+The application should allow users to edit or rename system-generated 
+bookmark titles to better reflect their personal context or preferences.
+
+Priority: Must-have
+
+#### Users should have access to their bookmarks if they open their book on another device
+
+Users should have access to their bookmarks when opening the same book 
+on another device, ensuring continuity.
+
+Priority: Should-have
+
+### Making Notes
+
+The ability to add, review, and edit notes within a reading app is an
+important feature for many users, especially those with print
+disabilities or learning challenges. Notes provide a flexible way to
+capture thoughts, highlight important information, or add personal
+annotations, which can aid comprehension and retention. For users who
+rely on assistive technologies, well-integrated note functionality (such
+as easy navigation, and synchronization) ensures that these annotations
+are accessible and usable across different contexts and devices.
+Supporting notes alongside the text and/or the audio also enhances
+interactivity and engagement with the content, making the reading
+experience more personalized and effective.
+
+#### The user must be able to create, review, edit and delete notes during reading
+
+Users must be able to manage notes---adding, reviewing, editing, and
+deleting them---while reading. Notes may be in text or audio format and
+must be anchored to a specific location in the content (at least a text
+range within a paragraph, or a timestamp). Visual indicators and screen
+reader compatibility are essential to ensure discoverability and
+usability for users with print disabilities.
+
+Priority: Must-have
+
+#### The user must be able to view notes in context, such as in a margin, overlay, or other adjacent display that maintains the user's reading position
+
+Displaying notes together with the text improves usability and allows 
+users to reference their annotations without losing their place in the 
+reading material.
+
+Priority: Must-have
+
+#### Screen reader users must be able to navigate from one note to another
+
+Efficient navigation between notes is essential for screen reader users
+to manage and review annotations without losing context. This includes
+the ability to move sequentially through notes, jump to specific notes,
+and return to the reading position.
+
+Priority: Must-have
+
+#### The user must be able to save notes automatically, including during offline use
+
+The user must be able to save notes automatically, including during 
+offline use, to ensure no loss of information. When the device connects 
+to the internet, notes must be synced. When the book is reopened, any 
+notes saved during the last session should be automatically restored.
+
+Priority: Must-have
+
+#### The user should be able to apply basic formatting to the content of a note
+
+Formatting options (bold, italic, and underline) allow users to
+emphasize key points, structure their thoughts, and improve the clarity
+of their notes. This can be especially helpful for users with cognitive
+or learning disabilities who benefit from visual cues to organize
+information.
+
+Priority: Should-have
+
+#### The user should be able to hide or show notes, either individually or all at once
+
+Controlling the visibility of notes helps users manage visual complexity
+and maintain focus, especially when reading for comprehension or
+studying.
+
+Priority: Should-have
+
+#### The user should be able to have notes read aloud, either individually or all in sequence
+
+Listening to notes supports users who rely on audio for comprehension or
+who prefer auditory review. The ability to hear notes one at a time or
+in sequence allows for flexible interaction with annotations.
+
+Priority: Should-have
+
+#### The user should be able to access their notes across multiple devices through synchronization
+
+Synchronizing notes across devices allows users to continue reading and
+working with their annotations without interruption. This is especially
+important for users who rely on different assistive technologies on
+different devices, or who move between environments such as home,
+school, or work.
+
+Priority: Should-have
+
+#### The user should be able to export notes in a structured format
+
+A straightforward way to share notes is by exporting them in a 
+structured, non-proprietary file format. This exported file should 
+include clear references to the text or timestamp the notes are anchored 
+to, enabling recipients to understand the context. Users can then send 
+this file to teachers, classmates, or others outside the reading system.
+
+A more advanced option could allow users to share notes directly within
+the reading system, enabling collaboration or review among users of the
+same platform. This could include features such as real-time sharing,
+commenting, or integrated feedback mechanisms.
+
+Priority: Should-have
+
+#### The user could organize notes using color coding or labels
+
+Color coding or labeling helps users categorize notes in a way that
+supports their reading goals, making it easier to locate and review
+related information later.
+
+Priority: Could-have
+
+#### The user could be able to create notes in formats beyond plain text, such as handwriting, math notation, or video
+
+Supporting multiple formats for notes allows users to record ideas in
+ways that suit their needs and preferences. This flexibility is
+especially valuable for users who find visual, symbolic, or spoken forms
+more accessible than typed text.
+
+Priority: Could-have
+
+#### The user could attach notes to bookmarks
+
+Check this isn't confusing things
+
+Priority: Could-have
+
+### Highlighting
 
 Highlights allow users to mark important parts of the text for quick
 reference. This supports efficient navigation and review, especially for
 users who benefit from visual cues or who use highlighting as part of
 their study or comprehension strategies.
 
+#### The user must be able to create, review, edit and delete highlights
+
+The user must be able to highlight any portion of the text, including 
+partial sentences or individual words. The user must be able to remove 
+or modify existing highlights easily. 
+
+The application must ensure that highlights are saved automatically and 
+persist across sessions, including offline use. Users should not need to 
+take extra action to retain their highlights, ensuring continuity even 
+when connectivity is intermittent.
+
 Priority: Must-have
 
-#### The user must be able to hide highlights.
+#### The user must be able to hide highlights
+
+The user must be able to hide or show highlights at any time. This 
+functionality should also be accessible to screen reader users, allowing 
+them to read or navigate the text without interference from visual 
+highlights while maintaining the ability to restore them when needed.
 
 Priority: Must-have
 
-#### The user should be able to change the color of highlights.
+#### The user must be able to change the color or category of highlights
+
+The application must allow users to assign different colors or styles to 
+highlights for categorization or emphasis. Both visually and through a 
+screen reader, users must be able to distinguish between types of 
+highlights to support study, reference, or personal organization.
+
+Priority: Must-have
+
+#### The user should be able to navigate from highlight to highlight
+
+Users should be able to navigate quickly between highlights, for example 
+via an overview list or table of highlights. The overview should provide 
+context, such as the surrounding text or page location, allowing users 
+to jump directly to specific highlights.
 
 Priority: Should-have
 
-#### The user should be able to navigate from highlight to highlight.
+#### The user could be able to annotate highlights
+
+The application could allow highlights to include optional notes or 
+annotations linked to the highlighted text. This would enable users to 
+add personal comments or summaries while keeping them associated with 
+the relevant passage.
+
+#### The user could have their highlights synchronized across devices
+
+Users could have their highlights synchronized across multiple devices 
+for the same book. This would allow continuity of study or reading, 
+enabling access to all highlights and annotations regardless of device.
 
 Priority: Should-have
 
-#### The user should be able to use several highlighting colors in one document.
+#### The user should be able to export highlighted sections
 
-Priority: Should-have
-
-#### The user should be able to export highlighted sections.
-
-Priority: Should-have
-
-#### The user should be able to add a label or comment to a highlight.
+The application should allow users to export highlighted text, grouped 
+by colors or categories where applicable. This would enable users to 
+review, revise, or study key passages outside of the application, 
+supporting learning and comprehension.
 
 Priority: Should-have
 
@@ -1268,7 +1375,7 @@ experience. Additionally, synchronization and export options provide
 greater flexibility, enabling users to access and manage their responses
 across devices and contexts.
 
-#### The user must be able to enter, edit and review answers into input fields embedded within a publication.
+#### The user must be able to enter, edit and review answers into input fields embedded within a publication
 
 The input fields must support a range of common types, including
 single-line text fields, multi-line text areas, radio buttons,
@@ -1283,7 +1390,7 @@ anticipated to become the main method of interaction.
 
 Priority: Must-have
 
-#### The user must be able to save their answers.
+#### The user must be able to save their answers
 
 Saving should occur automatically to reduce the risk of data loss and to
 support a seamless user experience. Ideally, answers are saved online to
@@ -1295,7 +1402,7 @@ reliable and persistent manner.
 
 Priority: Must-have
 
-#### The user must be able to see previously saved answers when reopening a book.
+#### The user must be able to see previously saved answers when reopening a book
 
 When a user returns to a publication, previously saved answers must be
 restored to the input fields and clearly associated with their
@@ -1307,7 +1414,7 @@ synchronized via an online service.
 
 Priority: Must-have
 
-#### Screen reader users must be able to navigate between input fields.
+#### Screen reader users must be able to navigate between input fields
 
 Screen reader users must be able to navigate and review each question
 and enter their answers using accessible controls, whether they are text
@@ -1319,7 +1426,7 @@ announced correctly by screen readers.
 
 Priority: Must-have
 
-#### The user should be able to format answers in text fields using a basic rich text editor.
+#### The user should be able to format answers in text fields using a basic rich text editor
 
 Some users, particularly in educational or professional contexts, may
 need to emphasize parts of their answers using basic formatting options
@@ -1333,7 +1440,7 @@ evolve.
 
 Priority: Should-have
 
-#### The user should be able to share answers with others (e.g. teachers, students).
+#### The user should be able to share answers with others (e.g. teachers, students)
 
 A straightforward way to share answers is by exporting them in a
 separate file format such as .html, .csv, or another accessible format.
@@ -1349,7 +1456,7 @@ sharing, commenting, or integrated feedback mechanisms.
 
 Priority: Should-have
 
-#### The user could be able to add custom input fields where none exist.
+#### The user could be able to add custom input fields where none exist
 
 In some cases, content providers may unintentionally omit input fields
 for certain questions or assignments within accessible publications.
@@ -1361,7 +1468,7 @@ exporting answers.
 
 Priority: Could-have
 
-#### The user could be able to synchronize answers across multiple devices.
+#### The user could be able to synchronize answers across multiple devices
 
 This functionality applies only when answers are saved online. In such
 cases, users' saved answers should be kept consistent across devices,
@@ -1372,7 +1479,7 @@ reliable data transfer is essential to protect user privacy.
 
 Priority: Could-have
 
-#### The user could be able to have their answers automatically checked.
+#### The user could be able to have their answers automatically checked
 
 Automatic checking of answers can provide immediate feedback to users,
 helping them understand mistakes and improve their learning experience.
@@ -1385,14 +1492,18 @@ Priority: Could-have
 
 ### Library and Bookshelf
 
-Readers with print disabilities rely on a range of services, such as
-specialist online libraries, public and academic libraries, bookstores
-and more. Often, they will use more than one. This section describes the
-user requirements for interacting with online libraries provided by many
-DAISY Consortium members and adding content acquired from other sources.
-It covers using the online library, managing titles in the user's
-bookshelf, and information about individual titles the user has in their
-device.
+Readers with print disabilities rely on a range of services, such as 
+specialist online libraries, public and academic libraries, bookstores, 
+and more—often using multiple sources. This section outlines user 
+requirements for managing and accessing content within the reading 
+application, whether the content is acquired through integration with 
+online repositories or imported from other sources (e.g., sideloaded 
+files). Some requirements apply specifically when the application 
+integrates with one or more online catalogs, and their implementation 
+may depend on the capabilities and interfaces those catalogs provide. 
+Other requirements, such as managing the user's local bookshelf and 
+accessing metadata for stored titles, apply regardless of such 
+integration.
 
 #### The user must have a simple way to log in to the reading system
 
@@ -1410,7 +1521,7 @@ technology or rely on visual matching.
 
 Priority: Must-have
 
-#### The user must be able to search, browse and acquire titles in a service provider's collection.
+#### The user must be able to search, browse and acquire titles in a service provider's collection
 
 To provide a comprehensive search, browse, and acquisition experience,
 the reading app must enable users to search for titles within a service
@@ -1434,7 +1545,7 @@ search across multiple collections (federated search).
 
 Priority: Must-have
 
-#### The user must be able to add titles from diverse sources.
+#### The user must be able to add titles from diverse sources
 
 Users must be able to import (sideload) content into the app from
 various external sources, such as titles obtained from other online
@@ -1443,7 +1554,7 @@ access and read all their preferred content within the application.
 
 Priority: Must-have
 
-#### The user must have a simple way to subscribe to serial publications, and to end the subscription.
+#### The user must have a simple way to subscribe to serial publications, and to end the subscription
 
 The user must be able to effectively manage serial publications offered
 by the service provider, such as newspapers, journals, and newsletters.
@@ -1453,7 +1564,7 @@ automatically download new issues for immediate access.
 
 Priority: Must-have
 
-#### The user must be able to remove titles from their bookshelf.
+#### The user must be able to remove titles from their bookshelf
 
 The user must be able to remove publications from their bookshelf. This
 should effectively 'return' a title to the library when the service
@@ -1461,7 +1572,7 @@ provider operates such a model.
 
 Priority: Must-have
 
-#### The user should be able to download titles and read them offline.
+#### The user must be able to download titles and read them offline
 
 If the service model offers both download and streaming capabilities,
 the user must be able to download a title, enabling them to read it
@@ -1469,7 +1580,7 @@ without requiring an internet connection.
 
 Priority: Must-have
 
-#### The user must be able to manage titles from multiple sources.
+#### The user must be able to manage titles from multiple sources
 
 The app\'s bookshelf must provide a cohesive and intuitive experience
 for managing all user content, regardless of its origin. This means
@@ -1500,7 +1611,7 @@ accessibility features.
 
 Priority: Must-have
 
-#### The user's bookshelf must automatically reflect changes made in synchronized services.
+#### The user's bookshelf must automatically reflect changes made in synchronized services
 
 In the case where a library offers such a service, the app\'s bookshelf
 must automatically synchronize with the user\'s online account(s). This
@@ -1515,7 +1626,7 @@ automatically added.
 
 Priority: Must-have
 
-#### The user should be able to preview a publication when available.
+#### The user should be able to preview a publication when available
 
 Users should be able to preview titles, whether they are browsing the
 online collection or considering content already added to the bookshelf
@@ -1527,9 +1638,18 @@ audiobooks, a short audio excerpt.
 
 Priority: Should-have
 
+#### The user should be able to open EPUB files directly from a file manager
+
+Users should be able to tap an EPUB file in a folder or file manager and 
+be presented with an option such as "Open in [App Name]", enabling a 
+seamless and intuitive way to access content without needing to manually 
+import it through the app interface.
+
+Priority: Should-have
+
 ## Miscellaneous
 
-#### The user must have user-friendly documentation.
+#### The user must have user-friendly documentation
 
 While the system should be intuitive, certain aspects like shortcut keys
 still need to be clearly explained. The documentation should be concise
@@ -1537,7 +1657,17 @@ and user-friendly.
 
 Priority: Must-have
 
-#### The user must be able to access and read protected content using assistive technologies.
+#### The user must receive clear and user-friendly error messages
+
+Users must be informed of any issues (e.g. failed uploads, missing 
+metadata, unsupported formats) through concise, non-technical messages 
+that explain what went wrong and how to resolve it. This ensures a 
+smooth experience and reduces frustration when interacting with the 
+application.
+
+Priority: Should-have
+
+#### The user must be able to access and read protected content using assistive technologies
 
 Protected content---such as DRM-restricted publications---must remain
 accessible to users with print disabilities. This includes compatibility
@@ -1550,7 +1680,7 @@ materials.
 
 Priority: Must-have
 
-## Additional User Requirements for Future Consideration 
+## Additional User Requirements for Future Consideration
 
 This section includes user requirements that were identified as
 potentially valuable but were not discussed in detail during the current
@@ -1593,7 +1723,7 @@ Additionally, limited printing or sharing of content from serial
 publications---such as recipes or selected articles---could enhance
 usability and encourage engagement.
 
-#### Export Content for Alternative Format Production (issue tracker #5) 
+#### Export Content for Alternative Format Production (issue tracker #5)
 
 The user must be able to export content from the reading system in a
 digital format suitable for creating alternative formats and supporting
@@ -1681,7 +1811,7 @@ calmer, more accessible reading experience in text-based publications.
 
 #### Support for LLM inference or other processing (issue tracker #33)
 
-#### Support for parallel text viewing and navigation for linked content, such as translations or annotations. (issue tracker #36)
+#### Support for parallel text viewing and navigation for linked content, such as translations or annotations (issue tracker #36)
 
 #### Tactile graphics support (issue tracker #37)
 
@@ -1694,8 +1824,6 @@ calmer, more accessible reading experience in text-based publications.
 #### Book recommendation sharing
 
 #### Borrowing history indicator
-
-#### 
 
 :::
 ::: {#userstories .section}
