@@ -1271,12 +1271,6 @@ more accessible than typed text.
 
 Priority: Could-have
 
-#### The user could attach notes to bookmarks
-
-Check this isn't confusing things
-
-Priority: Could-have
-
 ### Highlighting
 
 Highlights allow users to mark important parts of the text for quick
