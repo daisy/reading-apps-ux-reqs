@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Editors’ Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">11 September 2025</span></p>
+<p><span class="pubdate">24 September 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -43,7 +43,11 @@ issue</a></li>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#table-of-contents">Table of Contents</a></li>
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#moscow-prioritization-terminology">MoSCoW Prioritization
+Terminology</a></li>
+</ul></li>
 <li><a href="#user-requirements">User Requirements</a>
 <ul>
 <li><a href="#navigation">Navigation</a></li>
@@ -55,12 +59,14 @@ issue</a></li>
 href="#clarifying-note-on-bookmarks-notes-and-highlights">Clarifying
 Note on Bookmarks, Notes and Highlights</a></li>
 <li><a href="#bookmarking">Bookmarking</a></li>
-<li><a href="#making-notes">Making Notes</a></li>
 <li><a href="#highlighting">Highlighting</a></li>
+<li><a href="#the-highlights-must-be-distinguishable">The highlights
+must be distinguishable</a></li>
+<li><a href="#making-notes">Making Notes</a></li>
 <li><a href="#entering-answers">Entering Answers</a></li>
 <li><a href="#library-and-bookshelf">Library and Bookshelf</a></li>
-</ul></li>
 <li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul></li>
 <li><a
 href="#additional-user-requirements-for-future-consideration">Additional
 User Requirements for Future Consideration</a></li>
@@ -96,6 +102,24 @@ not just as a treasure trove of insights into the needs of people with
 print disabilities, but as a roadmap toward more inclusive digital
 reading experiences.</p>
 <section id="userrequirements">
+<h3 id="moscow-prioritization-terminology">MoSCoW Prioritization
+Terminology</h3>
+<p>This user requirements specification uses the MoSCoW technique to
+categorize requirements by priority. Each requirement is labeled with
+one of the following classifications:</p>
+<p><em>Must-have</em> - Critical requirements that are essential for
+creating an accessible reading application. These features are
+fundamental to ensuring users with print disabilities can effectively
+access and consume digital content.</p>
+<p><em>Should-have</em> - Important requirements that significantly
+enhance accessibility and usability for people with print disabilities.
+While not absolutely critical to basic reading functionality, omitting
+these features would notably reduce the application’s effectiveness in
+serving users’ needs and preferences.</p>
+<p><em>Could-have</em> - Beneficial features that would further improve
+the reading experience for users with print disabilities. These
+requirements enhance accessibility and user satisfaction but are not
+essential for creating a functional, accessible reading application.</p>
 <h2 id="user-requirements">User Requirements</h2>
 <h3 id="navigation">Navigation</h3>
 <p>Effective navigation is a critical aspect of digital accessibility.
@@ -197,20 +221,19 @@ current position in the content without losing their reading
 position.</p>
 <p>Priority: Must-have</p>
 <h4
-id="the-user-could-be-able-to-go-back-to-a-previous-location-in-the-content">The
-user could be able to go back to a previous location in the content</h4>
-<p>A “go back” feature within the reading application allows users to
-explicitly return to a previous location after navigating through a
+id="the-user-must-be-able-to-go-back-to-a-previous-location-in-the-content">The
+user must be able to go back to a previous location in the content</h4>
+<p>A “go back” feature within the reading application must allow users
+to explicitly return to a previous location after navigating through a
 digital publication, for example, after following an internal link,
-jumping to a search result, or accessing a glossary entry. While some
-screen readers offer limited navigation history, an in-app “go back”
-function provides a more predictable and user-controlled experience, and
-it benefits users who do not use screen readers as well. This is
-particularly beneficial for users with print disabilities, as it
-supports orientation and reduces cognitive load. The application could
-optionally support multiple location histories to enhance usability
-across complex publications.</p>
-<p>Priority: Could-have</p>
+reading a footnote or reference, jumping to a search result, or
+accessing a glossary entry.</p>
+<p>While some screen readers offer limited navigation history, an in-app
+“go back” function provides a more predictable and user-controlled
+experience, and benefits users who do not use screen readers as
+well.</p>
+<p>The application should support multiple location histories.</p>
+<p>Priority: Must-have</p>
 <h3 id="screen-reader-support">Screen Reader Support</h3>
 <p>Effective screen reader support depends not only on well-structured
 content but also on the reading app’s ability to interact seamlessly
@@ -248,6 +271,10 @@ user must be able to use their screen reader in a scrolling mode</h4>
 <p>The user must be able to use a scrolling (rather than a paginated
 mode) to enable the use of screen reader features (such as navigating to
 next/previous heading, landmark, graphic, etc.).</p>
+<p>Where the publication comprises multiple ‘documents’ the app may
+support loading the next or previous document via scroll actions or
+through dedicated navigation buttons. In this case the user must be able
+to easily move to the next document.</p>
 <p>Priority: Must-have</p>
 <h4
 id="screen-reader-users-must-be-able-to-navigate-confidently-between-internal-hyperlinks">Screen
@@ -263,19 +290,6 @@ id="screen-reader-users-must-be-able-to-activate-actionable-content">Screen
 reader users must be able to activate actionable content</h4>
 <p>Screen reader users must be able to activate actionable content (such
 as links, buttons, expandable elements).</p>
-<p>Priority: Must-have</p>
-<h4
-id="screen-reader-users-must-be-able-to-return-to-their-previous-reading-position">Screen
-reader users must be able to return to their previous reading
-position</h4>
-<p>After navigating to a different part of the content, such as
-following a footnote, internal hyperlink, glossary entry, or switching
-to another page, the user must be able to return to their previous
-reading position. Most modern screen readers support navigation history
-or reading position memory, allowing users to jump back to where they
-left off. To enable this functionality effectively, the application must
-maintain focus and structural consistency, ensuring that the screen
-reader can track and restore the user’s position within the content.</p>
 <p>Priority: Must-have</p>
 <h4
 id="screen-reader-users-must-be-able-to-use-footnotes-and-endnotes">Screen
@@ -317,6 +331,8 @@ user must be able to listen to text-based content using synthetic speech
 content. If the publication also has text synchronized with embedded
 audio, then the user must be able to choose the alternative of listening
 to the TTS read aloud.</p>
+<p>The user must be able to transition seamlessly between embedded
+audio, TTS read aloud, and screen reader use.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-control-the-starting-position-of-the-read-aloud">The
@@ -475,8 +491,8 @@ top to bottom. The read aloud could indicate the start of the table
 though an announcement or other notification.</p>
 <p>Priority: Must-have.</p>
 <h4
-id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsable-content">The
-user must be able to use read aloud with expandable/collapsable
+id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsible-content">The
+user must be able to use read aloud with expandable/collapsible
 content</h4>
 <p>Expanded content must be read aloud. Collapsed content must not be
 read aloud.</p>
@@ -562,6 +578,8 @@ or pre-recorded TTS)</h4>
 (human-narrated or pre-recorded TTS), whether synchronized with the text
 or provided as audio-only. Where synchronized audio is available, users
 must have the option to switch to TTS read aloud.</p>
+<p>The user must be able to transition seamlessly between embedded
+audio, TTS read aloud, and screen reader use.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-control-the-starting-position-of-the-embedded-audio">The
@@ -890,6 +908,8 @@ this should also affect the math expressions.</p>
 id="the-user-must-be-able-to-personalize-the-background-and-foreground-colors">The
 user must be able to personalize the background and foreground
 colors</h4>
+<p>The user must to set the background and text color from from a range
+of options.</p>
 <p>The user should be able to set the background and text color from the
 full color spectrum.</p>
 <p>Some people need high contrast between text and background, including
@@ -908,8 +928,7 @@ contrast for them yet not too high brightness. Readable and optimal
 color combinations differs vastly among individuals and can even vary
 for one individual depending on conditions such as fatigue and
 lighting.</p>
-<p>Priority: [Must-have for a limited color palette; Should-have for
-more specific background and text colors]</p>
+<p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-use-the-app-with-the-high-contrast-and-magnification-features-of-the-operating-system-platform">The
 user must be able to use the app with the high contrast and
@@ -943,6 +962,17 @@ href="https://www.epubtest.org/test-books/visual-adjustments/2.0.0/visual-210">v
 : Change brightness</a>, Legge G. E. (2016). Reading Digital with Low
 Vision. Visible language, 50(2), 102–125.
 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5726769/)</p>
+<h4 id="the-user-must-be-able-to-visually-hide-certain-content">The user
+must be able to visually hide certain content</h4>
+<p>The user must be able to configure their reading app so that it does
+not display some elements. Examples include page breaks and footnotes.
+This user requirement is the visual implementation of “The user must be
+able to decide that the read aloud should skip over certain
+content”.</p>
+<p>The user preference for hiding non-core content could be set on a
+per-title basis.</p>
+<p>Each format's specification determines which items can be hidden.</p>
+<p>Priority: Must-have</p>
 <h4
 id="the-user-should-be-able-to-remove-the-visual-text-styling-underline-italic-bold">The
 user should be able to remove the visual text styling (underline,
@@ -1000,21 +1030,17 @@ math expressions, so the chosen text color is always used.</p>
 <p>Priority: Could-have</p>
 <h3 id="clarifying-note-on-bookmarks-notes-and-highlights">Clarifying
 Note on Bookmarks, Notes and Highlights</h3>
-<p>Notes, bookmarks, and highlights are distinct features that support
-different user needs in digital reading environments:</p>
-<p>Notes are user-generated annotations that may contain text, audio, or
-other formats. They are typically used to capture thoughts, questions,
-or reflections on specific content.</p>
+<p>Notes, bookmarks, and highlights are features that support different
+user needs in digital reading environments:</p>
 <p>Bookmarks are navigational markers that help users return to a
-specific location in the content. They do not contain content themselves
-but may optionally be enhanced with a note for added context.</p>
+specific location in the content.</p>
 <p>Highlights visually mark portions of text to indicate importance or
 relevance. They are often used for quick reference and may be used
-independently or in combination with notes.</p>
-<p>While these features can be used together—for example, attaching a
-note to a highlight or a bookmark—they should remain functionally
-distinct to support a wide range of user strategies and accessibility
-needs.</p>
+exported to create an essay plan, revision notes or similar.</p>
+<p>Notes are user-generated annotations that may contain text, audio, or
+other formats. They are typically used to capture thoughts, questions,
+or reflections on specific content. Notes can be attached to bookmarks
+and highlights.</p>
 <h3 id="bookmarking">Bookmarking</h3>
 <p>The bookmarking features enable users to record their place in the
 content and return to it at a later point, which is particularly
@@ -1043,8 +1069,11 @@ there</h4>
 order of appearance in the book. This overview should be presented in a
 clear and navigable list, enabling users to identify bookmarked
 positions, select a bookmark to navigate directly to that point in the
-content. The application could allow the user to jump directly between
+content. The application should allow the user to jump directly between
 bookmarks without going via the overview.</p>
+<p>The user could use a list of bookmarks in the bookshelf view to
+navigate between saved locations across their collection of
+publications.</p>
 <p>Priority: Must-have</p>
 <h4 id="the-user-must-be-able-to-identify-each-bookmark">The user must
 be able to identify each bookmark</h4>
@@ -1054,13 +1083,81 @@ other bookmarks.</p>
 <p>The application should allow users to edit or rename system-generated
 bookmark titles to better reflect their personal context or
 preferences.</p>
+<p>The application should allow users to apply tags to bookmarks.</p>
 <p>Priority: Must-have</p>
 <h4
-id="users-should-have-access-to-their-bookmarks-if-they-open-their-book-on-another-device">Users
-should have access to their bookmarks if they open their book on another
-device</h4>
-<p>Users should have access to their bookmarks when opening the same
-book on another device, ensuring continuity.</p>
+id="the-user-must-be-able-to-save-bookmarks-automatically-including-during-offline-use">The
+user must be able to save bookmarks automatically, including during
+offline use</h4>
+<p>The user must have their bookmarks saved automatically, including
+during offline use, to ensure no loss of information. When the book is
+reopened, any bookmarks saved during the last session should be
+automatically restored.</p>
+<p>If online synchronization is supported, when the device connects to
+the internet the bookmarks must be synced.</p>
+<p>Priority: Must-have</p>
+<h3 id="highlighting">Highlighting</h3>
+<p>Highlights allow users to mark important parts of the text for quick
+reference. This supports efficient navigation and review, especially for
+users who benefit from visual cues or who use highlighting as part of
+their study or comprehension strategies.</p>
+<h4
+id="the-user-must-be-able-to-create-review-edit-and-delete-highlights">The
+user must be able to create, review, edit and delete highlights</h4>
+<p>The user must be able to highlight any portion of the text, including
+partial sentences or individual words. The user must be able to remove
+or modify existing highlights easily.</p>
+<p>The application must ensure that highlights are saved automatically
+and persist across sessions, including offline use. Users should not
+need to take extra action to retain their highlights, ensuring
+continuity even when connectivity is intermittent.</p>
+<p>Priority: Must-have</p>
+<h3 id="the-highlights-must-be-distinguishable">The highlights must be
+distinguishable</h3>
+<p>Whether reading visually, with read aloud or a screen reader,
+highlights must be distinguishable from the content that is not
+highlighted.</p>
+<h4 id="the-user-should-be-able-to-hide-highlights">The user should be
+able to hide highlights</h4>
+<p>Whether reading visually, with read aloud or a screen reader,
+the<br />
+user must be able to hide or show highlights. The user<br />
+must be able to read or navigate the text without interference while
+maintaining the ability to restore them when needed.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-must-be-able-to-change-the-color-or-category-of-highlights">The
+user must be able to change the color or category of highlights</h4>
+<p>The application must allow users to assign different colors or<br />
+tags for categorization or emphasis. Both visually and through a screen
+reader, users must be able to distinguish between types of highlights to
+support study, reference, or personal organization.</p>
+<p>Priority: Must-have</p>
+<h4
+id="the-user-should-be-able-to-navigate-from-highlight-to-highlight">The
+user should be able to navigate from highlight to highlight</h4>
+<p>Users should be able to navigate quickly between highlights, for
+example via an overview list or table of highlights. The overview should
+provide context, such as the surrounding text or page location, allowing
+users to jump directly to specific highlights.</p>
+<p>Priority: Should-have</p>
+<h4
+id="the-user-must-be-able-to-save-highlights-automatically-including-during-offline-use">The
+user must be able to save highlights automatically, including during
+offline use</h4>
+<p>The user must have their highlights saved automatically, including
+during offline use, to ensure no loss of information. When the book is
+reopened, any highlights saved during the last session should be
+automatically restored.</p>
+<p>If online synchronization is supported, when the device connects to
+the internet the highlights must be synced.</p>
+<p>Priority: Must-have</p>
+<h4 id="the-user-should-be-able-to-export-highlighted-sections">The user
+should be able to export highlighted sections</h4>
+<p>The application should allow users to export highlighted text,
+grouped by colors or tags where applicable. This would enable users to
+review, revise, or study key passages outside of the application,
+supporting learning and comprehension.</p>
 <p>Priority: Should-have</p>
 <h3 id="making-notes">Making Notes</h3>
 <p>The ability to add, review, and edit notes within a reading app is an
@@ -1080,9 +1177,8 @@ user must be able to create, review, edit and delete notes during
 reading</h4>
 <p>Users must be able to manage notes—adding, reviewing, editing, and
 deleting them—while reading. Notes may be in text or audio format and
-must be anchored to a specific location in the content (at least a text
-range within a paragraph, or a timestamp). Visual indicators and screen
-reader compatibility are essential to ensure discoverability and
+must be anchored to a bookmark or highlight. Visual indicators and
+screen reader compatibility are essential to ensure discoverability and
 usability for users with print disabilities.</p>
 <p>Priority: Must-have</p>
 <h4
@@ -1095,23 +1191,24 @@ users to reference their annotations without losing their place in the
 reading material.</p>
 <p>Priority: Must-have</p>
 <h4
-id="screen-reader-users-must-be-able-to-navigate-from-one-note-to-another">Screen
-reader users must be able to navigate from one note to another</h4>
+id="the-user-must-be-able-to-save-notes-automatically-including-during-offline-use">The
+user must be able to save notes automatically, including during offline
+use</h4>
+<p>The user must have their notes saved automatically, including during
+offline use, to ensure no loss of information. When the book is
+reopened, any notes saved during the last session should be
+automatically restored.</p>
+<p>If online synchronization is supported, when the device connects to
+the internet the notes must be synced.</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-should-be-able-to-navigate-from-one-note-to-another">Screen
+reader users should be able to navigate from one note to another</h4>
 <p>Efficient navigation between notes is essential for screen reader
 users to manage and review annotations without losing context. This
 includes the ability to move sequentially through notes, jump to
 specific notes, and return to the reading position.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-save-notes-automatically-including-during-offline-use">The
-user must be able to save notes automatically, including during offline
-use</h4>
-<p>The user must be able to save notes automatically, including during
-offline use, to ensure no loss of information. When the device connects
-to the internet, notes must be synced. When the book is reopened, any
-notes saved during the last session should be automatically
-restored.</p>
-<p>Priority: Must-have</p>
+<p>Priority: Should-have</p>
 <h4
 id="the-user-should-be-able-to-apply-basic-formatting-to-the-content-of-a-note">The
 user should be able to apply basic formatting to the content of a
@@ -1122,13 +1219,12 @@ of their notes. This can be especially helpful for users with cognitive
 or learning disabilities who benefit from visual cues to organize
 information.</p>
 <p>Priority: Should-have</p>
-<h4
-id="the-user-should-be-able-to-hide-or-show-notes-either-individually-or-all-at-once">The
-user should be able to hide or show notes, either individually or all at
-once</h4>
-<p>Controlling the visibility of notes helps users manage visual
-complexity and maintain focus, especially when reading for comprehension
-or studying.</p>
+<h4 id="the-user-should-be-able-to-hide-or-show-notes">The user should
+be able to hide or show notes</h4>
+<p>Whether reading visually, with read aloud or a screen reader, the
+user should be able to hide or show notes. Controlling the visibility of
+notes helps users manage visual complexity and maintain focus,
+especially when reading for comprehension or studying.</p>
 <p>Priority: Should-have</p>
 <h4
 id="the-user-should-be-able-to-have-notes-read-aloud-either-individually-or-all-in-sequence">The
@@ -1137,16 +1233,6 @@ in sequence</h4>
 <p>Listening to notes supports users who rely on audio for comprehension
 or who prefer auditory review. The ability to hear notes one at a time
 or in sequence allows for flexible interaction with annotations.</p>
-<p>Priority: Should-have</p>
-<h4
-id="the-user-should-be-able-to-access-their-notes-across-multiple-devices-through-synchronization">The
-user should be able to access their notes across multiple devices
-through synchronization</h4>
-<p>Synchronizing notes across devices allows users to continue reading
-and working with their annotations without interruption. This is
-especially important for users who rely on different assistive
-technologies on different devices, or who move between environments such
-as home, school, or work.</p>
 <p>Priority: Should-have</p>
 <h4
 id="the-user-should-be-able-to-export-notes-in-a-structured-format">The
@@ -1162,12 +1248,6 @@ within the reading system, enabling collaboration or review among users
 of the same platform. This could include features such as real-time
 sharing, commenting, or integrated feedback mechanisms.</p>
 <p>Priority: Should-have</p>
-<h4 id="the-user-could-organize-notes-using-color-coding-or-labels">The
-user could organize notes using color coding or labels</h4>
-<p>Color coding or labeling helps users categorize notes in a way that
-supports their reading goals, making it easier to locate and review
-related information later.</p>
-<p>Priority: Could-have</p>
 <h4
 id="the-user-could-be-able-to-create-notes-in-formats-beyond-plain-text-such-as-handwriting-math-notation-or-video">The
 user could be able to create notes in formats beyond plain text, such as
@@ -1177,67 +1257,6 @@ ways that suit their needs and preferences. This flexibility is
 especially valuable for users who find visual, symbolic, or spoken forms
 more accessible than typed text.</p>
 <p>Priority: Could-have</p>
-<h3 id="highlighting">Highlighting</h3>
-<p>Highlights allow users to mark important parts of the text for quick
-reference. This supports efficient navigation and review, especially for
-users who benefit from visual cues or who use highlighting as part of
-their study or comprehension strategies.</p>
-<h4
-id="the-user-must-be-able-to-create-review-edit-and-delete-highlights">The
-user must be able to create, review, edit and delete highlights</h4>
-<p>The user must be able to highlight any portion of the text, including
-partial sentences or individual words. The user must be able to remove
-or modify existing highlights easily.</p>
-<p>The application must ensure that highlights are saved automatically
-and persist across sessions, including offline use. Users should not
-need to take extra action to retain their highlights, ensuring
-continuity even when connectivity is intermittent.</p>
-<p>Priority: Must-have</p>
-<h4 id="the-user-must-be-able-to-hide-highlights">The user must be able
-to hide highlights</h4>
-<p>The user must be able to hide or show highlights at any time. This
-functionality should also be accessible to screen reader users, allowing
-them to read or navigate the text without interference from visual
-highlights while maintaining the ability to restore them when
-needed.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-must-be-able-to-change-the-color-or-category-of-highlights">The
-user must be able to change the color or category of highlights</h4>
-<p>The application must allow users to assign different colors or styles
-to highlights for categorization or emphasis. Both visually and through
-a screen reader, users must be able to distinguish between types of
-highlights to support study, reference, or personal organization.</p>
-<p>Priority: Must-have</p>
-<h4
-id="the-user-should-be-able-to-navigate-from-highlight-to-highlight">The
-user should be able to navigate from highlight to highlight</h4>
-<p>Users should be able to navigate quickly between highlights, for
-example via an overview list or table of highlights. The overview should
-provide context, such as the surrounding text or page location, allowing
-users to jump directly to specific highlights.</p>
-<p>Priority: Should-have</p>
-<h4 id="the-user-could-be-able-to-annotate-highlights">The user could be
-able to annotate highlights</h4>
-<p>The application could allow highlights to include optional notes or
-annotations linked to the highlighted text. This would enable users to
-add personal comments or summaries while keeping them associated with
-the relevant passage.</p>
-<h4
-id="the-user-could-have-their-highlights-synchronized-across-devices">The
-user could have their highlights synchronized across devices</h4>
-<p>Users could have their highlights synchronized across multiple
-devices for the same book. This would allow continuity of study or
-reading, enabling access to all highlights and annotations regardless of
-device.</p>
-<p>Priority: Should-have</p>
-<h4 id="the-user-should-be-able-to-export-highlighted-sections">The user
-should be able to export highlighted sections</h4>
-<p>The application should allow users to export highlighted text,
-grouped by colors or categories where applicable. This would enable
-users to review, revise, or study key passages outside of the
-application, supporting learning and comprehension.</p>
-<p>Priority: Should-have</p>
 <h3 id="entering-answers">Entering Answers</h3>
 <p><strong>Special note:</strong> reading systems typically let users
 add notes but currently do not support answer entry. However, this is an
@@ -1510,12 +1529,14 @@ and be presented with an option such as “Open in [App Name]”, enabling a
 seamless and intuitive way to access content without needing to manually
 import it through the app interface.</p>
 <p>Priority: Should-have</p>
-<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="miscellaneous">Miscellaneous</h3>
 <h4 id="the-user-must-have-user-friendly-documentation">The user must
 have user-friendly documentation</h4>
-<p>While the system should be intuitive, certain aspects like shortcut
-keys still need to be clearly explained. The documentation should be
-concise and user-friendly.</p>
+<p>While the system should be intuitive, certain aspects still need to
+be clearly explained. The documentation should be concise and
+user-friendly.</p>
+<p>Documentation might include general help, quick start guide, shortcut
+keys, contact information for accessibility help.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-receive-clear-and-user-friendly-error-messages">The
@@ -1539,6 +1560,17 @@ right to access content in an accessible format. Ensuring accessibility
 of protected content is essential for equitable access to reading
 materials.</p>
 <p>Priority: Must-have</p>
+<h4
+id="reading-systems-should-make-it-easy-for-a-user-to-get-a-citation-or-reference.">Reading
+Systems should make it easy for a user to get a citation or
+reference.</h4>
+<p>This feature would enable the reader to select a portion of text and
+then use a shortcut key or button to get the formal citation and copy it
+to the clipboard. The user should have the ability to select from a
+number of accepted formats for citations.</p>
+<p>To create a proper citation, the publication must have the correct
+metadata, which is not always present.</p>
+<p>Priority: Should-have</p>
 <h2
 id="additional-user-requirements-for-future-consideration">Additional
 User Requirements for Future Consideration</h2>
@@ -1549,137 +1581,116 @@ forward-looking for current implementation, while others were not
 prioritized due to time constraints. They are included here to document
 emerging needs and to support future exploration and innovation in
 accessible digital reading.</p>
-<h4 id="dynamic-content-based-on-user-input-issue-tracker-2">Dynamic
-content based on user input (issue tracker #2)</h4>
-<p>The user could enter personal or contextual information (e.g., number
-of servings, name, or variables) that dynamically updates the content of
-the publication.</p>
-<p>Allowing users to input values—such as the number of people to cook
-for or a name for personalized narration—enables dynamic updates to the
-content. This can make digital publications more engaging and practical.
-For users with print disabilities, such features can reduce cognitive
-load and improve usability by tailoring information to their specific
-context. Similar use cases may apply to textbooks, where variables or
-examples can be adapted to the learner’s input.</p>
-<h4 id="support-for-tactile-and-printable-content">Support for Tactile
-and Printable Content:</h4>
-<h4 id="print-or-export-specific-content-issue-tracker-3-and-5">Print or
-Export Specific Content (issue tracker #3 and 5)</h4>
-<p>The user should be able to print selected parts of the publication,
-such as templates or activity pages.</p>
-<p>In interactive or instructional publications—such as handicraft books
-or educational materials—users may need to print specific pages, like
-templates or diagrams. Providing a way to print selected content
-supports hands-on learning and accessibility for users who benefit from
-physical or tactile formats. This feature may also support embossing or
-other alternative output methods, depending on the user’s needs and
-available technology.</p>
-<p>Additionally, limited printing or sharing of content from serial
-publications—such as recipes or selected articles—could enhance
-usability and encourage engagement.</p>
-<h4
-id="export-content-for-alternative-format-production-issue-tracker-5">Export
-Content for Alternative Format Production (issue tracker #5)</h4>
-<p>The user must be able to export content from the reading system in a
-digital format suitable for creating alternative formats and supporting
-materials.<br />
-Priority: Must-have</p>
-<h4
-id="text-style-properties-must-be-exposed-to-assistive-technologies-issue-tracker-32">Text
-Style Properties Must Be Exposed to Assistive Technologies (issue
-tracker #32)</h4>
-<p>If supported by platform accessibility APIs, text style properties
-such as font, line spacing, indentation, justification, and emphasis
-(e.g., bold, italic, underline) must be exposed to assistive
-technologies.<br />
-Priority: Should-have</p>
-<p>Disclosing text style properties allows assistive technologies—such
-as screen readers and braille displays—to convey visual structure and
-emphasis in non-visual ways. For example, indentation and justification
-can help represent layout on a braille device, while bold or italic text
-may be rendered using specific braille indicators. This enhances
-comprehension and preserves the author’s intended structure and meaning
-for users with print disabilities.</p>
-<h4 id="turn-hyphenation-onoff-issue-tracker-6-and-24">Turn hyphenation
-on/off (issue tracker #6 and 24)</h4>
-<p>Hyphenation can affect readability and comprehension, especially for
-users with print disabilities such as dyslexia or low vision. Allowing
-users to turn hyphenation on or off gives them control over how text is
-presented, helping to reduce visual clutter and improve the flow of
-reading. This customization supports a more accessible and comfortable
-reading experience.</p>
-<h4
-id="synchronized-text-audio-and-switching-between-reading-modes-issue-tracker-7">Synchronized
-Text-Audio and Switching between reading modes (issue tracker #7)</h4>
-<p>The functionality of synchronized text and audio—where professionally
-narrated or pre-recorded audio is aligned with the visual text—is
-already well represented in the Embedded Audio section of this document.
-That section outlines key user requirements such as synchronized
-playback, visual emphasis, navigation, and customization of the reading
-experience.</p>
-<p>However, one important aspect is not yet fully addressed: the ability
-for users to switch flexibly between listening and reading modes. This
-includes scenarios where a user may: Pause embedded audio to read the
-text independently, either visually or with a screen reader; Resume
-audio playback from the same point after reading; Transition seamlessly
-between human narration, TTS read aloud, and screen reader use.</p>
-<p>This kind of multimodal interaction supports diverse reading
-strategies and is especially valuable for users with print disabilities
-who benefit from combining auditory and visual input. Future development
-should explore how reading systems can support synchronized state
-management across different modes, ensuring continuity and user control
-regardless of how the content is accessed.</p>
-<h4 id="bookmarking-issue-tracker-12">Bookmarking (issue tracker
-#12)</h4>
-<p>Bookmarking is a widely used and valued feature in digital reading
-systems. Although we did not have time to develop detailed user
-requirements for bookmarks in this version of the list, we recognize
-their importance for navigation, study, and personalization. Future work
-should explore how bookmarking can best support users with print
-disabilities, including possible integration with notes, accessibility
-via assistive technologies, and synchronization across devices.</p>
-<h4 id="follow-external-links-issue-tracker-12">Follow external links
-(issue tracker #12)</h4>
+<h4 id="reading-experience-navigation">Reading Experience &amp;
+Navigation</h4>
+<h5 id="less-distraction-mode-zen-mode-simplified-interface">Less
+distraction mode / Zen mode / Simplified interface</h5>
+<p>A simplified or “Zen” mode should be available, hiding most interface
+controls and presenting only essential reading functions. This reduces
+cognitive load and visual distractions, benefiting users with
+attention-related or cognitive disabilities.</p>
+<h5 id="configurable-reading-preferences">Configurable Reading
+Preferences</h5>
+<p>The application shall allow users to configure reading-related
+features both globally (via application settings) and locally (per
+document). Users with visual impairments need personalized settings to
+optimize readability. Global settings (e.g. font size, contrast, voice
+speed) ensure consistency, while some features (e.g. layout or reading
+mode) may need to be overridden per document. Per-document settings
+should be saved when relevant.</p>
+<h5 id="follow-external-links">Follow external links</h5>
 <p>Some digital publications include hyperlinks to external web
 resources. Users should be able to follow these links and open them in
 an external web browser outside the reading system. This supports access
 to supplementary materials and ensures that users with print
 disabilities can benefit from the full range of content referenced in
 the publication.</p>
-<h4
-id="less-distraction-mode-zen-mode-simplified-interface-issue-tracker-17-25">Less
-distraction mode / Zen mode / Simplified interface (issue tracker #17 +
-25)</h4>
-<p>A simplified or “Zen” mode could help users focus by hiding most
-interface controls and presenting only essential playback or reading
-functions. This can reduce cognitive load and visual distractions,
-benefiting users with attention-related or cognitive disabilities. While
-especially relevant for audiobooks, this mode could also support a
-calmer, more accessible reading experience in text-based
-publications.</p>
-<h4 id="reflow-of-text-for-fixed-layout-as-well-issue-tracker-26">Reflow
-of text, for fixed layout as well (issue tracker #26)</h4>
-<h4
-id="disclose-test-style-properties-to-assistive-technologies-e.g.-for-presentation-braille-device-issue-tracker-32">Disclose
-test style properties to assistive technologies, e.g. for presentation
-braille device (issue tracker #32)</h4>
-<h4
-id="support-for-llm-inference-or-other-processing-issue-tracker-33">Support
-for LLM inference or other processing (issue tracker #33)</h4>
-<h4
-id="support-for-parallel-text-viewing-and-navigation-for-linked-content-such-as-translations-or-annotations-issue-tracker-36">Support
-for parallel text viewing and navigation for linked content, such as
-translations or annotations (issue tracker #36)</h4>
-<h4 id="tactile-graphics-support-issue-tracker-37">Tactile graphics
-support (issue tracker #37)</h4>
-<h4
+<h5
+id="parallel-text-viewing-and-navigation-for-linked-content-such-as-translations-or-annotations">Parallel
+text viewing and navigation for linked content, such as translations or
+annotations</h5>
+<p>Users should be able to view multiple versions of a text side by
+side, such as an original and a translation, or a text with annotations,
+supporting comparative reading and study.</p>
+<h5
 id="display-word-counts-in-tables-of-contents-of-serial-publications">Display
-word counts in tables of contents of serial publications</h4>
-<h4 id="digital-clippings-archive">Digital clippings archive</h4>
-<h4 id="book-recommendations-based-on-personal-preferences">Book
-recommendations based on personal preferences</h4>
-<h4 id="book-recommendation-sharing">Book recommendation sharing</h4>
-<h4 id="borrowing-history-indicator">Borrowing history indicator</h4>
+word counts in tables of contents of serial publications</h5>
+<p>The app should display the word count for each article or chapter in
+the table of contents, helping users estimate the length and effort
+required for each section.</p>
+<h4 id="accessibility-assistive-technologies">Accessibility &amp;
+Assistive Technologies</h4>
+<h5
+id="disclose-text-style-properties-to-assistive-technologies-e.g.-for-presentation-on-braille-devices">Disclose
+text style properties to assistive technologies, e.g. for presentation
+on braille devices</h5>
+<p>If supported by the platform, text style properties such as font,
+line spacing, indentation, justification, and emphasis (bold, italic,
+underline) should be made available to assistive technologies. This
+allows screen readers and braille displays to convey visual structure
+and emphasis in non-visual ways, enhancing comprehension.</p>
+<h5 id="turn-hyphenation-onoff">Turn hyphenation on/off</h5>
+<p>Users should be able to enable or disable hyphenation. This
+customization supports a more accessible and comfortable reading
+experience, especially for users with dyslexia or low vision, by
+reducing visual clutter and improving text flow.</p>
+<h5 id="reflow-of-text-for-fixed-layout-as-well">Reflow of text for
+fixed layout as well</h5>
+<p>Text in fixed-layout documents should be able to reflow, allowing for
+better readability on small screens or when using magnification.</p>
+<h5 id="support-for-llm-inference-or-other-processing">Support for LLM
+inference or other processing</h5>
+<p>The app should allow integration of AI-powered features, such as
+summarization, question answering, or contextual assistance based on the
+content of the publication.</p>
+<h4 id="print-export-functionality">Print &amp; Export
+Functionality</h4>
+<h5 id="print-or-export-specific-content">Print or Export Specific
+Content</h5>
+<p>Users should be able to print or export selected parts of a
+publication, such as templates or activity pages. This supports hands-on
+learning and accessibility for users who benefit from physical or
+tactile formats.</p>
+<h5 id="export-content-for-alternative-format-production">Export Content
+for Alternative Format Production</h5>
+<p>The app must allow users to export content in a digital format
+suitable for creating alternative accessible formats, such as braille or
+large print.</p>
+<h5 id="support-for-tactile-graphics">Support for tactile graphics</h5>
+<p>The app should, where feasible, support the rendering of tactile
+graphics via compatible hardware such as refreshable Braille displays or
+pin-matrix devices. This functionality enables users with visual
+impairments to access graphical content embedded in general EPUB or
+similar document formats. As tactile display technology evolves, the
+implementation of this feature may need to be revisited. Initially, this
+support can be considered desirable but not mandatory, depending on user
+needs and technical feasibility.</p>
+<h4 id="personalization-interaction">Personalization &amp;
+Interaction</h4>
+<h5 id="dynamic-content-based-on-user-input">Dynamic content based on
+user input</h5>
+<p>The user should be able to enter personal or contextual
+information—such as the number of servings in a recipe or a name for
+personalized narration—which then dynamically updates the content. This
+makes digital publications more engaging and practical, and helps reduce
+cognitive load for users with print disabilities.</p>
+<h5 id="book-recommendations-based-on-personal-preferences">Book
+recommendations based on personal preferences</h5>
+<p>The app should provide personalized book recommendations based on the
+user’s reading history, interests, or profile, making it easier to
+discover relevant content.</p>
+<h5 id="book-recommendation-sharing">Book recommendation sharing</h5>
+<p>Users should be able to share book recommendations with others, for
+example via social media or within the reading platform, to encourage
+community and engagement.</p>
+<h5 id="borrowing-history-indicator">Borrowing history indicator</h5>
+<p>The app should indicate which books a user has previously borrowed or
+read, helping them avoid duplicates and revisit favorites.</p>
+<h4 id="content-management">Content Management</h4>
+<h5 id="digital-clippings-archive">Digital clippings archive</h5>
+<p>The app should allow users to save and organize excerpts or quotes
+from digital publications, functioning as a digital scrapbook for easy
+reference and study.</p>
 </section>
 <section id="userstories">
 <h2 id="user-stories">User Stories</h2>
@@ -1694,7 +1705,27 @@ group.</p>
 of the DAISY members and Friends who participated in the project. Their
 valuable insights, expertise, and experiences have been instrumental in
 ensuring that the requirements capture a broad range of user needs.</p>
-<p>This work is financially supported by <a
+<p>Arno Zuidema, Bibliotheekservice Passend Lezen; Avneesh Singh, DAISY
+Consortium; Basile Mignonneau, Association Valentin Haüy; Charles
+LaPierre, Benetech; Cody Care, EBSCO Information Services; Craig
+Hayward, University of North Carolina at Chapel Hill; Daniel Weck,
+EDRLab; Dang Hoai Phúc, Sao Mai Center for the Blind; Didier De
+Schepper, Sensotec; Gautier Chomel, EDRLab; George Kerscher, DAISY
+Consortium; Gregorio Pellegrino, Fondazione LIA; Hadrien Gardeur,
+EDRLab; Ioana Gandrabur, CELA; Irmgard Reijntjes, Bibliotheekservice
+Passend Lezen; James Yanchak, Taylor &amp; Francis Group; Jason White,
+Independent; John Ylioja, National Network for Equitable Libray Service;
+Julija Skerniskyte, Lithuanian audiosensory library; Katie Durand,
+Fédération des Aveugles et Amblyopes de France; Kirsten de Haan,
+Dedicon; Lars Wallin, Colibrio; Laurent Le Meur, EDRLab; Lukasz
+Koprowski, SBS Schweizerische Bibliothek für Blinde, Seh- und
+Lesebehinderte; Maaike Bras, Dedicon; Manfred Muchenberger, SBS
+Schweizerische Bibliothek voor Blinde, Seh- und Lesebehinderte; Marisa
+DeMeglio, DAISY Consortium; Mattias Karlsson, Dolphin Computer Access;
+Pedro Milliet, Fênix Editorial; Prashant Verma, DAISY Consortium;
+Richard Orme, DAISY Consortium; Sean Loraas, Austin Community College;
+Yorick Pieters, Sensotec.</p>
+<p>This work was financially supported by <a
 href="https://dedicon.nl">Dedicon</a>.</p>
 </section>
 <h2 id="references">References</h2>
