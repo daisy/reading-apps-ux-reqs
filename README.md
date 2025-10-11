@@ -6,4 +6,4 @@ The [working group meetings](https://github.com/daisy/reading-apps-ux-reqs/wiki/
 
 The project output is a document that expresses user requirements of individuals with diverse print disabilities for reading digital publications. It is hoped that the document will be highly valuable for the developers of specialized reading systems and provide inspiration for mainstream reading solutions.
 
-The Editors invite comments on the [Release Candidate version of the specification](https://daisy.github.io/reading-apps-ux-reqs/requirements/published/CR-20251011/) and the [Executive Summary]([url](https://daisy.github.io/reading-apps-ux-reqs/requirements/published/ES-20251011) before 31 October 2025.
+The Editors invite comments on the [Release Candidate version of the specification](https://daisy.github.io/reading-apps-ux-reqs/requirements/published/CR-20251011/) and the [Executive Summary](https://daisy.github.io/reading-apps-ux-reqs/requirements/published/ES-20251011) before 31 October 2025.
