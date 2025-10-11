@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[07 October 2025]{.pubdate}
+[11 October 2025]{.pubdate}
 
 Editors:
 
@@ -1112,7 +1112,7 @@ Priority: Could-have
 
 ::: {#clarifying-note .note}
 
-Clarifying Note on Bookmarks, Highlights and Notes
+**Clarifying Note on Bookmarks, Highlights and Notes**
 
 Bookmarks, highlights and notes are features that support
 different user needs in digital reading environments:
