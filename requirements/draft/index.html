@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Editors’ Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">24 September 2025</span></p>
+<p><span class="pubdate">07 October 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -55,13 +55,8 @@ Terminology</a></li>
 <li><a href="#read-aloud">Read Aloud</a></li>
 <li><a href="#embedded-audio">Embedded Audio</a></li>
 <li><a href="#visual-adjustments">Visual Adjustments</a></li>
-<li><a
-href="#clarifying-note-on-bookmarks-notes-and-highlights">Clarifying
-Note on Bookmarks, Notes and Highlights</a></li>
 <li><a href="#bookmarking">Bookmarking</a></li>
 <li><a href="#highlighting">Highlighting</a></li>
-<li><a href="#the-highlights-must-be-distinguishable">The highlights
-must be distinguishable</a></li>
 <li><a href="#making-notes">Making Notes</a></li>
 <li><a href="#entering-answers">Entering Answers</a></li>
 <li><a href="#library-and-bookshelf">Library and Bookshelf</a></li>
@@ -473,7 +468,6 @@ the read aloud stopping. The user must be able to listen and control
 read aloud from the lock screen, to the extent this is supported on the
 platform (e.g., pause, resume, go back and forward). The display could
 show relevant information such as the current position in the title.</p>
-<p>Editor’s note - this probably also applies to audio playback.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-control-read-aloud-playback-using-the-devices-media-controls">The
@@ -1028,20 +1022,21 @@ highlighted in distinct colors. For some people this can present
 problems. The user could be able to remove the color formatting used in
 math expressions, so the chosen text color is always used.</p>
 <p>Priority: Could-have</p>
-<h3 id="clarifying-note-on-bookmarks-notes-and-highlights">Clarifying
-Note on Bookmarks, Notes and Highlights</h3>
-<p>Notes, bookmarks, and highlights are features that support different
+<h3 id="bookmarking">Bookmarking</h3>
+<div id="clarifying-note" class="note">
+<p>Clarifying Note on Bookmarks, Highlights and Notes</p>
+<p>Bookmarks, highlights and notes are features that support different
 user needs in digital reading environments:</p>
 <p>Bookmarks are navigational markers that help users return to a
 specific location in the content.</p>
 <p>Highlights visually mark portions of text to indicate importance or
-relevance. They are often used for quick reference and may be used
-exported to create an essay plan, revision notes or similar.</p>
+relevance. They are often used for quick reference and may be exported
+to create an essay plan, revision notes or similar.</p>
 <p>Notes are user-generated annotations that may contain text, audio, or
 other formats. They are typically used to capture thoughts, questions,
 or reflections on specific content. Notes can be attached to bookmarks
 and highlights.</p>
-<h3 id="bookmarking">Bookmarking</h3>
+</div>
 <p>The bookmarking features enable users to record their place in the
 content and return to it at a later point, which is particularly
 valuable in educational and reference contexts. The ability to create
@@ -1097,6 +1092,8 @@ automatically restored.</p>
 the internet the bookmarks must be synced.</p>
 <p>Priority: Must-have</p>
 <h3 id="highlighting">Highlighting</h3>
+<p>See the <a href="#clarifying-note">clarifying note</a> on bookmarks,
+highlights and notes.</p>
 <p>Highlights allow users to mark important parts of the text for quick
 reference. This supports efficient navigation and review, especially for
 users who benefit from visual cues or who use highlighting as part of
@@ -1112,8 +1109,8 @@ and persist across sessions, including offline use. Users should not
 need to take extra action to retain their highlights, ensuring
 continuity even when connectivity is intermittent.</p>
 <p>Priority: Must-have</p>
-<h3 id="the-highlights-must-be-distinguishable">The highlights must be
-distinguishable</h3>
+<h4 id="the-user-must-be-able-to-distinguish-the-highlights">The user
+must be able to distinguish the highlights</h4>
 <p>Whether reading visually, with read aloud or a screen reader,
 highlights must be distinguishable from the content that is not
 highlighted.</p>
@@ -1160,6 +1157,8 @@ review, revise, or study key passages outside of the application,
 supporting learning and comprehension.</p>
 <p>Priority: Should-have</p>
 <h3 id="making-notes">Making Notes</h3>
+<p>See the <a href="#clarifying-note">clarifying note</a> on bookmarks,
+highlights and notes.</p>
 <p>The ability to add, review, and edit notes within a reading app is an
 important feature for many users, especially those with print
 disabilities or learning challenges. Notes provide a flexible way to
@@ -1258,6 +1257,7 @@ especially valuable for users who find visual, symbolic, or spoken forms
 more accessible than typed text.</p>
 <p>Priority: Could-have</p>
 <h3 id="entering-answers">Entering Answers</h3>
+<div class="note">
 <p><strong>Special note:</strong> reading systems typically let users
 add notes but currently do not support answer entry. However, this is an
 important need for learners with print disabilities. This section
@@ -1265,6 +1265,7 @@ summarises user needs for this functionality, based on workshops at
 Dedicon and discussions with app developers and the user requirements
 working group. This section aims to help designers and developers assess
 how this functionality could be implemented.</p>
+</div>
 <p>Learners with print disabilities can face significant challenges when
 completing exercises in books: if they are unable to read or write in
 physical books, they are often required to write their answers into a
@@ -1581,8 +1582,8 @@ forward-looking for current implementation, while others were not
 prioritized due to time constraints. They are included here to document
 emerging needs and to support future exploration and innovation in
 accessible digital reading.</p>
-<h4 id="reading-experience-navigation">Reading Experience &amp;
-Navigation</h4>
+<h4 class="no-ur" id="reading-experience-navigation">Reading Experience
+&amp; Navigation</h4>
 <h5 id="less-distraction-mode-zen-mode-simplified-interface">Less
 distraction mode / Zen mode / Simplified interface</h5>
 <p>A simplified or “Zen” mode should be available, hiding most interface
@@ -1618,8 +1619,9 @@ word counts in tables of contents of serial publications</h5>
 <p>The app should display the word count for each article or chapter in
 the table of contents, helping users estimate the length and effort
 required for each section.</p>
-<h4 id="accessibility-assistive-technologies">Accessibility &amp;
-Assistive Technologies</h4>
+<h4 class="no-ur"
+id="accessibility-assistive-technologies">Accessibility &amp; Assistive
+Technologies</h4>
 <h5
 id="disclose-text-style-properties-to-assistive-technologies-e.g.-for-presentation-on-braille-devices">Disclose
 text style properties to assistive technologies, e.g. for presentation
@@ -1643,7 +1645,7 @@ inference or other processing</h5>
 <p>The app should allow integration of AI-powered features, such as
 summarization, question answering, or contextual assistance based on the
 content of the publication.</p>
-<h4 id="print-export-functionality">Print &amp; Export
+<h4 class="no-ur" id="print-export-functionality">Print &amp; Export
 Functionality</h4>
 <h5 id="print-or-export-specific-content">Print or Export Specific
 Content</h5>
@@ -1665,7 +1667,7 @@ similar document formats. As tactile display technology evolves, the
 implementation of this feature may need to be revisited. Initially, this
 support can be considered desirable but not mandatory, depending on user
 needs and technical feasibility.</p>
-<h4 id="personalization-interaction">Personalization &amp;
+<h4 class="no-ur" id="personalization-interaction">Personalization &amp;
 Interaction</h4>
 <h5 id="dynamic-content-based-on-user-input">Dynamic content based on
 user input</h5>
@@ -1686,7 +1688,7 @@ community and engagement.</p>
 <h5 id="borrowing-history-indicator">Borrowing history indicator</h5>
 <p>The app should indicate which books a user has previously borrowed or
 read, helping them avoid duplicates and revisit favorites.</p>
-<h4 id="content-management">Content Management</h4>
+<h4 class="no-ur" id="content-management">Content Management</h4>
 <h5 id="digital-clippings-archive">Digital clippings archive</h5>
 <p>The app should allow users to save and organize excerpts or quotes
 from digital publications, functioning as a digital scrapbook for easy
@@ -1705,26 +1707,115 @@ group.</p>
 of the DAISY members and Friends who participated in the project. Their
 valuable insights, expertise, and experiences have been instrumental in
 ensuring that the requirements capture a broad range of user needs.</p>
-<p>Arno Zuidema, Bibliotheekservice Passend Lezen; Avneesh Singh, DAISY
-Consortium; Basile Mignonneau, Association Valentin Haüy; Charles
-LaPierre, Benetech; Cody Care, EBSCO Information Services; Craig
-Hayward, University of North Carolina at Chapel Hill; Daniel Weck,
-EDRLab; Dang Hoai Phúc, Sao Mai Center for the Blind; Didier De
-Schepper, Sensotec; Gautier Chomel, EDRLab; George Kerscher, DAISY
-Consortium; Gregorio Pellegrino, Fondazione LIA; Hadrien Gardeur,
-EDRLab; Ioana Gandrabur, CELA; Irmgard Reijntjes, Bibliotheekservice
-Passend Lezen; James Yanchak, Taylor &amp; Francis Group; Jason White,
-Independent; John Ylioja, National Network for Equitable Libray Service;
-Julija Skerniskyte, Lithuanian audiosensory library; Katie Durand,
-Fédération des Aveugles et Amblyopes de France; Kirsten de Haan,
-Dedicon; Lars Wallin, Colibrio; Laurent Le Meur, EDRLab; Lukasz
-Koprowski, SBS Schweizerische Bibliothek für Blinde, Seh- und
-Lesebehinderte; Maaike Bras, Dedicon; Manfred Muchenberger, SBS
-Schweizerische Bibliothek voor Blinde, Seh- und Lesebehinderte; Marisa
-DeMeglio, DAISY Consortium; Mattias Karlsson, Dolphin Computer Access;
-Pedro Milliet, Fênix Editorial; Prashant Verma, DAISY Consortium;
-Richard Orme, DAISY Consortium; Sean Loraas, Austin Community College;
-Yorick Pieters, Sensotec.</p>
+<ul style="list-style: none; padding: 0; margin: 0; display: inline;">
+<li style="display: inline;">
+Arno Zuidema, Bibliotheekservice Passend Lezen;
+</li>
+<li style="display: inline;">
+Avneesh Singh, DAISY Consortium;
+</li>
+<li style="display: inline;">
+Basile Mignonneau, Association Valentin Haüy;
+</li>
+<li style="display: inline;">
+Charles LaPierre, Benetech;
+</li>
+<li style="display: inline;">
+Cody Care, EBSCO Information Services;
+</li>
+<li style="display: inline;">
+Craig Hayward, University of North Carolina at Chapel Hill;
+</li>
+<li style="display: inline;">
+Daniel Weck, EDRLab;
+</li>
+<li style="display: inline;">
+Dang Hoai Phúc, Sao Mai Center for the Blind;
+</li>
+<li style="display: inline;">
+Didier De Schepper, Sensotec;
+</li>
+<li style="display: inline;">
+Gautier Chomel, EDRLab;
+</li>
+<li style="display: inline;">
+George Kerscher, DAISY Consortium;
+</li>
+<li style="display: inline;">
+Gregorio Pellegrino, Fondazione LIA;
+</li>
+<li style="display: inline;">
+Hadrien Gardeur, EDRLab;
+</li>
+<li style="display: inline;">
+Ioana Gandrabur, CELA;
+</li>
+<li style="display: inline;">
+Irmgard Reijntjes, Bibliotheekservice Passend Lezen;
+</li>
+<li style="display: inline;">
+James Yanchak, Taylor &amp; Francis Group;
+</li>
+<li style="display: inline;">
+Jason White, Independent;
+</li>
+<li style="display: inline;">
+John Ylioja, National Network for Equitable Libray Service;
+</li>
+<li style="display: inline;">
+Julija Skerniskyte, Lithuanian audiosensory library;
+</li>
+<li style="display: inline;">
+Katie Durand, Fédération des Aveugles et Amblyopes de France;
+</li>
+<li style="display: inline;">
+Kirsten de Haan, Dedicon;
+</li>
+<li style="display: inline;">
+Lars Wallin, Colibrio;
+</li>
+<li style="display: inline;">
+Laurent Le Meur, EDRLab;
+</li>
+<li style="display: inline;">
+Lukasz Koprowski, SBS Schweizerische Bibliothek für Blinde, Seh- und
+Lesebehinderte;
+</li>
+<li style="display: inline;">
+Maaike Bras, Dedicon;
+</li>
+<li style="display: inline;">
+Manfred Muchenberger, SBS Schweizerische Bibliothek voor Blinde, Seh-
+und Lesebehinderte;
+</li>
+<li style="display: inline;">
+Marisa DeMeglio, DAISY Consortium;
+</li>
+<li style="display: inline;">
+Mattias Karlsson, Dolphin Computer Access;
+</li>
+<li style="display: inline;">
+Pedro Milliet, Fênix Editorial;
+</li>
+<li style="display: inline;">
+Prashant Verma, DAISY Consortium;
+</li>
+<li style="display: inline;">
+Richard Orme, DAISY Consortium;
+</li>
+<li style="display: inline;">
+Sarah Harris, Benetech;
+</li>
+<li style="display: inline;">
+Sean Loraas, Austin Community College;
+</li>
+<li style="display: inline;">
+Tiffany O’Neal, Independent;
+</li>
+<li style="display: inline;">
+Yorick Pieters, Sensotec.
+</li>
+</ul>
 <p>This work was financially supported by <a
 href="https://dedicon.nl">Dedicon</a>.</p>
 </section>

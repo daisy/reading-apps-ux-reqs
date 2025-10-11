@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[24 September 2025]{.pubdate}
+[07 October 2025]{.pubdate}
 
 Editors:
 
@@ -58,10 +58,8 @@ Copyright © 2025 DAISY Consortium
   - [Read Aloud](#read-aloud)
   - [Embedded Audio](#embedded-audio)
   - [Visual Adjustments](#visual-adjustments)
-  - [Clarifying Note on Bookmarks, Notes and Highlights](#clarifying-note-on-bookmarks-notes-and-highlights)
   - [Bookmarking](#bookmarking)
   - [Highlighting](#highlighting)
-  - [The highlights must be distinguishable](#the-highlights-must-be-distinguishable)
   - [Making Notes](#making-notes)
   - [Entering Answers](#entering-answers)
   - [Library and Bookshelf](#library-and-bookshelf)
@@ -522,8 +520,6 @@ read aloud stopping. The user must be able to listen and control read
 aloud from the lock screen, to the extent this is supported on the
 platform (e.g., pause, resume, go back and forward). The display could
 show relevant information such as the current position in the title.
-
-Editor's note - this probably also applies to audio playback.
 
 Priority: Must-have
 
@@ -1112,16 +1108,20 @@ so the chosen text color is always used.
 
 Priority: Could-have
 
-### Clarifying Note on Bookmarks, Notes and Highlights
+### Bookmarking
 
-Notes, bookmarks, and highlights are features that support
+::: {#clarifying-note .note}
+
+Clarifying Note on Bookmarks, Highlights and Notes
+
+Bookmarks, highlights and notes are features that support
 different user needs in digital reading environments:
 
 Bookmarks are navigational markers that help users return to a specific
 location in the content. 
 
 Highlights visually mark portions of text to indicate importance or
-relevance. They are often used for quick reference and may be used
+relevance. They are often used for quick reference and may be 
 exported to create an essay plan, revision notes or similar.
 
 Notes are user-generated annotations that may contain text, audio, or
@@ -1129,7 +1129,7 @@ other formats. They are typically used to capture thoughts, questions,
 or reflections on specific content. Notes can be attached to bookmarks
 and highlights.
 
-### Bookmarking
+:::
 
 The bookmarking features enable users to record their place in the 
 content and return to it at a later point, which is particularly 
@@ -1195,6 +1195,8 @@ Priority: Must-have
 
 ### Highlighting
 
+See the [clarifying note](#clarifying-note) on bookmarks, highlights and notes.
+
 Highlights allow users to mark important parts of the text for quick
 reference. This supports efficient navigation and review, especially for
 users who benefit from visual cues or who use highlighting as part of
@@ -1213,7 +1215,7 @@ when connectivity is intermittent.
 
 Priority: Must-have
 
-### The highlights must be distinguishable
+#### The user must be able to distinguish the highlights
 
 Whether reading visually, with read aloud or a screen reader, highlights 
 must be distinguishable from the content that is not highlighted.
@@ -1266,6 +1268,8 @@ supporting learning and comprehension.
 Priority: Should-have
 
 ### Making Notes
+
+See the [clarifying note](#clarifying-note) on bookmarks, highlights and notes.
 
 The ability to add, review, and edit notes within a reading app is an
 important feature for many users, especially those with print
@@ -1370,6 +1374,8 @@ Priority: Could-have
 
 ### Entering Answers
 
+::: note
+
 **Special note:** reading systems typically let users add notes but
 currently do not support answer entry. However, this is an important
 need for learners with print disabilities. This section summarises user
@@ -1377,6 +1383,8 @@ needs for this functionality, based on workshops at Dedicon and
 discussions with app developers and the user requirements working group.
 This section aims to help designers and developers assess how this
 functionality could be implemented.
+
+:::
 
 Learners with print disabilities can face significant challenges when
 completing exercises in books: if they are unable to read or write in
@@ -1724,7 +1732,7 @@ prioritized due to time constraints. They are included here to document
 emerging needs and to support future exploration and innovation in
 accessible digital reading.
 
-#### Reading Experience & Navigation
+#### Reading Experience & Navigation  {.no-ur}
 
 ##### Less distraction mode / Zen mode / Simplified interface 
 A simplified or “Zen” mode should be available, hiding most interface controls and presenting only essential reading functions. This reduces cognitive load and visual distractions, benefiting users with attention-related or cognitive disabilities.
@@ -1741,7 +1749,7 @@ Users should be able to view multiple versions of a text side by side, such as a
 ##### Display word counts in tables of contents of serial publications 
 The app should display the word count for each article or chapter in the table of contents, helping users estimate the length and effort required for each section.
 
-#### Accessibility & Assistive Technologies
+#### Accessibility & Assistive Technologies {.no-ur}
 
 ##### Disclose text style properties to assistive technologies, e.g. for presentation on braille devices
 If supported by the platform, text style properties such as font, line spacing, indentation, justification, and emphasis (bold, italic, underline) should be made available to assistive technologies. This allows screen readers and braille displays to convey visual structure and emphasis in non-visual ways, enhancing comprehension.
@@ -1755,7 +1763,7 @@ Text in fixed-layout documents should be able to reflow, allowing for better rea
 ##### Support for LLM inference or other processing 
 The app should allow integration of AI-powered features, such as summarization, question answering, or contextual assistance based on the content of the publication.
 
-#### Print & Export Functionality
+#### Print & Export Functionality {.no-ur}
 
 ##### Print or Export Specific Content 
 Users should be able to print or export selected parts of a publication, such as templates or activity pages. This supports hands-on learning and accessibility for users who benefit from physical or tactile formats.
@@ -1767,7 +1775,7 @@ The app must allow users to export content in a digital format suitable for crea
 The app should, where feasible, support the rendering of tactile graphics via compatible hardware such as refreshable Braille displays or pin-matrix devices. This functionality enables users with visual impairments to access graphical content embedded in general EPUB or similar document formats.
 As tactile display technology evolves, the implementation of this feature may need to be revisited. Initially, this support can be considered desirable but not mandatory, depending on user needs and technical feasibility.
 
-#### Personalization & Interaction
+#### Personalization & Interaction {.no-ur}
 
 ##### Dynamic content based on user input 
 The user should be able to enter personal or contextual information—such as the number of servings in a recipe or a name for personalized narration—which then dynamically updates the content. This makes digital publications more engaging and practical, and helps reduce cognitive load for users with print disabilities.
@@ -1781,7 +1789,7 @@ Users should be able to share book recommendations with others, for example via 
 ##### Borrowing history indicator 
 The app should indicate which books a user has previously borrowed or read, helping them avoid duplicates and revisit favorites.
 
-#### Content Management
+#### Content Management {.no-ur}
 
 ##### Digital clippings archive 
 The app should allow users to save and organize excerpts or quotes from digital publications, functioning as a digital scrapbook for easy reference and study.
@@ -1805,7 +1813,43 @@ the DAISY members and Friends who participated in the project. Their
 valuable insights, expertise, and experiences have been instrumental in
 ensuring that the requirements capture a broad range of user needs.
 
-Arno Zuidema, Bibliotheekservice Passend Lezen; Avneesh Singh, DAISY Consortium; Basile Mignonneau, Association Valentin Haüy; Charles LaPierre, Benetech; Cody Care, EBSCO Information Services; Craig Hayward, University of North Carolina at Chapel Hill; Daniel Weck, EDRLab; Dang Hoai Phúc, Sao Mai Center for the Blind; Didier De Schepper, Sensotec; Gautier Chomel, EDRLab; George Kerscher, DAISY Consortium; Gregorio Pellegrino, Fondazione LIA; Hadrien Gardeur, EDRLab; Ioana Gandrabur, CELA; Irmgard Reijntjes, Bibliotheekservice Passend Lezen; James Yanchak, Taylor & Francis Group; Jason White, Independent; John Ylioja, National Network for Equitable Libray Service; Julija Skerniskyte, Lithuanian audiosensory library; Katie Durand, Fédération des Aveugles et Amblyopes de France; Kirsten de Haan, Dedicon; Lars Wallin, Colibrio; Laurent Le Meur, EDRLab; Lukasz Koprowski, SBS Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte; Maaike Bras, Dedicon; Manfred Muchenberger, SBS Schweizerische Bibliothek voor Blinde, Seh- und Lesebehinderte; Marisa DeMeglio, DAISY Consortium; Mattias Karlsson, Dolphin Computer Access; Pedro Milliet, Fênix Editorial; Prashant Verma, DAISY Consortium; Richard Orme, DAISY Consortium; Sean Loraas, Austin Community College; Yorick Pieters, Sensotec.
+<ul style="list-style: none; padding: 0; margin: 0; display: inline;">
+<li style="display: inline;">Arno Zuidema, Bibliotheekservice Passend Lezen;</li>
+<li style="display: inline;"> Avneesh Singh, DAISY Consortium;</li>
+<li style="display: inline;"> Basile Mignonneau, Association Valentin Haüy;</li>
+<li style="display: inline;"> Charles LaPierre, Benetech;</li>
+<li style="display: inline;"> Cody Care, EBSCO Information Services;</li>
+<li style="display: inline;"> Craig Hayward, University of North Carolina at Chapel Hill;</li>
+<li style="display: inline;"> Daniel Weck, EDRLab;</li>
+<li style="display: inline;"> Dang Hoai Phúc, Sao Mai Center for the Blind;</li>
+<li style="display: inline;"> Didier De Schepper, Sensotec;</li>
+<li style="display: inline;"> Gautier Chomel, EDRLab;</li>
+<li style="display: inline;"> George Kerscher, DAISY Consortium;</li>
+<li style="display: inline;"> Gregorio Pellegrino, Fondazione LIA;</li>
+<li style="display: inline;"> Hadrien Gardeur, EDRLab;</li>
+<li style="display: inline;"> Ioana Gandrabur, CELA;</li>
+<li style="display: inline;"> Irmgard Reijntjes, Bibliotheekservice Passend Lezen;</li>
+<li style="display: inline;"> James Yanchak, Taylor & Francis Group;</li>
+<li style="display: inline;"> Jason White, Independent;</li>
+<li style="display: inline;"> John Ylioja, National Network for Equitable Libray Service;</li>
+<li style="display: inline;"> Julija Skerniskyte, Lithuanian audiosensory library;</li>
+<li style="display: inline;"> Katie Durand, Fédération des Aveugles et Amblyopes de France;</li>
+<li style="display: inline;"> Kirsten de Haan, Dedicon;</li>
+<li style="display: inline;"> Lars Wallin, Colibrio;</li>
+<li style="display: inline;"> Laurent Le Meur, EDRLab;</li>
+<li style="display: inline;"> Lukasz Koprowski, SBS Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte;</li>
+<li style="display: inline;"> Maaike Bras, Dedicon;</li>
+<li style="display: inline;"> Manfred Muchenberger, SBS Schweizerische Bibliothek voor Blinde, Seh- und Lesebehinderte;</li>
+<li style="display: inline;"> Marisa DeMeglio, DAISY Consortium;</li>
+<li style="display: inline;"> Mattias Karlsson, Dolphin Computer Access;</li>
+<li style="display: inline;"> Pedro Milliet, Fênix Editorial;</li>
+<li style="display: inline;"> Prashant Verma, DAISY Consortium;</li>
+<li style="display: inline;"> Richard Orme, DAISY Consortium;</li>
+<li style="display: inline;"> Sarah Harris, Benetech;</li>
+<li style="display: inline;"> Sean Loraas, Austin Community College;</li>
+<li style="display: inline;"> Tiffany O'Neal, Independent;</li>
+<li style="display: inline;"> Yorick Pieters, Sensotec.</li>
+</ul>
 
 This work was financially supported by [Dedicon](https://dedicon.nl).
 

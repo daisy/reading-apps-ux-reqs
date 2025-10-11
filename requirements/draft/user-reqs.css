@@ -18,7 +18,13 @@
 		font-size: 1.6rem;
 		counter-increment: ur-counter;
 	}
-	h4:before {
-        content: "UR\0000a0" counter(ur-counter) ".\0000a0";
-    }
+	h4:not(.no-ur):before {
+    content: "UR\0000a0" counter(ur-counter) ".\0000a0";
+	}
+	.note {
+	padding: 0.5em;
+	border-left: 0.5em solid #52e052;
+	background: #e9fbe9;
+	margin: 1em 0;
+	}
 	
