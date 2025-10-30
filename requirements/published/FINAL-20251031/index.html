@@ -391,10 +391,10 @@
             <p>
                 Note: In this document the term “read aloud” refers to the app
                 leveraging text-to-speech (TTS) to provide an audio option for
-                text-based content. This is distinct from embedded audio. The read
-                aloud feature is essential to many users with print disabilities who
-                don’t use screen readers, and offers additional reading flexibility
-                to everyone.
+                text-based content. This is distinct from embedded audio. The
+                read aloud feature is essential to many users with print
+                disabilities who don’t use screen readers, and offers additional
+                reading flexibility to everyone.
             </p>
         </div>
         <p>
@@ -710,46 +710,49 @@
     </section>
     <section id="embedded-audio">
         <h2>Embedded Audio</h2>
-        <p>
-            Note: In this document the term “embedded audio” refers to the audio
-            content (could be human narrated audio or generated text-to-speech)
-            that is provided as part of the publication. This is distinct from
-            read aloud, where the app dynamically uses on device or cloud TTS to
-            create an audio rendition whilst reading the publication.
-        </p>
+        <div class="note">
+            <p>
+                Note: In this document the term “embedded audio” refers to the
+                audio content (could be human narrated audio or generated
+                text-to-speech) that is provided as part of the publication.
+                This is distinct from read aloud, where the app dynamically uses
+                on device or cloud TTS to create an audio rendition whilst
+                reading the publication.
+            </p>
+        </div>
         <p>
             Embedded audio includes both audio-only publications and
-            synchronized audio-text formats, where the audio is aligned with the
-            visual text. Audio-only formats are a long-standing favorite among
-            people with print disabilities, offering a streamlined, immersive
-            listening experience. They are also increasingly popular in
-            mainstream contexts, such as for multitasking or screen-free
-            reading.
+            synchronized audio-text formats, where the audio is aligned with
+            the visual text. Audio-only formats are a long-standing favorite
+            among people with print disabilities, offering a streamlined,
+            immersive listening experience. They are also increasingly
+            popular in mainstream contexts, such as for multitasking or
+            screen-free reading.
         </p>
         <p>
             Synchronized audio-text formats offer additional benefits by
-            enabling users to follow the structure of the text while listening.
-            This supports a wide range of reading strategies—for example,
-            allowing users to navigate the text with assistive technologies,
-            adjust playback speed or verbosity, or combine listening with
-            reading for improved comprehension and control. Although this
-            functionality is not yet widely supported in reading systems, it
-            holds great potential for inclusive and flexible reading
-            experiences.
+            enabling users to follow the structure of the text while
+            listening. This supports a wide range of reading strategies—for
+            example, allowing users to navigate the text with assistive
+            technologies, adjust playback speed or verbosity, or combine
+            listening with reading for improved comprehension and control.
+            Although this functionality is not yet widely supported in
+            reading systems, it holds great potential for inclusive and
+            flexible reading experiences.
         </p>
         <p>
             This section outlines the core user requirements for interacting
             with embedded audio, including playback control, synchronization
-            with text, visual emphasis, and customization. These features ensure
-            that users can access high-quality narration in a way that aligns
-            with the structure and intent of the publication.
+            with text, visual emphasis, and customization. These features
+            ensure that users can access high-quality narration in a way
+            that aligns with the structure and intent of the publication.
         </p>
         <p>
             While synchronized playback is well covered here, the ability to
-            switch flexibly between listening and reading modes—such as pausing
-            narration to read with a screen reader and resuming from the same
-            point—is not yet addressed and remains an area for future
-            development.
+            switch flexibly between listening and reading modes—such as
+            pausing narration to read with a screen reader and resuming from
+            the same point—is not yet addressed and remains an area for
+            future development.
         </p>
         <h3>
             The user must be able to access and play pre-recorded audio
@@ -757,9 +760,10 @@
         </h3>
         <p>
             The reading system must support pre-recorded audio playback
-            (human-narrated or pre-recorded TTS), whether synchronized with the
-            text or provided as audio-only. Where synchronized audio is
-            available, users must have the option to switch to TTS read aloud.
+            (human-narrated or pre-recorded TTS), whether synchronized with
+            the text or provided as audio-only. Where synchronized audio is
+            available, users must have the option to switch to TTS read
+            aloud.
         </p>
         <p>
             The user must be able to transition seamlessly between embedded
@@ -771,73 +775,74 @@
             embedded audio
         </h3>
         <p>
-            The user must have a way to start reading from a specific location
-            in embedded audio content.
+            The user must have a way to start reading from a specific
+            location in embedded audio content.
         </p>
         <p>
-            When reading publications with embedded audio it must be possible to
-            go to a specific location. This could be based on time, percentage,
-            or another approach.
+            When reading publications with embedded audio it must be
+            possible to go to a specific location. This could be based on
+            time, percentage, or another approach.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to listen to the embedded audio without having
-            to manually advance to subsequent pages or chapters
+            The user must be able to listen to the embedded audio without
+            having to manually advance to subsequent pages or chapters
         </h3>
         <p>
-            The reading system must support uninterrupted playback of embedded
-            audio across sections or chapters, allowing users to listen
-            continuously without needing to manually advance. Playback should
-            only stop if the user chooses to pause or exit, or at the end of the
-            publication.
+            The reading system must support uninterrupted playback of
+            embedded audio across sections or chapters, allowing users to
+            listen continuously without needing to manually advance.
+            Playback should only stop if the user chooses to pause or exit,
+            or at the end of the publication.
         </p>
         <p>
-            To support flexible listening, the system must also offer a sleep
-            timer that pauses playback after a user-defined duration.
+            To support flexible listening, the system must also offer a
+            sleep timer that pauses playback after a user-defined duration.
         </p>
         <p>Priority: Must-have</p>
         <h3>
             The user must be able to listen to embedded audio content in the
-            correct logical reading order, matching the intended structure of
-            the publication
+            correct logical reading order, matching the intended structure
+            of the publication
         </h3>
         <p>
-            To ensure a coherent listening experience, the reading system must
-            play embedded audio in the correct reading order. For audio-only
-            publications, this typically follows the sequence of audio files as
-            defined by the publication. In synchronized text and audio formats,
-            the playback order must be determined by the markup that links text
-            and audio, ensuring that the spoken content aligns with the visual
-            structure.
+            To ensure a coherent listening experience, the reading system
+            must play embedded audio in the correct reading order. For
+            audio-only publications, this typically follows the sequence of
+            audio files as defined by the publication. In synchronized text
+            and audio formats, the playback order must be determined by the
+            markup that links text and audio, ensuring that the spoken
+            content aligns with the visual structure.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to view the corresponding text while listening
-            to embedded audio, if synchronized text is available
+            The user must be able to view the corresponding text while
+            listening to embedded audio, if synchronized text is available
         </h3>
         <p>
-            When embedded audio is synchronized with text, the user must be able
-            to see the relevant text, and the display must automatically update
-            to keep the spoken text in view. The techniques for changing the
-            text in display might include scrolling the text to keep the text
-            being read in the center of the display or displaying a new screen
-            of text and starting again at the top. Keep in mind that some users
-            may use large text settings, so it's important to consider that they
-            might not see the entire first or last sentence.
+            When embedded audio is synchronized with text, the user must be
+            able to see the relevant text, and the display must
+            automatically update to keep the spoken text in view. The
+            techniques for changing the text in display might include
+            scrolling the text to keep the text being read in the center of
+            the display or displaying a new screen of text and starting
+            again at the top. Keep in mind that some users may use large
+            text settings, so it's important to consider that they might not
+            see the entire first or last sentence.
         </p>
         <p>
-            The user should be able to see the text being read. If starting from
-            the top of the display then the audio playback should start from the
-            first visible text in view (that is, should not read text that is
-            not visible). The display should promptly update to always show the
-            text being read, even if this is partway through a sentence at the
-            bottom of the display.
+            The user should be able to see the text being read. If starting
+            from the top of the display then the audio playback should start
+            from the first visible text in view (that is, should not read
+            text that is not visible). The display should promptly update to
+            always show the text being read, even if this is partway through
+            a sentence at the bottom of the display.
         </p>
         <p>
-            The user could have the ability to move to a different part of the
-            text whilst the playback continues. If viewing a different part of
-            the text, the user should be able to initiate the playback from a
-            part of the text they select.
+            The user could have the ability to move to a different part of
+            the text whilst the playback continues. If viewing a different
+            part of the text, the user should be able to initiate the
+            playback from a part of the text they select.
         </p>
         <p>
             The user could have the option to listen to the audio without
@@ -850,26 +855,26 @@
         <p>Priority: Must-have</p>
         <h3>
             The user must be able to enable or disable visual emphasis of
-            synchronized text during embedded audio playback, if synchronized
-            text is available
+            synchronized text during embedded audio playback, if
+            synchronized text is available
         </h3>
         <p>
             When synchronized text is available, the user must be able to
-            visually emphasize the text currently being played in the embedded
-            audio. This may include highlighting, underlining, or other visual
-            cues. Some users benefit from fine-grained emphasis, such as
-            word-by-word highlighting, which can support focus and
-            comprehension. However, others may find this distracting or
-            experience negative effects due to visual sensitivity. To
-            accommodate diverse needs, users must be able to turn visual
-            emphasis on or off, and systems should consider offering options to
-            adjust the granularity of the emphasis.
+            visually emphasize the text currently being played in the
+            embedded audio. This may include highlighting, underlining, or
+            other visual cues. Some users benefit from fine-grained
+            emphasis, such as word-by-word highlighting, which can support
+            focus and comprehension. However, others may find this
+            distracting or experience negative effects due to visual
+            sensitivity. To accommodate diverse needs, users must be able to
+            turn visual emphasis on or off, and systems should consider
+            offering options to adjust the granularity of the emphasis.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to customize the color and style of the visual
-            emphasis applied to synchronized text during embedded audio
-            playback, if synchronized text is available
+            The user must be able to customize the color and style of the
+            visual emphasis applied to synchronized text during embedded
+            audio playback, if synchronized text is available
         </h3>
         <p>
             The user must be able to adjust the visual emphasis of the
@@ -881,47 +886,47 @@
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to adjust the playback speed of embedded audio
-            without distortion of pitch or pronunciation
+            The user must be able to adjust the playback speed of embedded
+            audio without distortion of pitch or pronunciation
         </h3>
         <p>
-            Users must be able to control the playback speed of embedded audio.
-            Speed adjustments must maintain natural pitch and clear
+            Users must be able to control the playback speed of embedded
+            audio. Speed adjustments must maintain natural pitch and clear
             pronunciation. The reading app should provide audio previews
             demonstrating different playback rates, enabling users to make
             informed selections.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to listen to alt texts included in embedded
-            audio, and must be able to disable or skip them if supported by the
-            publication
+            The user must be able to listen to alt texts included in
+            embedded audio, and must be able to disable or skip them if
+            supported by the publication
         </h3>
         <p>
             If image descriptions are included in the embedded audio as alt
-            texts, the reading system must allow users to hear them as part of
-            the playback. To support user preferences and accessibility needs,
-            users must be able to disable or skip these descriptions, provided
-            the publication includes the necessary markup or audio segmentation.
-            Where possible, image descriptions should be distinguishable from
-            surrounding content—such as through a brief introductory phrase, or
-            audio cue.
+            texts, the reading system must allow users to hear them as part
+            of the playback. To support user preferences and accessibility
+            needs, users must be able to disable or skip these descriptions,
+            provided the publication includes the necessary markup or audio
+            segmentation. Where possible, image descriptions should be
+            distinguishable from surrounding content—such as through a brief
+            introductory phrase, or audio cue.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to listen to math content included in embedded
-            audio, if present in the publication
+            The user must be able to listen to math content included in
+            embedded audio, if present in the publication
         </h3>
         <p>
-            If math content is included in the embedded audio (e.g., MathML),
-            the reading system must ensure it is presented clearly and
-            accessibly as part of the narration. The playback feature must be
-            able to announce encoded math content.
+            If math content is included in the embedded audio (e.g.,
+            MathML), the reading system must ensure it is presented clearly
+            and accessibly as part of the narration. The playback feature
+            must be able to announce encoded math content.
         </p>
         <p>
-            The user should be able to adjust the announcement of math content
-            according to their preference (e.g. relative reading speed, reading
-            style, verbosity).
+            The user should be able to adjust the announcement of math
+            content according to their preference (e.g. relative reading
+            speed, reading style, verbosity).
         </p>
         <p>Priority: Must-have</p>
         <h3>
@@ -929,13 +934,13 @@
             listening to embedded audio
         </h3>
         <p>
-            When the user locks their mobile device, the embedded audio playback
-            must continue uninterrupted. The user must be able to listen and
-            control playback (pause, resume, skip backward, and skip forward)
-            using lock screen media controls, to the extent that the operating
-            system supports this functionality. The display could show relevant
-            playback information, such as the current chapter or time position
-            in the title.
+            When the user locks their mobile device, the embedded audio
+            playback must continue uninterrupted. The user must be able to
+            listen and control playback (pause, resume, skip backward, and
+            skip forward) using lock screen media controls, to the extent
+            that the operating system supports this functionality. The
+            display could show relevant playback information, such as the
+            current chapter or time position in the title.
         </p>
         <p>Priority: Must-have</p>
         <h3>
@@ -943,42 +948,42 @@
             device-level media controls
         </h3>
         <p>
-            The user must be able to control embedded audio playback using the
-            device’s media controls, such as keyboard shortcuts, headset
+            The user must be able to control embedded audio playback using
+            the device’s media controls, such as keyboard shortcuts, headset
             buttons, or other hardware interfaces. The user must be able to
-            perform actions like play, pause, skip forward, skip backward, and
-            stop, if supported by the platform.
+            perform actions like play, pause, skip forward, skip backward,
+            and stop, if supported by the platform.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to listen to embedded audio that accurately
-            conveys the structure and content of tables
+            The user must be able to listen to embedded audio that
+            accurately conveys the structure and content of tables
         </h3>
         <p>
-            When tables are included in the publication, the embedded audio must
-            present the content in a clear and logical order, typically left to
-            right, top to bottom, to reflect the table’s structure. The user
-            must be able to understand the relationships between rows and
-            columns through the narration. If supported by the publication, the
-            audio could include cues to indicate the start of a table or
-            transitions between cells, such as spoken labels or brief
-            announcements.
+            When tables are included in the publication, the embedded audio
+            must present the content in a clear and logical order, typically
+            left to right, top to bottom, to reflect the table’s structure.
+            The user must be able to understand the relationships between
+            rows and columns through the narration. If supported by the
+            publication, the audio could include cues to indicate the start
+            of a table or transitions between cells, such as spoken labels
+            or brief announcements.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to listen to embedded audio that reflects the
-            current state of expandable or collapsible content, playing only
-            content that is expanded
+            The user must be able to listen to embedded audio that reflects
+            the current state of expandable or collapsible content, playing
+            only content that is expanded
         </h3>
         <p>
             When embedded audio is synchronized with structured content that
-            includes expandable or collapsible sections, the user must be able
-            to hear only the content that is currently expanded. Collapsed
-            sections must be excluded from playback unless the user expands
-            them. This ensures that the audio experience matches the user’s
-            navigation and content visibility preferences. The reading system
-            must respect the current document state when determining which audio
-            segments to play.
+            includes expandable or collapsible sections, the user must be
+            able to hear only the content that is currently expanded.
+            Collapsed sections must be excluded from playback unless the
+            user expands them. This ensures that the audio experience
+            matches the user’s navigation and content visibility
+            preferences. The reading system must respect the current
+            document state when determining which audio segments to play.
         </p>
         <p>Priority: Must-have</p>
         <h3>
@@ -988,65 +993,66 @@
         </h3>
         <p>
             The user must be able to interrupt playback of certain
-            structures—such as tables or footnotes—and continue listening from
-            the next item in the reading order. These escapable structures must
-            be defined by the publication format and appropriately marked to
-            support this behavior.
+            structures—such as tables or footnotes—and continue listening
+            from the next item in the reading order. These escapable
+            structures must be defined by the publication format and
+            appropriately marked to support this behavior.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user must be able to configure embedded audio playback to skip
-            content marked as skippable
+            The user must be able to configure embedded audio playback to
+            skip content marked as skippable
         </h3>
         <p>
-            The user must be able to set preferences that cause embedded audio
-            playback to skip over content defined as skippable, such as
-            footnotes or page numbers. These preferences could be set on a
-            per-title basis. Skippable structures are defined by each format
-            specification.
+            The user must be able to set preferences that cause embedded
+            audio playback to skip over content defined as skippable, such
+            as footnotes or page numbers. These preferences could be set on
+            a per-title basis. Skippable structures are defined by each
+            format specification.
         </p>
         <p>
-            The user must be able to configure their reading app so that it does
-            not announce skippable elements.
+            The user must be able to configure their reading app so that it
+            does not announce skippable elements.
         </p>
         <p>Priority: Must-have</p>
         <h3>
-            The user could be able to play embedded audio for a selected portion
-            of the text, if the content is synchronized
+            The user could be able to play embedded audio for a selected
+            portion of the text, if the content is synchronized
         </h3>
         <p>
-            If the embedded audio is synchronized with the text, the user could
-            select specific portions such as a word, sentence, or paragraph, and
-            play the corresponding audio. This feature supports focused
-            listening and improved navigation but depends on the availability of
-            fine-grained synchronization in the publication.
+            If the embedded audio is synchronized with the text, the user
+            could select specific portions such as a word, sentence, or
+            paragraph, and play the corresponding audio. This feature
+            supports focused listening and improved navigation but depends
+            on the availability of fine-grained synchronization in the
+            publication.
         </p>
         <p>Priority: Could-have</p>
         <h3>
-            The user could be able to choose from different playback modes for
-            embedded audio, including non-continuous playback based on content
-            units, if supported by the publication
+            The user could be able to choose from different playback modes
+            for embedded audio, including non-continuous playback based on
+            content units, if supported by the publication
         </h3>
         <p>
             The user could configure embedded audio playback to stop after
             specific units such as a word, sentence, paragraph, page, or
             chapter. This allows for more controlled listening and supports
-            focused reading strategies. Availability of these modes depends on
-            the level of synchronization provided in the publication.
+            focused reading strategies. Availability of these modes depends
+            on the level of synchronization provided in the publication.
         </p>
         <p>Priority: Could-have</p>
         <h3>
-            The user could be able to adjust the pause length between content
-            blocks during embedded audio playback, if supported by the
-            publication
+            The user could be able to adjust the pause length between
+            content blocks during embedded audio playback, if supported by
+            the publication
         </h3>
         <p>
             The user could configure the length of pauses between sentences,
-            paragraphs, or other content blocks during embedded audio playback.
-            This feature may support improved comprehension and comfort,
-            particularly for neurodivergent users who benefit from controlled
-            pacing. Availability depends on how the audio is authored and
-            segmented.
+            paragraphs, or other content blocks during embedded audio
+            playback. This feature may support improved comprehension and
+            comfort, particularly for neurodivergent users who benefit from
+            controlled pacing. Availability depends on how the audio is
+            authored and segmented.
         </p>
         <p>Priority: Could-have</p>
     </section>
@@ -2244,25 +2250,26 @@
             easy reference and study.
         </p>
     </section>
-        <section id="userstories">
-            <h2>User Stories</h2>
-            <p>
-                To ground these requirements in real-world contexts, the working
-                group developed a comprehensive set of user stories that
-                describe specific scenarios and tasks people with print
-                disabilities encounter when using digital reading applications.
-            </p>
-            <p>
-                These user stories served as a foundation for the working
-                group's discussions and helped prioritize requirements based on
-                actual user experiences. We strongly encourage readers to review
-                the <a
-                href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/">complete
-                collection of user stories</a>, as they provide valuable context
-                for understanding why specific requirements were prioritized and
-                offer practical insights into the lived experiences of users
-                with print disabilities.
-            </p>
+    <section id="userstories">
+        <h2>User Stories</h2>
+        <p>
+            To ground these requirements in real-world contexts, the working
+            group developed a comprehensive set of user stories that
+            describe specific scenarios and tasks people with print
+            disabilities encounter when using digital reading applications.
+        </p>
+        <p>
+            These user stories served as a foundation for the working
+            group's discussions and helped prioritize requirements based on
+            actual user experiences. We strongly encourage readers to review
+            the <a href="https://daisy.github.io/reading-apps-ux-reqs/use-cases/">
+                complete
+                collection of user stories
+            </a>, as they provide valuable context
+            for understanding why specific requirements were prioritized and
+            offer practical insights into the lived experiences of users
+            with print disabilities.
+        </p>
     </section>
     <section id="acknowledgments">
         <h2>Acknowledgements</h2>
@@ -2383,8 +2390,7 @@
             </li>
         </ul>
         <p>
-            This work was financially supported by <a
-            href="https://dedicon.nl">Dedicon</a>.
+            This work was financially supported by <a href="https://dedicon.nl">Dedicon</a>.
         </p>
     </section>
     <section id="epubtest">
@@ -2397,8 +2403,7 @@
             epubtest.org informed the requirements in this document.
         </p>
         <p>
-            Evaluations on epubtest.org are completed with the same set of <a
-            href="https://www.epubtest.org/test-books">
+            Evaluations on epubtest.org are completed with the same set of <a href="https://www.epubtest.org/test-books">
                 standardized test books
             </a> to ensure consistency and accuracy across all reading systems.
             The test results help developers improve their products and enable
