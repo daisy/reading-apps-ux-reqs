@@ -27,7 +27,7 @@ keywords: [DAISY, Dedicon, accessibility, reading apps]
 
 </hgroup>
 
-[11 October 2025]{.pubdate}
+[27 October 2025]{.pubdate}
 
 Editors:
 
@@ -89,7 +89,7 @@ experiences of people with print disabilities, and the requirements have
 been shaped and articulated by professionals with deep expertise in
 accessible reading technology.
 
-This **Editors' Working Draft** represents the results of six
+This document represents the results of six
 months of working group meetings, workshops, and discussions with
 developers. Feedback and collaboration are welcomed as the document
 evolves toward the publication, likely in Q4 of 2025.
@@ -98,6 +98,8 @@ While the document is particularly relevant for those developing or
 procuring specialized reading apps, it also offers valuable guidance for
 those working on mainstream reading platforms who wish to make their
 products outstandingly accessible and user-friendly for everyone.
+Furthermore, it is widely recognized that affordances made for users 
+with print disabilities are often beneficial or convenient for other users.
 Whether you are building a new reading application from the ground up or
 enhancing an existing one, we invite you to explore these requirements
 not just as a treasure trove of insights into the needs of people with
@@ -188,26 +190,6 @@ location. This could be based on time, percentage, or another approach.
 
 Priority: Must-have
 
-#### Screen reader/assistive technology users must be able to navigate through content by headings, block items, lines, words and characters
-
-This functionality is provided by the screen reader or assistive 
-technology, but it relies on how the audio and text content is exposed 
-within the app. To support navigation by headings, blocks, lines, words, 
-and characters, the content must be properly structured and tagged so 
-that the screen reader can interpret and present it accurately to the 
-user.
-
-Priority: Must-have
-
-#### Screen reader users must be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location
-
-For content with text it must be possible to use the continuous reading
-feature of a screen reader to start, pause and resume continuous
-reading. The reading should not stop at the end of the display but
-continue until the end is reached or stopped by the user.
-
-Priority: Must-have
-
 #### The user must be able to return to the last location the next time they open the publication
 
 The saving of the user\'s location must happen automatically, for
@@ -258,11 +240,12 @@ Effective screen reader support depends not only on well-structured
 content but also on the reading app's ability to interact seamlessly
 with assistive technologies. The application or platform must enable
 screen readers to accurately interpret and present semantic markup,
-navigation elements, and interactive features to users. This close
-collaboration between the reading app and screen reader ensures that
-users can navigate, access, and understand content efficiently.
-Addressing these technical requirements is essential to provide a fully
-accessible and usable experience for screen reader users.
+navigation elements, and interactive features to users using synthetic 
+speech and/or a braille display. This close collaboration between the 
+reading app and screen reader ensures that users can navigate, access, 
+and understand content efficiently. Addressing these technical 
+requirements is essential to provide a fully accessible and usable 
+experience for screen reader users.
 
 #### The user must be able to use their screen reader in the user interface
 
@@ -271,6 +254,26 @@ app---including menus, dialogs, buttons, and content---using their
 assistive technology. All interactive components shall provide
 appropriate semantic labels and roles to support accessibility standards
 such as WCAG 2.1 and ARIA guidelines.
+
+Priority: Must-have
+
+#### Screen reader/assistive technology users must be able to navigate through content by headings, block items, lines, words and characters
+
+This functionality is provided by the screen reader or assistive 
+technology, but it relies on how the audio and text content is exposed 
+within the app. To support navigation by headings, blocks, lines, words, 
+and characters, the content must be properly structured and tagged so 
+that the screen reader can interpret and present it accurately to the 
+user.
+
+Priority: Must-have
+
+#### Screen reader users must be able to read continuously from the current position, and be able to pause, then resume reading from the paused reading location
+
+For content with text it must be possible to use the continuous reading
+feature of a screen reader to start, pause and resume continuous
+reading. The reading should not stop at the end of the display but
+continue until the end is reached or stopped by the user.
 
 Priority: Must-have
 
@@ -331,8 +334,7 @@ the content creator, the user could use additional navigation features
 offered by the reading app. Such navigation affordances are especially
 beneficial to print disabled readers. For example, the app could provide
 navigation by heading, between landmarks, tables, figures, and
-mathematics expressions, irrespective of whether they are in the same
-content document.
+mathematics expressions.
 
 Priority: Could-have
 
@@ -340,7 +342,10 @@ Priority: Could-have
 
 Note: In this document the term "read aloud" refers to the app
 leveraging Text to Speech (TTS) to provide an audio option for
-text-based content. This is distinct from embedded audio.
+text-based content. This is distinct from embedded audio. The 
+read aloud feature is essential to many users with print disabilities 
+who don’t use screen readers, and offers additional reading flexibility 
+to everyone.
 
 Read aloud functionality plays a crucial role in making digital content
 accessible to people with visual impairments, dyslexia, or other reading
@@ -463,19 +468,17 @@ when reading content with language tags (if available to the reading
 app). The user should be able to override language switching and select
 the language to be used for all content.
 
-The read aloud could switch between dialects of the same language. If
-this feature is supported the user must be able to disable it.
+If the read aloud supports switching between dialects of the same 
+language, the user must be able to turn this feature off.
 
 Priority: Must-have
 
 #### The user must be able to control the rate of the read aloud
 
-The user must be able to choose the speed of the read aloud voice. The
-reading app must not distort the pitch when the user has selected higher
-listening speeds.
-
-The reading app could provide an audio preview of the adjusted rate to
-assist the user in selection.
+Users must be able to control the playback speed of read aloud audio. Speed 
+adjustments must maintain natural pitch and clear pronunciation. The reading app 
+should provide audio previews demonstrating different playback rates, enabling users 
+to make informed selections.
 
 Priority: Must-have
 
@@ -483,9 +486,10 @@ Priority: Must-have
 
 The user must be able to select from a range of voices.
 
-Consideration should made of how the voice options are presented (by
-region or language, online/offline, etc). The reading app could provide
-an audio preview to assist the user in their selection of voices.
+Careful consideration should be given to the organization of voice 
+options, such as grouping by region, language, or online/offline 
+availability. Audio previews should be provided within the reading 
+app to facilitate informed voice selection.
 
 Priority: Must-have
 
@@ -535,7 +539,7 @@ Priority: Must-have
 #### The user must be able to use read aloud with tables
 
 The read aloud must read the table contents from left to right and top
-to bottom. The read aloud could indicate the start of the table though
+to bottom. The read aloud could indicate the start of the table through
 an announcement or other notification.
 
 Priority: Must-have.
@@ -729,14 +733,12 @@ highlighted at any time.
 
 Priority: Must-have
 
-#### The user must be able to adjust the playback speed of embedded audio without distortion of pitch
+#### The user must be able to adjust the playback speed of embedded audio without distortion of pitch or pronunciation
 
-The user must be able to control the playback rate of embedded audio,
-enabling faster or slower listening according to their preference.
-Playback speed adjustments must preserve the natural pitch of the audio
-to maintain clarity and intelligibility. To support user
-decision-making, the system could offer a preview of the audio at the
-selected speed before applying the change.
+Users must be able to control the playback speed of embedded audio. Speed 
+adjustments must maintain natural pitch and clear pronunciation. The reading app 
+should provide audio previews demonstrating different playback rates, enabling users 
+to make informed selections.
 
 Priority: Must-have
 
@@ -978,7 +980,7 @@ Priority: Must-have
 
 #### The user must be able to personalize the background and foreground colors
 
-The user must to set the background and text color from from a range of 
+The user must be able to set the background and text color from a range of 
 options. 
 
 The user should be able to set the background and text color from the
@@ -1099,7 +1101,7 @@ could be able to use a paginated reading mode.
 
 Priority: Could-have
 
-#### The user could be able display mathematical expressions without color formatting, using a consistent text color instead
+#### The user could be able to display mathematical expressions without color formatting, using a consistent text color instead
 
 Sometimes, specific sections of mathematical expressions are highlighted 
 in distinct colors. For some people this can present problems. The user 
@@ -1683,7 +1685,7 @@ While the system should be intuitive, certain aspects still need to be
 clearly explained. The documentation should be concise and user-friendly.
 
 Documentation might include general help, quick start guide, shortcut 
-keys, contact information for accessibility help.
+keys, contact information for accessibility help, and AI powered assistance.
 
 Priority: Must-have
 
@@ -1710,15 +1712,12 @@ materials.
 
 Priority: Must-have
 
-#### Reading Systems should make it easy for a user to get a citation or reference.
+#### The user should be able to get a citation or reference.
 
-This feature would enable the reader to select a portion of text and then 
+The user should be able to select a portion of text and then 
 use a shortcut key or button to get the formal citation and copy it to the 
 clipboard. The user should have the ability to select from a number of 
 accepted formats for citations.
-
-To create a proper citation, the publication must have the correct metadata, 
-which is not always present.
 
 Priority: Should-have
 
@@ -1759,6 +1758,9 @@ Users should be able to enable or disable hyphenation. This customization suppor
 
 ##### Reflow of text for fixed layout as well
 Text in fixed-layout documents should be able to reflow, allowing for better readability on small screens or when using magnification.
+
+##### Regional navigation features
+The app could provide region-based navigation which zooms in and steps the reader though a defined reading order. The reader could navigate between regions at their own pace.
 
 ##### Support for LLM inference or other processing 
 The app should allow integration of AI-powered features, such as summarization, question answering, or contextual assistance based on the content of the publication.
@@ -1831,7 +1833,7 @@ ensuring that the requirements capture a broad range of user needs.
 <li style="display: inline;"> Irmgard Reijntjes, Bibliotheekservice Passend Lezen;</li>
 <li style="display: inline;"> James Yanchak, Taylor & Francis Group;</li>
 <li style="display: inline;"> Jason White, Independent;</li>
-<li style="display: inline;"> John Ylioja, National Network for Equitable Libray Service;</li>
+<li style="display: inline;"> John Ylioja, National Network for Equitable Library Service;</li>
 <li style="display: inline;"> Julija Skerniskyte, Lithuanian audiosensory library;</li>
 <li style="display: inline;"> Katie Durand, Fédération des Aveugles et Amblyopes de France;</li>
 <li style="display: inline;"> Kirsten de Haan, Dedicon;</li>

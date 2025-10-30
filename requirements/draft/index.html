@@ -18,7 +18,7 @@ class="logo" style="height:15.0%" alt="DAISY Consortium" /></a></p>
 Reading Apps User Requirements</h1>
 <p><span class="subtitle">Editors’ Working Draft</span></p>
 </hgroup>
-<p><span class="pubdate">11 October 2025</span></p>
+<p><span class="pubdate">27 October 2025</span></p>
 <p>Editors:</p>
 <ul>
 <li><a href="mailto:KirstendeHaan@dedicon.nl">Kirsten de Haan</a></li>
@@ -83,19 +83,21 @@ knowledge and practical insights. The document draws on the lived
 experiences of people with print disabilities, and the requirements have
 been shaped and articulated by professionals with deep expertise in
 accessible reading technology.</p>
-<p>This <strong>Editors’ Working Draft</strong> represents the results
-of six months of working group meetings, workshops, and discussions with
-developers. Feedback and collaboration are welcomed as the document
-evolves toward the publication, likely in Q4 of 2025.</p>
+<p>This document represents the results of six months of working group
+meetings, workshops, and discussions with developers. Feedback and
+collaboration are welcomed as the document evolves toward the
+publication, likely in Q4 of 2025.</p>
 <p>While the document is particularly relevant for those developing or
 procuring specialized reading apps, it also offers valuable guidance for
 those working on mainstream reading platforms who wish to make their
 products outstandingly accessible and user-friendly for everyone.
-Whether you are building a new reading application from the ground up or
-enhancing an existing one, we invite you to explore these requirements
-not just as a treasure trove of insights into the needs of people with
-print disabilities, but as a roadmap toward more inclusive digital
-reading experiences.</p>
+Furthermore, it is widely recognized that affordances made for users
+with print disabilities are often beneficial or convenient for other
+users. Whether you are building a new reading application from the
+ground up or enhancing an existing one, we invite you to explore these
+requirements not just as a treasure trove of insights into the needs of
+people with print disabilities, but as a roadmap toward more inclusive
+digital reading experiences.</p>
 <section id="userrequirements">
 <h3 id="moscow-prioritization-terminology">MoSCoW Prioritization
 Terminology</h3>
@@ -170,27 +172,6 @@ specific location. This could be based on time, percentage, or another
 approach.</p>
 <p>Priority: Must-have</p>
 <h4
-id="screen-readerassistive-technology-users-must-be-able-to-navigate-through-content-by-headings-block-items-lines-words-and-characters">Screen
-reader/assistive technology users must be able to navigate through
-content by headings, block items, lines, words and characters</h4>
-<p>This functionality is provided by the screen reader or assistive
-technology, but it relies on how the audio and text content is exposed
-within the app. To support navigation by headings, blocks, lines, words,
-and characters, the content must be properly structured and tagged so
-that the screen reader can interpret and present it accurately to the
-user.</p>
-<p>Priority: Must-have</p>
-<h4
-id="screen-reader-users-must-be-able-to-read-continuously-from-the-current-position-and-be-able-to-pause-then-resume-reading-from-the-paused-reading-location">Screen
-reader users must be able to read continuously from the current
-position, and be able to pause, then resume reading from the paused
-reading location</h4>
-<p>For content with text it must be possible to use the continuous
-reading feature of a screen reader to start, pause and resume continuous
-reading. The reading should not stop at the end of the display but
-continue until the end is reached or stopped by the user.</p>
-<p>Priority: Must-have</p>
-<h4
 id="the-user-must-be-able-to-return-to-the-last-location-the-next-time-they-open-the-publication">The
 user must be able to return to the last location the next time they open
 the publication</h4>
@@ -234,11 +215,12 @@ well.</p>
 content but also on the reading app’s ability to interact seamlessly
 with assistive technologies. The application or platform must enable
 screen readers to accurately interpret and present semantic markup,
-navigation elements, and interactive features to users. This close
-collaboration between the reading app and screen reader ensures that
-users can navigate, access, and understand content efficiently.
-Addressing these technical requirements is essential to provide a fully
-accessible and usable experience for screen reader users.</p>
+navigation elements, and interactive features to users using synthetic
+speech and/or a braille display. This close collaboration between the
+reading app and screen reader ensures that users can navigate, access,
+and understand content efficiently. Addressing these technical
+requirements is essential to provide a fully accessible and usable
+experience for screen reader users.</p>
 <h4
 id="the-user-must-be-able-to-use-their-screen-reader-in-the-user-interface">The
 user must be able to use their screen reader in the user interface</h4>
@@ -247,6 +229,27 @@ the app—including menus, dialogs, buttons, and content—using their
 assistive technology. All interactive components shall provide
 appropriate semantic labels and roles to support accessibility standards
 such as WCAG 2.1 and ARIA guidelines.</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-readerassistive-technology-users-must-be-able-to-navigate-through-content-by-headings-block-items-lines-words-and-characters">Screen
+reader/assistive technology users must be able to navigate through
+content by headings, block items, lines, words and characters</h4>
+<p>This functionality is provided by the screen reader or assistive
+technology, but it relies on how the audio and text content is exposed
+within the app. To support navigation by headings, blocks, lines, words,
+and characters, the content must be properly structured and tagged so
+that the screen reader can interpret and present it accurately to the
+user.</p>
+<p>Priority: Must-have</p>
+<h4
+id="screen-reader-users-must-be-able-to-read-continuously-from-the-current-position-and-be-able-to-pause-then-resume-reading-from-the-paused-reading-location">Screen
+reader users must be able to read continuously from the current
+position, and be able to pause, then resume reading from the paused
+reading location</h4>
+<p>For content with text it must be possible to use the continuous
+reading feature of a screen reader to start, pause and resume continuous
+reading. The reading should not stop at the end of the display but
+continue until the end is reached or stopped by the user.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-take-advantage-of-their-screen-readers-ability-to-leverage-semantic-markup-in-the-content">The
@@ -302,13 +305,15 @@ the content creator, the user could use additional navigation features
 offered by the reading app. Such navigation affordances are especially
 beneficial to print disabled readers. For example, the app could provide
 navigation by heading, between landmarks, tables, figures, and
-mathematics expressions, irrespective of whether they are in the same
-content document.</p>
+mathematics expressions.</p>
 <p>Priority: Could-have</p>
 <h3 id="read-aloud">Read Aloud</h3>
 <p>Note: In this document the term “read aloud” refers to the app
 leveraging Text to Speech (TTS) to provide an audio option for
-text-based content. This is distinct from embedded audio.</p>
+text-based content. This is distinct from embedded audio. The read aloud
+feature is essential to many users with print disabilities who don’t use
+screen readers, and offers additional reading flexibility to
+everyone.</p>
 <p>Read aloud functionality plays a crucial role in making digital
 content accessible to people with visual impairments, dyslexia, or other
 reading challenges. By leveraging Text to Speech (TTS) technology,
@@ -422,24 +427,24 @@ user of read aloud must hear content in the correct language</h4>
 when reading content with language tags (if available to the reading
 app). The user should be able to override language switching and select
 the language to be used for all content.</p>
-<p>The read aloud could switch between dialects of the same language. If
-this feature is supported the user must be able to disable it.</p>
+<p>If the read aloud supports switching between dialects of the same
+language, the user must be able to turn this feature off.</p>
 <p>Priority: Must-have</p>
 <h4 id="the-user-must-be-able-to-control-the-rate-of-the-read-aloud">The
 user must be able to control the rate of the read aloud</h4>
-<p>The user must be able to choose the speed of the read aloud voice.
-The reading app must not distort the pitch when the user has selected
-higher listening speeds.</p>
-<p>The reading app could provide an audio preview of the adjusted rate
-to assist the user in selection.</p>
+<p>Users must be able to control the playback speed of read aloud audio.
+Speed adjustments must maintain natural pitch and clear pronunciation.
+The reading app should provide audio previews demonstrating different
+playback rates, enabling users to make informed selections.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-control-the-voice-of-the-read-aloud">The
 user must be able to control the voice of the read aloud</h4>
 <p>The user must be able to select from a range of voices.</p>
-<p>Consideration should made of how the voice options are presented (by
-region or language, online/offline, etc). The reading app could provide
-an audio preview to assist the user in their selection of voices.</p>
+<p>Careful consideration should be given to the organization of voice
+options, such as grouping by region, language, or online/offline
+availability. Audio previews should be provided within the reading app
+to facilitate informed voice selection.</p>
 <p>Priority: Must-have</p>
 <h4 id="the-user-must-be-able-to-listen-to-image-alt-text">The user must
 be able to listen to image alt text</h4>
@@ -482,7 +487,7 @@ on a keyboard or headset.</p>
 must be able to use read aloud with tables</h4>
 <p>The read aloud must read the table contents from left to right and
 top to bottom. The read aloud could indicate the start of the table
-though an announcement or other notification.</p>
+through an announcement or other notification.</p>
 <p>Priority: Must-have.</p>
 <h4
 id="the-user-must-be-able-to-use-read-aloud-with-expandablecollapsible-content">The
@@ -662,15 +667,13 @@ synchronized text and audio.</p>
 highlighted at any time.</p>
 <p>Priority: Must-have</p>
 <h4
-id="the-user-must-be-able-to-adjust-the-playback-speed-of-embedded-audio-without-distortion-of-pitch">The
+id="the-user-must-be-able-to-adjust-the-playback-speed-of-embedded-audio-without-distortion-of-pitch-or-pronunciation">The
 user must be able to adjust the playback speed of embedded audio without
-distortion of pitch</h4>
-<p>The user must be able to control the playback rate of embedded audio,
-enabling faster or slower listening according to their preference.
-Playback speed adjustments must preserve the natural pitch of the audio
-to maintain clarity and intelligibility. To support user
-decision-making, the system could offer a preview of the audio at the
-selected speed before applying the change.</p>
+distortion of pitch or pronunciation</h4>
+<p>Users must be able to control the playback speed of embedded audio.
+Speed adjustments must maintain natural pitch and clear pronunciation.
+The reading app should provide audio previews demonstrating different
+playback rates, enabling users to make informed selections.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-be-able-to-listen-to-alt-texts-included-in-embedded-audio-and-must-be-able-to-disable-or-skip-them-if-supported-by-the-publication">The
@@ -902,8 +905,8 @@ this should also affect the math expressions.</p>
 id="the-user-must-be-able-to-personalize-the-background-and-foreground-colors">The
 user must be able to personalize the background and foreground
 colors</h4>
-<p>The user must to set the background and text color from from a range
-of options.</p>
+<p>The user must be able to set the background and text color from a
+range of options.</p>
 <p>The user should be able to set the background and text color from the
 full color spectrum.</p>
 <p>Some people need high contrast between text and background, including
@@ -1014,8 +1017,8 @@ user could be able to view the content in a paginated view</h4>
 could be able to use a paginated reading mode.</p>
 <p>Priority: Could-have</p>
 <h4
-id="the-user-could-be-able-display-mathematical-expressions-without-color-formatting-using-a-consistent-text-color-instead">The
-user could be able display mathematical expressions without color
+id="the-user-could-be-able-to-display-mathematical-expressions-without-color-formatting-using-a-consistent-text-color-instead">The
+user could be able to display mathematical expressions without color
 formatting, using a consistent text color instead</h4>
 <p>Sometimes, specific sections of mathematical expressions are
 highlighted in distinct colors. For some people this can present
@@ -1538,7 +1541,8 @@ have user-friendly documentation</h4>
 be clearly explained. The documentation should be concise and
 user-friendly.</p>
 <p>Documentation might include general help, quick start guide, shortcut
-keys, contact information for accessibility help.</p>
+keys, contact information for accessibility help, and AI powered
+assistance.</p>
 <p>Priority: Must-have</p>
 <h4
 id="the-user-must-receive-clear-and-user-friendly-error-messages">The
@@ -1562,16 +1566,12 @@ right to access content in an accessible format. Ensuring accessibility
 of protected content is essential for equitable access to reading
 materials.</p>
 <p>Priority: Must-have</p>
-<h4
-id="reading-systems-should-make-it-easy-for-a-user-to-get-a-citation-or-reference.">Reading
-Systems should make it easy for a user to get a citation or
-reference.</h4>
-<p>This feature would enable the reader to select a portion of text and
-then use a shortcut key or button to get the formal citation and copy it
-to the clipboard. The user should have the ability to select from a
-number of accepted formats for citations.</p>
-<p>To create a proper citation, the publication must have the correct
-metadata, which is not always present.</p>
+<h4 id="the-user-should-be-able-to-get-a-citation-or-reference.">The
+user should be able to get a citation or reference.</h4>
+<p>The user should be able to select a portion of text and then use a
+shortcut key or button to get the formal citation and copy it to the
+clipboard. The user should have the ability to select from a number of
+accepted formats for citations.</p>
 <p>Priority: Should-have</p>
 <h2
 id="additional-user-requirements-for-future-consideration">Additional
@@ -1641,6 +1641,10 @@ reducing visual clutter and improving text flow.</p>
 fixed layout as well</h5>
 <p>Text in fixed-layout documents should be able to reflow, allowing for
 better readability on small screens or when using magnification.</p>
+<h5 id="regional-navigation-features">Regional navigation features</h5>
+<p>The app could provide region-based navigation which zooms in and
+steps the reader though a defined reading order. The reader could
+navigate between regions at their own pace.</p>
 <h5 id="support-for-llm-inference-or-other-processing">Support for LLM
 inference or other processing</h5>
 <p>The app should allow integration of AI-powered features, such as
@@ -1761,7 +1765,7 @@ James Yanchak, Taylor &amp; Francis Group;
 Jason White, Independent;
 </li>
 <li style="display: inline;">
-John Ylioja, National Network for Equitable Libray Service;
+John Ylioja, National Network for Equitable Library Service;
 </li>
 <li style="display: inline;">
 Julija Skerniskyte, Lithuanian audiosensory library;
