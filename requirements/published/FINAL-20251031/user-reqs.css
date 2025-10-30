@@ -1,0 +1,53 @@
+/* Override W3C copyright with DAISY copyright */
+.head .copyright {
+    display: none;
+}
+
+.head::after {
+    content: "Copyright \00a9  DAISY Consortium 2025";
+    display: block;
+    margin-top: 1em;
+}
+
+/* Hide ReSpec menu button */
+.respec-button,
+#respec-ui {
+    display: none !important;
+}
+
+/* Reduce spacing around h3 headings - override ReSpec's 48px top margin */
+body section h3,
+body section.introductory h3,
+section#navigation h3,
+section#screen-reader-support h3,
+section#read-aloud h3 {
+    margin-top: 8px !important;
+    margin-bottom: 4px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+    /* Reduce spacing for paragraphs following h3 */
+    body section h3 + p {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+/* Reduce spacing between all paragraphs in sections */
+body section p {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Restore normal spacing for paragraphs inside notes */
+.note p,
+div.note p {
+    margin-top: revert !important;
+    margin-bottom: revert !important;
+}
+
+/* Add space after each requirement block (after Priority paragraph) */
+body section h3 ~ p:has(+ h3),
+body section p:last-child {
+    margin-bottom: 12px !important;
+}
